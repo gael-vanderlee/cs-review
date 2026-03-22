@@ -1,8 +1,8 @@
 # macOS
 .DS_Store
 
-# latexmk output ($out_dir in latexmkrc)
-out/
+# latexmk writes to out/; track *.pdf there, ignore aux/logs via patterns below
+template_tvcg/out/
 
 # LaTeX auxiliary and build products
 *.acn
