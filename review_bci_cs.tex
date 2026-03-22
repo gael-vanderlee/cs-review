@@ -1,0 +1,146 @@
+\documentclass[lettersize,journal]{IEEEtran}
+\usepackage{amsmath,amsfonts}
+\usepackage{graphicx}
+\usepackage{cite}
+
+% Additional packages you may need
+\usepackage{multirow}
+\usepackage{pgfplotstable}
+\usepackage{svg}
+% Packages for algorithm
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+%% ----------------- My Packages ----------------- %%
+
+% Autorefs
+\usepackage{hyperref}
+
+% To run some commands present in the .bib file
+\usepackage{manfnt}
+
+% Table from csv
+\PassOptionsToPackage{svgnames}{xcolor}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.18}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{soul}
+
+% Author comments
+\newcommand{\hsm}[1]{{\color{blue}{[H: #1]}}}
+\newcommand{\fc}[1]{{\color{red}{[F: #1]}}}
+\newcommand{\gv}[1]{{\color{orange}{[G: #1]}}}
+\newcommand{\rs}[1]{{\color{green}{[R: #1]}}}
+\newcommand{\al}[1]{{\color{violet}{[A: #1]}}}
+\newcommand{\changed}[1]{{\color{magenta}{#1}}}
+
+% Remove comments
+\renewcommand{\hsm}[1]{}
+\renewcommand{\fc}[1]{}
+\renewcommand{\gv}[1]{}
+\renewcommand{\rs}[1]{}
+\renewcommand{\al}[1]{}
+\renewcommand{\changed}[1]{#1}  % This will keep the changes but remove the color.
+
+
+% Capitalize section autorefs
+% \newcommand\sectionautorefname{Section}
+
+% SVG support
+\usepackage{svg}
+
+% Merge footnotes
+% \usepackage{fixfoot}
+% \DeclareFixedFootnote*{\hidden}{Citation hidden for double-blind review}
+
+\graphicspath{{figs/}{figures/}{pictures/}{images/}{./}{template_ieee/}} % where to search for the images
+
+% Subfigures
+\usepackage{subcaption}
+
+% Template fix
+\usepackage{booktabs}
+
+% Quote
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\small, breaklines=true}
+
+% Latex plots
+\usepackage{pgfplots}
+\usepackage{tikz}
+\pgfplotsset{compat=1.18}
+
+%% ----------------- End my Packages ----------------- %%
+
+% Anonymization flag - set to true for submission, false for final version
+\newif\ifanonymous
+\anonymousfalse  % Change to \anonymousfalse for final version
+
+\begin{document}
+% \bstctlcite{IEEEexample:BSTcontrol}  % Commented out - missing bibliography entry
+
+
+\title{The Neurophysiology of Cybersickness: A Review of BCI-based Characterization and Prediction}
+
+\ifanonymous
+\author{Authors names removed for double-blind reviewing}
+\else
+\author{Gaël Van der Lee, François Cabestaing, Hakim Si-Mohammed}
+% \thanks{Gaël Van der Lee is with University of Lille (e-mail: gael.vanderlee@univ-lille.fr).} 
+% \thanks{Anatole Lécuyer is with Inria Rennes (e-mail: anatole.lecuyer@inria.fr).} 
+% \thanks{Maxence Naud is with University of Lille.} 
+% \thanks{Reinhold Scherer is with University of Essex (e-mail: r.scherer@essex.ac.uk).} 
+% \thanks{François Cabestaing is with University of Lille (e-mail: francois.cabestaing@univ-lille.fr).} 
+% \thanks{Hakim Si-Mohammed is with University of Lille (e-mail: hakim.simohammed@univ-lille.fr).}
+% }
+\fi
+
+\maketitle
+
+\begin{abstract}
+  \input{contents/abstract}
+\end{abstract}
+
+\begin{IEEEkeywords}
+Human-centered computing, Human computer interaction (HCI), Interaction paradigms, Virtual reality.
+\end{IEEEkeywords}
+
+\section{Introduction}
+\input{contents/introduction}
+
+% Include your sections as inputs
+\section{Theoretical and Methodological Background}\label{sec:theoretical}
+\input{contents/theoretical}
+
+\section{Review Methodology}\label{sec:methodology}
+\input{contents/methodology}
+
+\section{Results}\label{sec:results}
+\input{contents/results}
+
+\section{Discussion}\label{sec:discussion}
+\input{contents/discussion}
+
+\section{Conclusion}\label{sec:conclusion}
+\input{contents/conclusion}
+
+% Acknowledgments (if needed)
+\ifanonymous
+% Acknowledgments removed for double-blind reviewing
+\else
+\section*{Acknowledgments}
+This research was funded by the European Union ERANET CHIST-ERA 2020 (CHIST-ERA-20-BCI-003 - "GENESIS") and the French Research Agency (ANR-21-CHRA-0001-01).
+\fi
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+% Biography section (optional)
+% \begin{IEEEbiography}{Author Name}
+% Biography text goes here.
+% \end{IEEEbiography}
+
+\vfill
+
+\end{document}

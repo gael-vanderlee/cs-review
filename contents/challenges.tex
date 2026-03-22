@@ -1,0 +1,49 @@
+% To highlight: VR headsets, resolutions, high accuracy, young subjects, small samples
+
+While the reviewed literature demonstrates significant progress in applying BCI methods to cybersickness research, a critical appraisal reveals substantial methodological challenges.
+These issues temper the interpretation of many findings and present considerable barriers to the generalization, replication, and practical application of the reported results.
+This section will highlight four main challenges identified in the literature (1) optimistic accuracy estimates, (2) the lack of standardized cybersickness thresholds, (3) protocol disparities and (4) conceptual variability.
+
+A prominent trend in the classification literature is an "accuracy arms race," with a proliferation of studies reporting exceptionally high performance.
+Numerous papers claim binary classification accuracies exceeding 95\%, and in some cases, approaching 99\% \cite{huaDetectionVirtualReality2024, shenClassificationVisuallyInduced2024, huaEEGClassificationModel2024, dasdemirLocomotionTechniquesEEG2023, huaDualpathwayEEGModel2025}.
+However, these impressive figures are often a product of experimental designs that limit their generalizability.
+Many are achieved using within-subject validation on small, homogeneous participant pools, which may not translate to new, unseen users.
+Furthermore, the choice of data used for classification also plays a role. For example, some high-performing models compare resting-state EEG data collected before and after VR exposure \cite{huaEEGClassificationModel2024, chaiEEGStudyVirtual2023}, a paradigm that, while useful for identifying state changes, is ill-suited for the real-time detection required by adaptive systems.
+
+The foundation of any supervised learning model is the quality of its "ground truth" labels, and in cybersickness research, this foundation is ill-defined.
+The vast majority of predictive models are trained on subjective data, most commonly post-exposure SSQ scores or in-task ratings from scales like the FMS \cite{rosannePreprocessNotPreprocess2025}.
+The SSQ is retrospective and coarse, while continuous ratings can lead the model to classify signals related to the motor action of reporting.
+A more fundamental issue is the lack of standardized thresholds for defining sickness states.
+Individual studies frequently devise their own arbitrary cut-offs to convert continuous SSQ scores into binary ("sick" vs. "not sick") or multi-level ("mild," "moderate," "severe") labels.
+This means that the very definition of the target variable is inconsistent across the literature, severely undermining the comparability of different models and their reported accuracies.
+
+This lack of standardization extends to many aspects of experimental design, creating a profound heterogeneity that hinders scientific synthesis.
+First, there is significant variability in display technology and the nature of the stimulus.
+Experiences in fully immersive HMDs are not equivalent to those on large-screen monitors or in CAVE-like projection systems \cite{limTestretestReliabilityVirtual2021, zhangAnalysisMotionSickness2020}, or smartphone based VR systems \cite{molefiVibromotorReprocessingTherapy2022}, yet findings are often discussed interchangeably.
+Similarly, passive viewing of a 360-degree video \cite{suwandiExploringImpactMotion2024} is fundamentally different from active navigation in an interactive game \cite{cortesEEGbasedExperimentVR2023a}.
+Our meta-analysis supports these concerns, revealing statistically significant differences in neural response patterns between different hardware platforms and virtual environment types (see \autoref{subsubsec:confounding}).
+Second, experimental protocols are inconsistent, with wide variance in exposure duration, the inclusion and length of rest periods, and the definition of a valid baseline.
+A particularly problematic practice is the use of an "eyes-closed" baseline, which artificially inflates alpha power and directly confounds the interpretation of alpha suppression, one of the most commonly reported neural markers of cybersickness.
+Third, the recording itself varies, ranging from research-grade, high-density EEG systems to low-cost, consumer-grade devices with fewer channels and potentially lower signal quality, which may impact the reliability of the derived results \cite{liuPilotStudyEEGBased2020}.
+Additionally, reporting quality across studies demonstrates substantial deficiencies in critical methodological parameters.
+For example, EEG reference electrode configuration is reported in only 49.4\% of studies, and notch filter frequency in 22.9\%, hampering reproducibility and meta-analytic synthesis.
+A quantitative analysis of the included literature reveals a reliance on low-density EEG systems, with 82.9\% of studies employing 32 or fewer electrodes, and 21.4\% employing 10 or fewer electrodes.
+While such systems are appropriate for applied BCI paradigms that target well-characterized and localized neural signals, their use in the context of cybersickness research presents a significant methodological limitation.
+The neural underpinnings of cybersickness are not yet fully elucidated, and the research objective for many studies remains fundamentally exploratory.
+Low-density electrode montages have insufficient spatial resolution for reliable source localization and are blind to activity originating from large, un-sampled cortical areas.
+This practice, therefore, risks generating an incomplete understanding of cybersickness neurophysiology, potentially overlooking critical contributions from distributed neural networks and biasing the literature towards the few cortical sites that are consistently measured.
+
+Finally, the field suffers from a degree of conceptual imprecision.
+A significant conceptual issue is the frequent absence of an explicit theoretical framework guiding experimental design and interpretation.
+Many of the reviewed studies adopt a data-driven, correlational approach, identifying statistical relationships between physiological signals and subjective sickness reports without explicitly stating which theory of cybersickness, such as Sensory Conflict Theory or Postural Instability Theory, they are operating under.
+This lack of theoretical grounding is problematic for scientific synthesis.
+Without a stated theoretical context, the interpretation of findings becomes ambiguous, hindering meaningful cross-study comparisons.
+Furthermore, it weakens the basis for generalizing results, as a "neuromarker" identified in a purely correlational manner lacks a principled foundation for predicting its validity in a new VR application that may stress a different underlying causal mechanism.
+Moreover, the terms "cybersickness," "motion sickness", "VIMS", "simulator sickness" and more are often used interchangeably, despite evidence that they may represent distinct phenomena.
+There are fundamental differences, such as the fact that motion sickness occurs in the presence of vestibular motion, while cybersickness occurs with visual motion and is related to visually induced motion also known as vection.
+Those semantic discrepancies can result in measurable differences.
+For instance, Rebenitsch et al. \cite{rebenitschReviewCybersicknessApplications2016} found that motion sickness and cybersickness present distinct symptom profiles, while Stanny et al. \cite{stanneyCybersicknessNotSimulator1997} highlight differences between cybersickness and simulator sickness.
+Furthermore, there is a tendency to label any statistically significant feature as a "neuromarker" without sufficient validation of its specificity, sensitivity, and reliability across different contexts.
+Compounding these issues is the prevalent use of small sample sizes and demographically biased populations (e.g., young, male university students), which severely limits the statistical power and external validity of the findings \cite{jangEstimatingObjectiveEEG2022, molefiVibromotorReprocessingTherapy2022}.
+
+Taken together, this landscape of methodological and conceptual variability poses a significant threat to replicability and impedes the cumulative progress of the field.

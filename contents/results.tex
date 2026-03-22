@@ -1,0 +1,335 @@
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=1\linewidth]{figures/year_objective_stacked.pdf}
+    \caption{Distribution of reviewed papers by year and research objective category}
+    \label{fig:stacked}
+\end{figure*}
+
+The selected studies address several distinct objectives, which we categorize as follows.
+These include: (1) Observed study characteristics, (2) the identification of neurophysiological and physiological correlates of the cybersickness state; (3) the development of computational models for the classification and prediction of sickness; (4) the characterization of neurophysiological factors underlying individual susceptibility; (5) the testing of BCI-driven mitigation and intervention strategies; and (6) ancillary investigations encompassing recovery dynamics, dataset contributions, cognitive performance effects, and hardware-specific neural response patterns.
+The research demonstrates temporal evolution in research focus, with early investigations concentrating primarily on correlates and classification of cybersickness, while recent research has diversified into additional fields of study, as illustrated in \autoref{fig:stacked}.
+
+The following section synthesizes the findings from this literature, structured thematically according to these primary research objectives.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.8\linewidth]{figures/eeg_channels_distribution.pdf}
+    \caption{Distribution of EEG channel configurations across cybersickness studies}
+    \label{fig:eeg_channels}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%           Study Characteristics          %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Study Characteristics}
+The synthesis encompasses 83 empirical studies spanning from 2001 to 2025, with a notable acceleration in research activity observed in recent years: 59.0\% of studies were conducted from 2021 onwards.
+The total participant population across all investigations comprises 2213 individuals, with studies employing a mean of 26.7 ± 25.7 participants per investigation (median: 20, range: 6-202).
+Age demographics show a mean of 24.0 ± 2.3 years (median: 23.7, range: 20.4-29.9) across the 49 studies that reported participant age, reflecting a predominant focus on young adult populations.
+An overview of age distributions across all studies is presented in \autoref{fig:age_distribution}.
+
+\subsubsection{Neuroimaging and Physiological Recording Modalities}
+EEG represents the predominant neuroimaging modality, employed in 89.2\% of studies (74 of 83), followed by fNIRS at 6.0\% (5 studies) and fMRI at 4.8\% (4 studies).
+EEG configurations demonstrate substantial variability, with a mean of 38.9 ± 56.4 channels (median: 30, range: 1-256).
+The distribution reveals a predominance of standard montages, with the most frequently employed configurations including 32-channel (21 studies), 14-channel (7 studies), 64-channel (7 studies), 256-channel (4 studies), and 30-channel (4 studies) setups.
+A visual representation of the distribution of EEG channel configurations across studies is presented in \autoref{fig:eeg_channels}.
+
+Beyond primary neuroimaging modalities, studies frequently incorporate additional physiological measurements.
+Multi-modal approaches are employed in 55.4\% of investigations, with electrocardiography (ECG) being the most common supplementary modality (15.1\% of studies), followed by joystick input (12.8\%) and head tracking (11.6\%).
+Other recorded signals include galvanic skin response (GSR) (8.1\%), electrooculography (EOG) (8.1\%), eye tracking (5.8\%), photoplethysmography (PPG) (4.7\%), skin temperature (4.7\%), electrogastrography (EGG) (3.5\%), button box (3.5\%), heart rate monitor (3.5\%), and respiration monitor (3.5\%).
+Additional modalities encompass motion capture systems (2.3\%), blood pressure monitor (2.3\%), balance board (2.3\%), and various other devices including Kinect, pulse oximeter, electromyography (EMG), keyboard, force plate, mouse, and accelerometer (each 1.2\%).
+
+\subsubsection{Experimental Design and Data Collection Protocols}
+Study designs predominantly employ within-subject comparisons (75.9\%), with 7.2\% employing between-subject designs exclusively, and 16.9\% utilizing both within-subject and between-subject approaches.
+Session protocols demonstrate considerable variation, with the majority implementing single-session designs and the remainder conducting multiple sessions (mean: 1.4 ± 0.8 sessions, range: 1-4).
+Experimental sessions last a mean of 49.8 ± 34.9 minutes (median: 48.5, range: 2-180), while cybersickness-inducing stimulus exposure durations average 17.2 ± 17.8 minutes (median: 10.0, range: 0-90).
+
+Virtual reality exposure is delivered through head-mounted displays in 56.0\% of studies, screen-based displays in 15.5\%, projection systems in 19.0\%, other configurations in 6.0\%, and television displays in 3.6\%.
+Virtual environments encompass navigation tasks (24.4\%), driving simulations (20.0\%), video content (15.6\%), roller coaster experiences (13.3\%), games (7.8\%), and other scenarios (16.7\%).
+The relationship between VR device types and virtual environments is illustrated in \autoref{fig:vr_device_environment}.
+
+\subsubsection{Cybersickness Assessment Methods}
+Cybersickness measurement employs questionnaire-based approaches in 67.0\% of studies, continuous rating methods in 17.6\%, Likert scale assessments in 8.8\%, and other methodologies in 6.6\%.
+The Simulator Sickness Questionnaire (SSQ) represents the predominant assessment instrument, utilized in 63.4\% of studies, followed by the Fast Motion Sickness Scale (FMS) (9.8\%) and Motion Sickness Susceptibility Questionnaire (MSSQ) (4.9\%).
+Continuous input mechanisms include joystick-based ratings (48.0\% of continuous studies), other methods (44.0\%), and keyboard input (8.0\%).
+
+\subsubsection{Data Processing and Signal Analysis}
+EEG signal preprocessing demonstrates considerable heterogeneity across studies in terms of filtering approaches and frequency ranges.
+Band-pass filtering is employed across a wide spectrum of frequency ranges, from very low frequencies (0.01 Hz) to high gamma ranges (100 Hz), with the majority of studies applying filters in the 1-50 Hz range.
+The distribution of band-pass filter configurations across studies is presented in \autoref{fig:bandpass_distribution}, illustrating the substantial variability in preprocessing approaches employed in the literature.
+
+\input{figures/bandpass_frequencies_latex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%           Correlates          %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{figures/age_range_intervals_latex}
+
+\subsection{Neural and Physiological Correlates of Cybersickness}
+A primary objective across a substantial portion of the literature has been to identify objective, physiological markers that co-vary with the subjective experience of cybersickness.
+This research addresses the question of what physiological changes occur when a user becomes sick.
+The studies have identified a set of neural and physiological correlates, which form the basis for the development of predictive models.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/vr_device_environment_heatmap.pdf}
+    \caption{Heatmap of the distribution of VR device types and virtual environments across studies. Studies employing multiple devices or environments contribute towards each.}
+    \label{fig:vr_device_environment}
+\end{figure}
+
+\subsubsection{EEG Spectral Power and Connectivity}
+The most frequently reported neural signature of cybersickness is a modulation of EEG spectral power.
+Across numerous studies employing diverse VR stimuli and hardware, a pattern emerges characterized by an increase in low-frequency power and a corresponding decrease in alpha-band activity.
+Quantitative analysis across studies examining specific brain rhythms reveals patterns accross the literature.
+Delta rhythm changes show increases in 79.3\% of studies, decreases in 10.3\%, mixed findings in 6.9\%, and no change in 3.4\%.
+Theta rhythm investigations report increases in 73.3\% of studies, with decreases in 13.3\%, mixed results in 10.0\%, and no change in 3.3\%.
+Specifically, an increase in power within the delta (1-4 Hz) and theta (4-8 Hz) frequency bands has been associated with the onset and increasing severity of CS \cite{krokosQuantifyingVRCybersickness2022, nurnbergerMismatchVisualVestibularInformation2021, kimCharacteristicChangesPhysiological2005, andrievskaiaExploringNeurophysiologicalCorrelates2023, jangEstimatingObjectiveEEG2022}.
+Concurrently, a commonly observed phenomenon is a suppression of power in the alpha band (8-13 Hz), particularly over central, parietal, and occipital cortices \cite{cortesEEGbasedExperimentVR2023a, chenSpatialTemporalEEG2010, kimPsychophysiologicalChangesNavigation2001}.
+Alpha rhythm findings demonstrate greater variability, with 45.7\% reporting increases, 31.4\% showing decreases, 14.3\% presenting mixed results, and 8.6\% finding no change.
+This alpha suppression is often interpreted as a marker of increased cognitive load, potentially reflecting the brain's attempt to manage sensory conflict or maintain postural control \cite{cortesEEGbasedExperimentVR2023a}.
+While less consistent, changes have also been reported in higher frequency bands, with some studies noting decreases in beta power \cite{kimCharacteristicChangesPhysiological2005} and others reporting increases \cite{suwandiExploringImpactMotion2024} or its utility for channel selection \cite{khoirunnisaaChannelSelectionEEGBased2018}.
+Beta rhythm studies show increases in 41.4\% of investigations, no change in 24.1\%, decreases in 24.1\%, and mixed findings in 10.3\%.
+Gamma rhythm research reports increases in 40.0\% of studies, no change in 33.3\%, decreases in 20.0\%, and mixed results in 6.7\%.
+A comprehensive analysis of rhythm changes across different brain regions is presented in \autoref{fig:rhythm_changes}.
+The test-retest reliability of these spectral markers has been formally assessed, with one study demonstrating good reliability for delta, theta, and alpha power changes in frontal and central areas across multiple sessions \cite{limTestretestReliabilityVirtual2021}.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/rhythm_changes_by_region.pdf}
+    \caption{Brain rhythm changes across anatomical regions during cybersickness}
+    \label{fig:rhythm_changes}
+\end{figure}
+Furthermore, the normalization of delta wave power has been shown to serve as an objective marker for the dissipation of symptoms during the recovery phase \cite{wooRecoveryTimeVR2023}.
+
+In addition to band power, researchers have explored more complex features derived from the EEG signal.
+These include metrics such as spectral entropy and skew \cite{fengComprehensiveExplorationMotion2025}, Gravity Frequency, and Kolmogorov Complexity \cite{liuPilotStudyEEGBased2020, liuMeasuringVisuallyInduced2017}, as well as amplitude modulation features, which one study identified as significant for CS characterization \cite{rosannePreprocessNotPreprocess2025}.
+Others have used the mean frequency of the theta band as a direct indicator of motion sickness level \cite{liEEGbasedEvaluationMotion2022}.
+Investigations into functional connectivity provide information on more systemic CS-related brain dynamics.
+Functional connectivity investigations reveal mixed findings in 56.2\% of studies, increases in 18.8\%, decreases in 18.8\%, and no change in 6.2\%.
+One finding is a general decrease in information transfer, measured via transfer entropy, with the onset of VIMS \cite{nurnbergerMismatchVisualVestibularInformation2021}.
+More specifically, studies using EEG microstate analysis have shown that CS alters the temporal dynamics of canonical brain networks and is associated with decreased functional connectivity between the visual cortex (V5) and vestibular processing regions \cite{namElectroencephalogramMicrostatesFunctional2022}.
+Connectivity-based features are also used as direct inputs for deep learning models, often based on metrics like the Phase-Locked Value (PLV) \cite{shenClassificationVisuallyInduced2024, huaDualpathwayEEGModel2025}.
+The causal relevance of these spectral patterns is suggested by intervention studies where symptom mitigation correlates with a normalization of these same EEG bands \cite{molefiVibromotorReprocessingTherapy2022, yeoEEGbasedAnalysisVarious2022}.
+
+\subsubsection{Hemodynamic and Regional Brain Activity (fNIRS \& fMRI)}
+EEG offers high temporal resolution, whereas fMRI and fNIRS provide high spatial localization, identifying the specific brain regions involved in the cybersickness experience.
+fNIRS and fMRI each represent 4.8\% of studies, reflecting their complementary but less prevalent role compared to EEG-based investigations.
+fMRI studies have delineated a "nausea network".
+One study dissociated the temporal evolution of nausea, identifying a network including the amygdala and putamen that was active preceding a transition to stronger nausea, and a broader network including the insular, anterior cingulate, and orbitofrontal cortices that was active following the transition \cite{napadowBrainCircuitryUnderlying2013}.
+Furthermore, motion sickness has been shown to increase the functional connectivity between the visual motion processing area (MT+/V5) and nausea-associated regions like the insula and mid-cingulate cortex \cite{toschiMotionSicknessIncreases2017}.
+The involvement of this network is highlighted by findings that its functional connectivity is also modulated during the post-exposure recovery phase \cite{miyazakiRestingstateFunctionalConnectivity2021}.
+This central processing has been linked to peripheral physiology, with activity in distinct brain networks correlating with sympathetic and parasympathetic autonomic outflow during nausea \cite{scloccoBrainCircuitrySupporting2014}.
+
+fNIRS studies, which offer greater portability, have corroborated and extended these findings.
+Research using fNIRS has identified deactivation in the bilateral angular gyrus \cite{yeoInvestigatingCorticalActivity2024} and activation changes in the occipital lobe \cite{zhangAnalysisMotionSickness2020} and parieto-temporal regions \cite{gavganiCybersicknessrelatedChangesBrain2018} that correlate with subjective sickness scores.
+Others have linked an increase in total hemoglobin concentration directly to cybersickness \cite{yamamuraHemodynamicVRAdaptingUsers2021a, renAssessingPassengersMotion2023}.
+This body of work indicates a complex hemodynamic response, with evidence for both increased regional perfusion in some cortical areas and a decrease in global cerebral perfusion during cybersickness episodes \cite{gavganiCybersicknessrelatedChangesBrain2018}.
+
+\subsubsection{Event-Related Potential (ERP) and Evoked Potential}
+Beyond ongoing oscillations, a subset of studies has used ERPs to probe how cybersickness impacts discrete cognitive processes.
+These studies indicate that cybersickness is accompanied by measurable changes in cognitive function.
+One finding is that VR sickness is associated with a reduction in the amplitude of the P3b component in a dual-task paradigm, a classic marker of diminished attentional resources \cite{mimnaughVirtualRealitySickness2023}.
+Relatedly, VIMS has been shown to impair response inhibition, as reflected by a larger N2 amplitude and a smaller, delayed P3 component in an oddball task \cite{wuInhibitionrelatedN2P32020}.
+Other work has shown that trait-like susceptibility to cybersickness is associated with distinct baseline ERP characteristics, such as excessive N2 amplitudes \cite{weiMotionSicknesssusceptibleParticipants2019} and higher P3 amplitudes during sensory mismatch conditions \cite{ahnTemporalDynamicsVisually2020}.
+An approach using heartbeat-evoked potentials (HEPs) has linked the subjective experience of disorientation to a significant suppression of fronto-central HEP amplitudes, providing a potential link between interoceptive processing and a key symptom of cybersickness \cite{changIdentifyingPhysiologicalCorrelates2022}.
+
+\subsubsection{Other Physiological Correlates}
+Many studies have adopted a multimodal approach, recording other physiological signals alongside neuroimaging data.
+This work indicates that cybersickness is a whole-body phenomenon.
+Electrogastrography (EGG) has been identified as a measure for detecting nausea-specific symptoms \cite{tianWhoSaysYou2024}.
+Measures of autonomic nervous system arousal, such as heart rate variability (HRV) and galvanic skin response (GSR), are also consistently modulated by cybersickness and have been integrated into predictive models \cite{sameriPhysiologydrivenCybersicknessDetection2024, leeAssessingIndividualVR2022, scloccoBrainCircuitrySupporting2014}.
+In a study that integrated VR with a motion platform, electromyography (EMG) signals were reported to be more informative for classifying motion sickness than the concurrently recorded EEG signals \cite{recentiPredictingMotionSickness2021}.
+Finally, electrooculography (EOG) has been used to show that an increased eye blink rate correlates with subjective cybersickness reports \cite{moinnereauInstrumentingVirtualReality2022}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%           Classification          %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Classification and Prediction of Cybersickness}
+A substantial body of research has focused on using the previously identified neural correlates to automatically classify or predict a user's cybersickness state.
+This line of inquiry seeks to determine if these physiological changes can be reliably detected and quantified by computational models.
+The research objective is to develop objective, real-time assessment systems that can operate continuously and implicitly during VR use.
+Analysis of computational approaches across the literature reveals that deep learning architectures are employed in 15 studies (34.1\%), traditional machine learning classifiers in 14 (31.8\%), regression models in 13 (29.5\%), thresholding in 1 (2.3\%), and unsupervised approaches in 1 (2.3\%).
+We defined statistical and correlational analysis as studies that identify and validate statistically significant relationships between physiological signals and cybersickness without building predictive models, including methods such as t-tests, ANOVA, and correlation analyses. Traditional machine learning was defined as studies employing established algorithms with engineered features for discrete state classification, including Support Vector Machines, Linear Discriminant Analysis, and k-Nearest Neighbors. Deep learning encompasses studies utilizing multi-layered neural networks for automatic feature learning from raw data, including Convolutional Neural Networks, Recurrent Neural Networks, and hybrid architectures. Regression models were defined as studies predicting continuous cybersickness severity values using methods such as Support Vector Regression and linear regression approaches.
+The distribution of these classification approaches is illustrated in \autoref{fig:classification_methods}, with detailed breakdowns of specific methods within each category shown in \autoref{fig:classification_detailed}.
+Additionally, 55.4\% of studies adopt multi-modal approaches, combining EEG with other physiological measurements.
+The most common additional modalities are Electrocardiography (ECG) and Head tracking, which are used in 15.1\% and 11.6\% of studies, respectively.
+Model validation strategies predominantly employ k-fold cross-validation (65.7\%), with additional approaches including train-test splits (14.3\%), other methods (11.4\%), and leave-one-subject-out cross-validation (8.6\%).
+Performance evaluation reveals mean classification accuracies of 92.5\% ± 8.6\% for within-subject validation (range: 73.3\%-99.9\%) and 86.8\% ± 9.8\% for cross-subject validation (range: 68.0\%-100.0\%).
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.8\linewidth]{figures/classification_methods_hierarchical_bar.pdf}
+    \caption{Distribution of classification method categories across cybersickness studies}
+    \label{fig:classification_methods}
+\end{figure}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=.95\linewidth]{figures/classification_methods_detailed_bars.pdf}
+    \caption{Detailed breakdown of specific methods within each classification category}
+    \label{fig:classification_detailed}
+\end{figure}
+
+\subsubsection{Methodological Approaches and Feature Engineering}
+The methodologies for automated cybersickness detection have evolved in parallel with advances in machine learning.
+One set of approaches relies on traditional machine learning classifiers fed with pre-selected, or "handcrafted," features.
+These models include Support Vector Machines (SVM), k-Nearest Neighbors (k-NN), and Linear Discriminant Analysis (LDA) \cite{yuEEGbasedClassificationSystem2010, chaiEEGStudyVirtual2023}.
+Features extracted from EEG for these models are frequently based on Power Spectral Density (PSD), wavelet-derived energy ratios \cite{liVRMotionSickness2020}, or spectral entropy and skew \cite{fengComprehensiveExplorationMotion2025}.
+Other work has employed time-domain statistical features such as signal variance \cite{mawalidClassificationEEGSignal2018}.
+To reduce dimensionality and improve model performance, some studies focus on feature selection algorithms, using methods like Correlation Feature Selection (CFS) \cite{khoirunnisaaChannelSelectionEEGBased2018} and genetic algorithms \cite{weiGeneticFeatureSelection2011}.
+
+A second set of approaches utilizes deep learning architectures, which can learn relevant features directly from the data.
+Convolutional Neural Networks (CNNs) are widely used to extract spatial and spectral features from EEG time series, spectrograms, or topological scalp maps \cite{jeongCybersicknessAnalysisEEG2019}.
+To capture the temporal evolution of cybersickness, these are often combined with Recurrent Neural Networks (RNNs) like Long Short-Term Memory (LSTM) \cite{liaoUsingEEGDeep2020} or Gated Recurrent Units (GRU) \cite{luoFeatureExtractionMethod2024}.
+Other explored architectures include spiking neural networks \cite{yangPredictionDetectionVirtual2023} and specialized shallow CNNs designed for real-time detection in mitigation systems \cite{uyanCDMSRealtimeSystem2024}.
+More recent models frequently employ hybrid architectures, such as combining CNNs and LSTMs \cite{shenClassificationVisuallyInduced2024} or implementing dual-pathway CNNs that process raw EEG and functional connectivity data in parallel \cite{huaDualpathwayEEGModel2025}.
+These models may be enhanced with attention mechanisms to weigh the importance of different channels or time points \cite{huaEEGClassificationModel2024}.
+The inputs to these models have also diversified, incorporating functional connectivity matrices \cite{shenClassificationVisuallyInduced2024} or features such as entropy and cross-frequency coupling asymmetry \cite{huaDetectionVirtualReality2024}.
+
+Beyond EEG-only models, a number of studies have demonstrated the utility of multimodal data fusion.
+This involves combining neural signals with peripheral physiological data, such as galvanic skin response (GSR) and blood volume pulse (BVP) \cite{sameriPhysiologydrivenCybersicknessDetection2024}, or with non-neural signals like electromyography (EMG) from postural muscles, which was found to be highly informative \cite{recentiPredictingMotionSickness2021}.
+Other modalities, including fNIRS, have also been used as input for regression models \cite{renAssessingPassengersMotion2023}.
+A different approach involves knowledge transfer, where a model trained on EEG data is used to enable prediction based solely on features extracted from the VR video content \cite{kimDeepCybersicknessPredictor2019}.
+To improve model interpretability, some studies have incorporated explainable AI (XAI) techniques \cite{sameriPhysiologydrivenCybersicknessDetection2024}.
+
+\subsubsection{Classification Tasks and Performance}
+Model performance is typically evaluated across three main tasks.
+The most common task is binary classification, which distinguishes between a "sick" and "not sick" state.
+In within-subject validation paradigms, many studies report accuracies exceeding 95\% \cite{huaDetectionVirtualReality2024, shenClassificationVisuallyInduced2024, huaEEGClassificationModel2024, jeongCybersicknessAnalysisEEG2019, dasdemirLocomotionTechniquesEEG2023, yuEEGbasedClassificationSystem2010}.
+Quantitative analysis of reported performance metrics reveals that within-subject models achieve a mean accuracy of 92.5\% ± 8.6\% (median: 92.7\%, range: 73.3\%-99.9\%).
+Cross-subject models, which are trained on a group of users and tested on a new user, yield accuracies typically in the range of 68.0\%-100.0\% \cite{liVRMotionSickness2020, luoFeatureExtractionMethod2024}, with a mean accuracy of 86.8\% ± 9.8\% (median: 86.7\%).
+The accuracy distributions for both validation approaches are compared in \autoref{fig:accuracy_comparison}.
+
+\begin{figure*}[t]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{figures/accuracy_within_subject_per_method_category.pdf}
+        \caption{Within-subject accuracy}
+        \label{fig:accuracy_within}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{figures/accuracy_cross_subject_per_method_category.pdf}
+        \caption{Cross-subject accuracy}
+        \label{fig:accuracy_cross}
+    \end{subfigure}
+    \caption{Classification accuracy distributions by method category for within-subject and cross-subject validation approaches}
+    \label{fig:accuracy_comparison}
+\end{figure*}
+
+A second task is multi-level classification, which categorizes cybersickness into several discrete levels of severity.
+Studies have demonstrated three-level classification using multimodal data fusion \cite{liMachineLearningAssessment2019, dennisonImprovingMotionSickness2019} and EEG alone, for instance with a rule-based induction algorithm \cite{paneIdentifyingSeverityLevel2018} or a genetic algorithm with an SVM \cite{linMotionSicknessEstimation2012}.
+
+A third task is continuous prediction or regression, where the objective is to predict a continuous value, such as a total SSQ score.
+Performance is measured by correlation coefficients and error metrics.
+Deep learning models have demonstrated high correlations between predicted and actual SSQ scores \cite{liuExploringBrainPhysiological2024, huaAssessmentVirtualReality2023, xuSECNNAttentionStructure2023, liuExploringQuantitativeAssessment2024}.
+Earlier work in this area used methods such as Support Vector Regression (SVR) \cite{weiEEGbasedEvaluationSystem2011, koEstimatingLevelMotion2011} and linear regression \cite{weiImplementationMotionSickness2011}.
+Current architectures include Siamese LSTMs \cite{huaSiamLSTMModelMultichannel2024} and frameworks that fuse physiological signals with VR video features \cite{leeAssessingIndividualVR2022}.
+Addressing the challenge of relying on discrete, post-hoc subjective labels, some research has focused on developing methods for continuous, calibration-free detection directly from physiological data \cite{demirelSubjectivityContinuousCybersickness2025}.
+The temporal evolution of classification performance across both validation approaches is depicted in \autoref{fig:year_accuracy}.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/year_accuracy_scatter.pdf}
+    \caption{Classification accuracy over time comparing within-subject and cross-subject validation approaches}
+    \label{fig:year_accuracy}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%           Individual differences          %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Individual Differences and Susceptibility}
+A well-established observation in cybersickness research is the significant inter-subject variability in symptom onset and severity.
+This has motivated a specific line of inquiry focused on identifying the neurophysiological basis of individual susceptibility.
+The goal of this research is to understand why some individuals are highly vulnerable to cybersickness while others remain resistant, and to determine if these differences can be predicted from brain activity.
+
+A key finding in this area is that an individual's susceptibility to cybersickness can be predicted from their resting-state brain activity, even before any VR exposure.
+One study, using a spiking neural network, demonstrated the ability to predict whether a user would later become sick with 85.9\% accuracy, based solely on pre-exposure resting-state EEG \cite{yangPredictionDetectionVirtual2023}.
+Other work has identified specific features of the resting-state signal as being predictive.
+For instance, one study found that EEG beta power in the left parietal region was a significant predictor of subsequent motion sickness ratings in an in-car VR platform \cite{liRestingstateEEGVestibular2023}.
+Another EEG study found that aperiodic components of the signal predicted an individual's susceptibility to rotational motion \cite{tianWhoSaysYou2024}.
+These findings suggest the existence of pre-existing neural traits that predispose individuals to cybersickness.
+
+Beyond prediction, studies have also identified distinct neural signatures that differentiate susceptible and resistant individuals during a nauseogenic experience.
+In a comparison between groups, resistant individuals were found to exhibit enhanced theta activity in the left parietal cortex, a potential biomarker of resilience \cite{liExploringNeuralBiomarkers2023}.
+Conversely, susceptible individuals show unique patterns of brain activity.
+One study found that VIMS-susceptible participants exhibited excessive parietal N2 ERP amplitudes and impaired theta-band phase synchronization compared to their resistant counterparts, suggesting a systematic impairment in dynamic cortical coordination \cite{weiMotionSicknesssusceptibleParticipants2019}.
+Similarly, another ERP study found that individuals with high sickness levels presented with higher P3 amplitudes during sensory mismatch conditions, indicating a greater demand on cognitive resources \cite{ahnTemporalDynamicsVisually2020}.
+Analyses of spectral power and source-space activity have further revealed differential patterns of activation between susceptible and non-susceptible groups during vection \cite{zhouBrainActivityDifferences2023}.
+For instance, one study noted that while the cybersickness condition increased delta and decreased alpha power in both sensitive and non-sensitive groups, the sensitive group showed significantly lower absolute power in the beta and gamma bands at baseline \cite{jangEstimatingObjectiveEEG2022}.
+An early study also found that the ratio of theta to total EEG power in the frontal and parietal lobes differed significantly between sick and non-sick groups during a long-duration driving task, suggesting it as a potential physiological index of sensitivity \cite{parkLongTermStudySimulator2008}.
+
+In addition to neurophysiological traits, demographic factors have been shown to contribute to susceptibility.
+Specifically, several studies have consistently reported a higher incidence and severity of cybersickness in female participants compared to male participants \cite{bergerInfluencePlaceboTDCS2024, bergerManipulatingCybersicknessVirtual2025}.
+Together, this research demonstrates that individual susceptibility to cybersickness is not random but is rooted in measurable differences in baseline brain function, neural responses to sensory conflict, and demographic variables.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%           Mitigation          %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% What mitigation methods work ??
+
+\subsection{Mitigation and Intervention Strategies}
+A primary applied objective of cybersickness research is the development of mitigation and prevention strategies.
+A number of studies are focused on this area, developing and testing systems that use neurophysiological signals to trigger interventions.
+This research can be divided into two categories: real-time adaptive systems that modify the VR environment, and interventions that aim to directly modulate the user's brain state.
+
+\subsubsection{Real-Time Adaptive Systems}
+One approach involves creating closed-loop systems that can detect the onset of cybersickness and dynamically adapt the virtual environment to reduce its nauseogenic properties.
+These systems differ from static VR experiences by creating environments that are responsive to the user's internal state.
+Only two studies in the corpus implemented this approach, indicating that this area of study remains in early-stage development.
+One study developed a system that uses a two-stage shallow convolutional network to first detect cybersickness from EEG and then to infer a likely causal factor \cite{uyanCDMSRealtimeSystem2024}.
+The system then selectively modifies the identified parameter (e.g., navigation speed or scene complexity) in real-time, resulting in a significant reduction in user-reported sickness compared to control conditions.
+Another approach utilized fNIRS to monitor total hemoglobin concentration in the brain \cite{yamamuraHemodynamicVRAdaptingUsers2021a}.
+Upon detecting an increase in hemoglobin correlated with sickness, the system dynamically reduced the user's field of view (FOV), demonstrating the feasibility of an fNIRS-based closed-loop system for symptom alleviation.
+
+\subsubsection{Neurostimulation, Neurofeedback, and Other Interventions}
+A second category of mitigation research investigates the efficacy of external interventions while measuring their effect on brain activity.
+Five studies in our corpus have taken this approach.
+One study demonstrated that transcutaneous auricular vagus nerve stimulation (taVNS) significantly reduced motion sickness symptoms \cite{molefiTranscutaneousAuricularVagus2025}.
+The reduction in symptoms was correlated with taVNS-induced neural activation in specific brain regions, as measured by EEG source localization, providing a neurophysiological correlate for the treatment's effect.
+Another study explored Vibro-motor Reprocessing Therapy (VRT) and found its application was associated with significant reductions in alpha, delta, and theta spectral power \cite{molefiVibromotorReprocessingTherapy2022}.
+Beyond stimulation, modifying other sensory inputs has also been shown to be effective.
+One study found that providing synchronized auditory and physical motion cues during a simulated bicycle ride reduced VIMS scores compared to conditions with mismatched or absent cues, an effect that was reflected in concurrent EEG recordings \cite{yeoEEGbasedAnalysisVarious2022}.
+
+Some protocols leveraged neurofeedback (NF), where users are trained to volitionally modulate their own brain activity.
+However, research in this area has identified a significant confounding variable: the presence of cybersickness symptoms can directly impair a user's ability to successfully perform the neurofeedback training task \cite{bergerManipulatingCybersicknessVirtual2025}.
+Further complicating the study of such interventions, another experiment found that a placebo transcranial direct current stimulation (tDCS) procedure, while having no significant effect on reported sickness symptoms, paradoxically degraded performance on a concurrent NF task \cite{bergerInfluencePlaceboTDCS2024}.
+These findings illustrate a critical challenge for BCI-based interventions, where the physiological state being targeted can interfere with the user's ability to engage with the intervention itself.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%           Other          %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection{Additional Findings: Recovery, Datasets, Cognition, and Confounding Factors}
+Beyond the primary research thrusts of correlation, prediction, and mitigation, several studies address additional aspects relevant to cybersickness.
+These include: (1) the neurodynamics of recovery after exposure, (2) publicly released datasets that support benchmarking and reproducibility, (3) the effects of cybersickness on cognition and task performance, and (4) identification of confounding factors such as hardware platform and virtual environment type that systematically influence neural response patterns.
+
+\subsubsection{The Neurodynamics of Recovery}
+While the majority of research focuses on the onset and progression of cybersickness, a subset of studies has investigated the neural processes that underlie recovery after the nauseogenic stimulus is removed.
+One study sought to objectively quantify the duration of recovery using both subjective SSQ reports and objective EEG measures \cite{wooRecoveryTimeVR2023}.
+The authors found that both measures indicated a recovery period of at least 11.5 minutes, with EEG delta wave power serving as a reliable objective marker of the recovery time course.
+Investigating the underlying network dynamics with fMRI, another study found that the recovery period from VIMS was characterized by enhanced resting-state functional connectivity patterns involving the insular, cingulate, and visual cortical regions, which are the same networks implicated in the emergence of sickness \cite{miyazakiRestingstateFunctionalConnectivity2021}.
+This body of literature suggests that recovery is not a passive return to a baseline state but an active neurophysiological process.
+
+\subsubsection{Public Datasets}
+The advancement of robust and generalizable machine learning models is dependent on the availability of large, high-quality, and publicly accessible datasets.
+Several research groups have contributed to the field by providing such resources.
+One dataset was released by \cite{kimDeepCybersicknessPredictor2019}, containing EEG data from over 200 subjects experiencing 44 different VR contents, which was used to develop a model for predicting sickness from video features.
+Another contribution is a dataset containing EEG and subjective measures collected while participants used ten different VR locomotion techniques, providing a resource for studying the impact of interaction design on cybersickness \cite{dasdemirClassificationEmotionalImmersive2023}.
+More recently, a dataset was released alongside a method for continuous, calibration-free cybersickness detection, addressing the need for data with dynamic, real-time ground-truth labels rather than post-hoc questionnaires \cite{demirelSubjectivityContinuousCybersickness2025}.
+These open datasets are necessary for benchmarking new algorithms and fostering reproducible science.
+
+\subsubsection{Effects of Cybersickness on Cognition and Performance}
+A final ancillary theme explores the consequences of cybersickness on a user's ability to perform tasks within the virtual environment.
+This research demonstrates that cybersickness is an issue of both comfort and functional impairment.
+Studies using event-related potentials (ERPs) have provided direct neurophysiological evidence of this impairment.
+For instance, one study found that VR sickness severity was associated with a reduction in the P3b component amplitude, a classic ERP marker of diminished attentional resources available for a secondary task \cite{mimnaughVirtualRealitySickness2023}.
+Relatedly, VIMS has been shown to impair executive functions such as response inhibition, an effect indexed by a larger N2 amplitude and a smaller, delayed P3 component during an oddball task \cite{wuInhibitionrelatedN2P32020}.
+
+This functional impairment also presents a specific challenge for BCI applications.
+In a pair of studies investigating VR-based neurofeedback (NF), it was found that the presence of cybersickness symptoms significantly hampered the user's ability to successfully perform the NF training task \cite{bergerManipulatingCybersicknessVirtual2025}.
+These studies also found that a placebo tDCS treatment, while having little effect on sickness symptoms, paradoxically impaired NF success, and consistently observed that female participants experienced more cybersickness and had worse NF performance than their male counterparts \cite{bergerInfluencePlaceboTDCS2024}.
+These findings highlight a challenge for BCI applications in VR: the physiological state being targeted can interfere with the user's ability to engage with the intervention itself.
+
+\subsubsection{Confounding Factors: Hardware Platform and Virtual Environment Effects}\label{subsubsec:confounding}
+Meta-analysis of neural response patterns reveals differences based on hardware platform and experimental conditions.
+Head-mounted display studies demonstrate distinct alpha band response patterns compared to non-HMD configurations, with HMD studies showing alpha increases in 20.9\% of cases while non-HMD studies show alpha decreases in 29.2\% of cases, suggesting different underlying neural mechanisms.
+Mann-Whitney U analysis with Cliff's delta effect size revealed a statistically significant difference in alpha rhythm changes between HMD-based and screen-based cybersickness studies (p=0.044, Cliff's $\delta$=0.455, large effect).
+This large effect size indicates that VR display technology substantially modulates alpha frequency responses during cybersickness, providing empirical support for device-specific neural response patterns that justify separate analytical treatment of HMD versus screen-based VR paradigms.
+Stimulus duration analysis reveals that HMD studies employ significantly shorter exposure periods (mean: 11.6 ± 16.6 minutes) compared to non-HMD studies (mean: 23.7 ± 15.0 minutes; U=242.0, $p<0.001$, Cohen's $d=0.76$), potentially reflecting comfort limitations with immersive displays or accelerated symptom onset in HMD environments.
+Virtual environment type demonstrates additional specificity in neural responses, with driving simulations exhibiting increased alpha responses 46.7\% of the time while navigation tasks exhibit increased alpha only 15.8\% of the time, potentially reflecting the distinct sensorimotor demands of driving scenarios.

@@ -1,0 +1,33 @@
+The successful identification of cybersickness correlates and the development of high-performing classifiers mark a significant first phase of research.
+However, to transition from a collection of isolated, proof-of-concept studies to a mature scientific field capable of producing robust, real-world applications, a concerted effort toward methodological rigor and conceptual clarity is required.
+Based on the challenges identified in this review, we propose the following roadmap for future research.
+
+First, the field must embrace standardization and open science.
+The profound heterogeneity in stimuli, hardware, and protocols is the single greatest impediment to comparing results and building cumulative knowledge.
+We advocate for a community-led effort to develop standardized experimental protocols and benchmark datasets.
+These datasets should encompass a variety of common VR experiences (e.g., passive roller coasters, active navigation) and include high-quality, multimodal data (e.g., EEG, EOG, ECG, head-motion) alongside well-defined subjective labels.
+The public release of such resources, as pioneered by a few research groups \cite{demirelSubjectivityContinuousCybersickness2025, kimDeepCybersicknessPredictor2019, dasdemirClassificationEmotionalImmersive2023}, is essential for validating new methods and ensuring fair, direct comparisons between different classification and prediction models.
+Accompanying this should be a commitment to open-sourcing analysis code and pre-trained models to enhance transparency and facilitate replication.
+
+Second, research must move beyond correlation to causal mechanisms.
+While the literature has established strong correlations between specific neural patterns and cybersickness, the causal nature of these relationships remains largely unexplored.
+Future work should employ interventional techniques to probe these connections.
+For instance, non-invasive brain stimulation methods like transcranial alternating current stimulation (tACS) could be used to exogenously modulate specific neural oscillations (e.g., alpha or theta power) to determine if this directly influences sickness susceptibility or severity.
+Such studies, when combined with sophisticated computational neuroscience models based on frameworks like predictive coding, can help disentangle epiphenomenal correlates from the core causal drivers of the cybersickness experience.
+
+Third, for BCI systems to be practical, they must be generalizable and validated in ecologically valid contexts.
+The performance of many current classifiers drops significantly in cross-subject paradigms.
+Future research should prioritize the development of advanced machine learning techniques, such as transfer learning and domain adaptation, to create models that are robust to inter-subject and inter-session variability without requiring burdensome user-specific calibration.
+Furthermore, validation must move beyond the laboratory.
+Studies conducted in more naturalistic, uncontrolled settings, such as the at-home gaming paradigm explored by Moinnereau et al. \cite{moinnereauInstrumentingVirtualReality2022}, are crucial for assessing the real-world viability of these systems.
+
+Fourth, there is a critical need to innovate on the measurement of ground truth.
+The field's heavy reliance on subjective questionnaires is a persistent limitation.
+Future work should focus on developing and validating objective, implicit behavioral markers of cybersickness that can supplement or, in some cases, replace subjective reports.
+These could include metrics derived from user behavior within the VR environment, such as changes in task performance, head motion dynamics (e.g., freezing or reduced exploration), or eye-tracking metrics (e.g., blink rate, saccadic velocity).
+Integrating these behavioral measures with neurophysiological signals could provide a more holistic and objective picture of the user's state.
+
+Finally, the field should adopt longitudinal study designs to investigate adaptation and recovery.
+The vast majority of studies are single-session experiments, leaving the neurodynamics of how users adapt to VR over time, or "get their VR legs", largely unknown.
+Multi-session, longitudinal studies are needed to track the neural changes that accompany this adaptation process.
+Similarly, while a handful of studies have examined the recovery period immediately following exposure \cite{wooRecoveryTimeVR2023, miyazakiRestingstateFunctionalConnectivity2021}, a deeper understanding of the neural mechanisms governing the dissipation of symptoms is required to develop effective post-exposure recovery strategies.

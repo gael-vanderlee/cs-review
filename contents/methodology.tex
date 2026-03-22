@@ -1,0 +1,64 @@
+\subsection{Search Strategy}
+A systematic literature search was conducted on March 27, 2025, to identify all relevant peer-reviewed articles.
+The search was performed across three major academic databases: PubMed, Web of Science, and Scopus.
+No date restrictions were applied to ensure a comprehensive historical overview of the field.
+The following search query, designed to capture studies at the intersection of BCI and cybersickness, was utilized:
+
+\begin{lstlisting}
+(Brain Computer Interface OR EEG OR electroencephalogram OR neuromarkers OR MEG OR fMRI OR ECoG OR fNIRS) 
+AND 
+(Cybersickness OR ((virtual reality OR VR) AND motion sickness) OR simulator sickness OR visually induced motion sickness OR Virtual Reality Motion Sickness)
+\end{lstlisting}
+
+\subsection{Study Selection and Eligibility Criteria}
+The initial search yielded a total of 360 articles.
+Following the removal of 119 duplicate entries, 241 unique records remained for screening.
+This systematic review was conducted in accordance with the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) 2020 statement, an evidence-based guideline for transparent and complete reporting. 
+This framework enables readers to appraise the review's methodological quality and to ensure the reproducibility of the search and selection strategy.
+The full selection process is detailed in the PRISMA flow diagram (Figure~\ref{fig:prisma}).
+
+\begin{figure*}[hbt!]
+    \centering
+    \includegraphics[width=\textwidth]{figures/prisma.pdf}
+    \caption{PRISMA flow diagram illustrating the study identification, screening, eligibility, and inclusion process.}
+    \label{fig:prisma}
+\end{figure*}
+
+Each of the 241 records underwent a manual screening process based on titles and abstracts to assess relevance according to predefined eligibility criteria.
+The inclusion criteria for this review were as follows:
+\begin{itemize}
+    \item The study employed a neuroimaging or BCI methodology (e.g., EEG, fMRI, fNIRS) to measure brain activity.
+    \item The study focused on cybersickness or a closely related term (e.g., VIMS, simulator sickness) within a VR or simulated environment.
+    \item The study presented original empirical data from a human-subject study.
+\end{itemize}
+
+Conversely, articles were excluded if they met any of the following criteria:
+\begin{itemize}
+    \item The work was non-empirical, such as literature reviews, meta-analyses, editorials, letters, or conference abstracts without a corresponding full paper.
+    \item The full text of the article was unobtainable.
+\end{itemize}
+
+This screening process resulted in the exclusion of 155 articles, leaving 91 for full-text assessment.
+An additional two relevant articles were identified through manual citation searching and included.
+Of these 93 articles, 10 were subsequently removed due to the unavailability of their full text.
+This resulted in a final corpus of 83 peer-reviewed articles for detailed analysis.
+
+\subsection{Data Extraction and Thematic Synthesis}
+For each of the 83 included articles, a structured data extraction process was performed to systematically capture and catalogue key information.
+This process was guided by a predefined protocol designed to ensure consistency and facilitate subsequent comparison and synthesis.
+The following data points were extracted from each paper:
+\begin{enumerate}
+    \item \textbf{Summary of Contribution:} A concise summary of the study's primary objective and its main contribution to the field of BCI-based cybersickness research.
+    \item \textbf{Cybersickness Measurement:} The methods used to measure or label cybersickness, distinguishing between subjective questionnaires (e.g., SSQ, FMS) and objective physiological or behavioral metrics (e.g., galvanic skin response, postural sway).
+    \item \textbf{BCI Methodology:} A detailed breakdown of the neuroimaging pipeline, including: (a) the measurement modality (e.g., EEG, fMRI), (b) the key feature extraction techniques (e.g., power spectral density, event-related potentials, functional connectivity), and (c) the primary analysis or classification methods (e.g., statistical tests, machine learning models).
+    \item \textbf{Theoretical Framework:} The explicitly stated or implicitly assumed theory of cybersickness (e.g., Sensory Conflict, Postural Instability) that guided the study's design or interpretation of results.
+    \item \textbf{Quantitative Performance:} Reported performance measures, such as classification accuracy, correlation coefficients (e.g., PLCC, SROCC), root mean square error (RMSE), or statistical significance values.
+    \item \textbf{Empirical Study Details:} For empirical studies, specific details of the experimental protocol, including the VR environment, display hardware, cybersickness-inducing stimulus, and the number of human subjects.
+    \item \textbf{Reported Shortcomings:} Any limitations, caveats, or weaknesses explicitly identified by the authors or apparent from the study's design.
+\end{enumerate}
+
+Following data extraction, a quantitative analysis was conducted to structure the review and identify overarching trends, methods, and results.
+To facilitate this synthesis, each paper was assigned to a primary research objective category.
+An initial set of objective categories was defined \textit{a priori} based on established research paradigms in the field.
+This set was iteratively refined during the data extraction process to accurately capture the full spectrum of research goals present in the literature.
+The final categories, which form the organizational structure of the subsequent results section, include: Classification (Binary, Likert, Continuous), Correlates (e.g., Brain Regions, Rhythms, Physiological), Mitigation (A/B Testing, Real-time), User Differences, Dataset Provision, Recovery, and studies on the Effects of Cybersickness on other cognitive or performance metrics.

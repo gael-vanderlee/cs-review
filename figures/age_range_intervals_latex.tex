@@ -1,0 +1,276 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=\columnwidth,
+    height=0.6\textheight,
+    xlabel={Age (years)},
+    ylabel={Studies},
+    grid=major,
+    grid style={dashed,gray!30},
+    tick style={font=\footnotesize},
+    label style={font=\small},
+    title style={font=\normalsize},
+    title={Age Distribution: Range and Standard Deviation},
+    ytick={0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48},
+    yticklabels={\cite{huaDetectionVirtualReality2024},\cite{chaiEEGStudyVirtual2023},\cite{shenClassificationVisuallyInduced2024},\cite{dasdemirClassificationEmotionalImmersive2023},\cite{dasdemirLocomotionTechniquesEEG2023},\cite{huaEEGClassificationModel2024},\cite{liExploringNeuralBiomarkers2023},\cite{linEEGEffectsMotion2007},\cite{zhouBrainActivityDifferences2023},\cite{liEEGbasedEvaluationMotion2022},\cite{chenSpatialTemporalEEG2010},\cite{chenMotionSicknessRelatedBrain2009},\cite{weiImplementationMotionSickness2011},\cite{xuAssessingEffectsFullbody2019},\cite{fengComprehensiveExplorationMotion2025},\cite{huaSiamLSTMModelMultichannel2024},\cite{huaAssessmentVirtualReality2023},\cite{liMachineLearningAssessment2019},\cite{yangPredictionDetectionVirtual2023},\cite{kimCharacteristicChangesPhysiological2005},\cite{mimnaughVirtualRealitySickness2023},\cite{tianWhoSaysYou2024},\cite{parkLongTermStudySimulator2008},\cite{minPsychophysiologicalEvaluationSimulator2004},\cite{molefiTranscutaneousAuricularVagus2025},\cite{ozkanEffectsSpeedComplexity2023},\cite{recentiPredictingMotionSickness2021},\cite{jangEstimatingObjectiveEEG2022},\cite{leeUnsupervisedEEGCybersickness2020},\cite{wooRecoveryTimeVR2023},\cite{namElectroencephalogramMicrostatesFunctional2022},\cite{yeoEEGbasedAnalysisVarious2022},\cite{yeoInvestigatingCorticalActivity2024},\cite{yamamuraHemodynamicVRAdaptingUsers2021a},\cite{changIdentifyingPhysiologicalCorrelates2022},\cite{liuExploringBrainPhysiological2024},\cite{limTestretestReliabilityVirtual2021},\cite{demirelSubjectivityContinuousCybersickness2025},\cite{khoirunnisaaChannelSelectionEEGBased2018},\cite{cortesEEGbasedExperimentVR2023a},\cite{wuInhibitionrelatedN2P32020},\cite{andrievskaiaExploringNeurophysiologicalCorrelates2023},\cite{krokosQuantifyingVRCybersickness2022},\cite{napadowBrainCircuitryUnderlying2013},\cite{argasinskiElectroencephalographicEEGCorrelates2023},\cite{nurnbergerMismatchVisualVestibularInformation2021},\cite{moinnereauInstrumentingVirtualReality2022},\cite{ahnTemporalDynamicsVisually2020},\cite{molefiVibromotorReprocessingTherapy2022}},
+    yticklabel style={font=\tiny},
+    xmin=14.6,
+    xmax=51.7,
+    enlarge y limits=0.05,
+    legend pos=south east,
+    legend style={font=\tiny},
+]
+
+% Mean points
+\addplot[only marks, mark=*, mark size=2pt, black] coordinates {
+    (20.4, 0)
+    (20.4, 1)
+    (21.32, 2)
+    (21.44, 3)
+    (21.44, 4)
+    (22.0, 5)
+    (22.0, 6)
+    (22.0, 7)
+    (22.1, 8)
+    (22.1, 9)
+    (22.1, 10)
+    (22.1, 11)
+    (22.1, 12)
+    (22.42, 13)
+    (22.8, 14)
+    (22.8, 15)
+    (22.8, 16)
+    (22.8, 17)
+    (23.0, 18)
+    (23.08, 19)
+    (23.11, 20)
+    (23.3, 21)
+    (23.4, 22)
+    (23.4, 23)
+    (23.7, 24)
+    (23.8, 25)
+    (23.8, 26)
+    (23.95, 27)
+    (24.04, 28)
+    (24.1, 29)
+    (24.1, 30)
+    (24.12, 31)
+    (24.17, 32)
+    (24.5, 33)
+    (24.65, 34)
+    (24.8, 35)
+    (25.0, 36)
+    (25.0, 37)
+    (25.11, 38)
+    (25.73, 39)
+    (25.8, 40)
+    (26.7, 41)
+    (27.0, 42)
+    (27.3, 43)
+    (28.1, 44)
+    (28.8, 45)
+    (28.9, 46)
+    (29.7, 47)
+    (29.88, 48)
+};
+\addlegendentry{Mean age}
+
+% Age range error bars (min-max)
+\draw[black, line width=1.0pt, densely dotted] (axis cs:18.0,3) -- (axis cs:30.0,3);
+\draw[black, line width=1.0pt] (axis cs:18.0,2.85) -- (axis cs:18.0,3.15);
+\draw[black, line width=1.0pt] (axis cs:30.0,2.85) -- (axis cs:30.0,3.15);
+\draw[black, line width=1.0pt, densely dotted] (axis cs:18.0,4) -- (axis cs:30.0,4);
+\draw[black, line width=1.0pt] (axis cs:18.0,3.85) -- (axis cs:18.0,4.15);
+\draw[black, line width=1.0pt] (axis cs:30.0,3.85) -- (axis cs:30.0,4.15);
+\draw[black, line width=1.0pt, densely dotted] (axis cs:19.0,5) -- (axis cs:25.0,5);
+\draw[black, line width=1.0pt] (axis cs:19.0,4.85) -- (axis cs:19.0,5.15);
+\draw[black, line width=1.0pt] (axis cs:25.0,4.85) -- (axis cs:25.0,5.15);
+\draw[black, line width=1.0pt, densely dotted] (axis cs:20.0,6) -- (axis cs:32.0,6);
+\draw[black, line width=1.0pt] (axis cs:20.0,5.85) -- (axis cs:20.0,6.15);
+\draw[black, line width=1.0pt] (axis cs:32.0,5.85) -- (axis cs:32.0,6.15);
+\draw[black, line width=1.0pt, densely dotted] (axis cs:18.0,7) -- (axis cs:26.0,7);
+\draw[black, line width=1.0pt] (axis cs:18.0,6.85) -- (axis cs:18.0,7.15);
+\draw[black, line width=1.0pt] (axis cs:26.0,6.85) -- (axis cs:26.0,7.15);
+\draw[black, line width=1.0pt, densely dotted] (axis cs:21.0,9) -- (axis cs:24.0,9);
+\draw[black, line width=1.0pt] (axis cs:21.0,8.85) -- (axis cs:21.0,9.15);
+\draw[black, line width=1.0pt] (axis cs:24.0,8.85) -- (axis cs:24.0,9.15);
+\draw[black, line width=1.0pt, densely dotted] (axis cs:21.0,10) -- (axis cs:24.0,10);
+\draw[black, line width=1.0pt] (axis cs:21.0,9.85) -- (axis cs:21.0,10.15);
+\draw[black, line width=1.0pt] (axis cs:24.0,9.85) -- (axis cs:24.0,10.15);
+\draw[black, line width=1.0pt, densely dotted] (axis cs:21.0,11) -- (axis cs:24.0,11);
+\draw[black, line width=1.0pt] (axis cs:21.0,10.85) -- (axis cs:21.0,11.15);
+\draw[black, line width=1.0pt] (axis cs:24.0,10.85) -- (axis cs:24.0,11.15);
+\draw[black, line width=1.0pt, densely dotted] (axis cs:19.0,13) -- (axis cs:29.0,13);
+\draw[black, line width=1.0pt] (axis cs:19.0,12.85) -- (axis cs:19.0,13.15);
+\draw[black, line width=1.0pt] (axis cs:29.0,12.85) -- (axis cs:29.0,13.15);
+\draw[black, line width=1.0pt, densely dotted] (axis cs:18.0,17) -- (axis cs:27.0,17);
+\draw[black, line width=1.0pt] (axis cs:18.0,16.85) -- (axis cs:18.0,17.15);
+\draw[black, line width=1.0pt] (axis cs:27.0,16.85) -- (axis cs:27.0,17.15);
+\draw[black, line width=1.0pt, densely dotted] (axis cs:18.0,18) -- (axis cs:33.0,18);
+\draw[black, line width=1.0pt] (axis cs:18.0,17.85) -- (axis cs:18.0,18.15);
+\draw[black, line width=1.0pt] (axis cs:33.0,17.85) -- (axis cs:33.0,18.15);
+\draw[black, line width=1.0pt, densely dotted] (axis cs:19.0,19) -- (axis cs:27.0,19);
+\draw[black, line width=1.0pt] (axis cs:19.0,18.85) -- (axis cs:19.0,19.15);
+\draw[black, line width=1.0pt] (axis cs:27.0,18.85) -- (axis cs:27.0,19.15);
+\draw[black, line width=1.0pt, densely dotted] (axis cs:18.0,20) -- (axis cs:50.0,20);
+\draw[black, line width=1.0pt] (axis cs:18.0,19.85) -- (axis cs:18.0,20.15);
+\draw[black, line width=1.0pt] (axis cs:50.0,19.85) -- (axis cs:50.0,20.15);
+\draw[black, line width=1.0pt, densely dotted] (axis cs:20.0,21) -- (axis cs:45.0,21);
+\draw[black, line width=1.0pt] (axis cs:20.0,20.85) -- (axis cs:20.0,21.15);
+\draw[black, line width=1.0pt] (axis cs:45.0,20.85) -- (axis cs:45.0,21.15);
+\draw[black, line width=1.0pt, densely dotted] (axis cs:20.0,22) -- (axis cs:28.0,22);
+\draw[black, line width=1.0pt] (axis cs:20.0,21.85) -- (axis cs:20.0,22.15);
+\draw[black, line width=1.0pt] (axis cs:28.0,21.85) -- (axis cs:28.0,22.15);
+\draw[black, line width=1.0pt, densely dotted] (axis cs:20.0,23) -- (axis cs:28.0,23);
+\draw[black, line width=1.0pt] (axis cs:20.0,22.85) -- (axis cs:20.0,23.15);
+\draw[black, line width=1.0pt] (axis cs:28.0,22.85) -- (axis cs:28.0,23.15);
+\draw[black, line width=1.0pt, densely dotted] (axis cs:18.0,24) -- (axis cs:49.0,24);
+\draw[black, line width=1.0pt] (axis cs:18.0,23.85) -- (axis cs:18.0,24.15);
+\draw[black, line width=1.0pt] (axis cs:49.0,23.85) -- (axis cs:49.0,24.15);
+\draw[black, line width=1.0pt, densely dotted] (axis cs:18.0,25) -- (axis cs:42.0,25);
+\draw[black, line width=1.0pt] (axis cs:18.0,24.85) -- (axis cs:18.0,25.15);
+\draw[black, line width=1.0pt] (axis cs:42.0,24.85) -- (axis cs:42.0,25.15);
+\draw[black, line width=1.0pt, densely dotted] (axis cs:25.0,37) -- (axis cs:37.0,37);
+\draw[black, line width=1.0pt] (axis cs:25.0,36.85) -- (axis cs:25.0,37.15);
+\draw[black, line width=1.0pt] (axis cs:37.0,36.85) -- (axis cs:37.0,37.15);
+\draw[black, line width=1.0pt, densely dotted] (axis cs:19.0,41) -- (axis cs:44.0,41);
+\draw[black, line width=1.0pt] (axis cs:19.0,40.85) -- (axis cs:19.0,41.15);
+\draw[black, line width=1.0pt] (axis cs:44.0,40.85) -- (axis cs:44.0,41.15);
+\draw[black, line width=1.0pt, densely dotted] (axis cs:21.0,43) -- (axis cs:49.0,43);
+\draw[black, line width=1.0pt] (axis cs:21.0,42.85) -- (axis cs:21.0,43.15);
+\draw[black, line width=1.0pt] (axis cs:49.0,42.85) -- (axis cs:49.0,43.15);
+\draw[black, line width=1.0pt, densely dotted] (axis cs:18.0,44) -- (axis cs:42.0,44);
+\draw[black, line width=1.0pt] (axis cs:18.0,43.85) -- (axis cs:18.0,44.15);
+\draw[black, line width=1.0pt] (axis cs:42.0,43.85) -- (axis cs:42.0,44.15);
+\draw[black, line width=1.0pt, densely dotted] (axis cs:23.0,45) -- (axis cs:37.0,45);
+\draw[black, line width=1.0pt] (axis cs:23.0,44.85) -- (axis cs:23.0,45.15);
+\draw[black, line width=1.0pt] (axis cs:37.0,44.85) -- (axis cs:37.0,45.15);
+\draw[black, line width=1.0pt, densely dotted] (axis cs:21.0,47) -- (axis cs:48.0,47);
+\draw[black, line width=1.0pt] (axis cs:21.0,46.85) -- (axis cs:21.0,47.15);
+\draw[black, line width=1.0pt] (axis cs:48.0,46.85) -- (axis cs:48.0,47.15);
+
+% Standard deviation error bars (mean ± std)
+\draw[gray, line width=1.0pt] (axis cs:18.9,0) -- (axis cs:21.9,0);
+\draw[gray, line width=1.0pt] (axis cs:18.9,-0.1) -- (axis cs:18.9,0.1);
+\draw[gray, line width=1.0pt] (axis cs:21.9,-0.1) -- (axis cs:21.9,0.1);
+\draw[gray, line width=1.0pt] (axis cs:18.9,1) -- (axis cs:21.9,1);
+\draw[gray, line width=1.0pt] (axis cs:18.9,0.9) -- (axis cs:18.9,1.1);
+\draw[gray, line width=1.0pt] (axis cs:21.9,0.9) -- (axis cs:21.9,1.1);
+\draw[gray, line width=1.0pt] (axis cs:19.05,2) -- (axis cs:23.59,2);
+\draw[gray, line width=1.0pt] (axis cs:19.05,1.9) -- (axis cs:19.05,2.1);
+\draw[gray, line width=1.0pt] (axis cs:23.59,1.9) -- (axis cs:23.59,2.1);
+\draw[gray, line width=1.0pt] (axis cs:19.32,3) -- (axis cs:23.560000000000002,3);
+\draw[gray, line width=1.0pt] (axis cs:19.32,2.9) -- (axis cs:19.32,3.1);
+\draw[gray, line width=1.0pt] (axis cs:23.560000000000002,2.9) -- (axis cs:23.560000000000002,3.1);
+\draw[gray, line width=1.0pt] (axis cs:19.32,4) -- (axis cs:23.560000000000002,4);
+\draw[gray, line width=1.0pt] (axis cs:19.32,3.9) -- (axis cs:19.32,4.1);
+\draw[gray, line width=1.0pt] (axis cs:23.560000000000002,3.9) -- (axis cs:23.560000000000002,4.1);
+\draw[gray, line width=1.0pt] (axis cs:19.75,8) -- (axis cs:24.450000000000003,8);
+\draw[gray, line width=1.0pt] (axis cs:19.75,7.9) -- (axis cs:19.75,8.1);
+\draw[gray, line width=1.0pt] (axis cs:24.450000000000003,7.9) -- (axis cs:24.450000000000003,8.1);
+\draw[gray, line width=1.0pt] (axis cs:21.7,14) -- (axis cs:23.900000000000002,14);
+\draw[gray, line width=1.0pt] (axis cs:21.7,13.9) -- (axis cs:21.7,14.1);
+\draw[gray, line width=1.0pt] (axis cs:23.900000000000002,13.9) -- (axis cs:23.900000000000002,14.1);
+\draw[gray, line width=1.0pt] (axis cs:21.7,15) -- (axis cs:23.900000000000002,15);
+\draw[gray, line width=1.0pt] (axis cs:21.7,14.9) -- (axis cs:21.7,15.1);
+\draw[gray, line width=1.0pt] (axis cs:23.900000000000002,14.9) -- (axis cs:23.900000000000002,15.1);
+\draw[gray, line width=1.0pt] (axis cs:21.7,16) -- (axis cs:23.900000000000002,16);
+\draw[gray, line width=1.0pt] (axis cs:21.7,15.9) -- (axis cs:21.7,16.1);
+\draw[gray, line width=1.0pt] (axis cs:23.900000000000002,15.9) -- (axis cs:23.900000000000002,16.1);
+\draw[gray, line width=1.0pt] (axis cs:18.9,18) -- (axis cs:27.1,18);
+\draw[gray, line width=1.0pt] (axis cs:18.9,17.9) -- (axis cs:18.9,18.1);
+\draw[gray, line width=1.0pt] (axis cs:27.1,17.9) -- (axis cs:27.1,18.1);
+\draw[gray, line width=1.0pt] (axis cs:21.029999999999998,19) -- (axis cs:25.13,19);
+\draw[gray, line width=1.0pt] (axis cs:21.029999999999998,18.9) -- (axis cs:21.029999999999998,19.1);
+\draw[gray, line width=1.0pt] (axis cs:25.13,18.9) -- (axis cs:25.13,19.1);
+\draw[gray, line width=1.0pt] (axis cs:16.24,20) -- (axis cs:29.98,20);
+\draw[gray, line width=1.0pt] (axis cs:16.24,19.9) -- (axis cs:16.24,20.1);
+\draw[gray, line width=1.0pt] (axis cs:29.98,19.9) -- (axis cs:29.98,20.1);
+\draw[gray, line width=1.0pt] (axis cs:18.9,21) -- (axis cs:27.700000000000003,21);
+\draw[gray, line width=1.0pt] (axis cs:18.9,20.9) -- (axis cs:18.9,21.1);
+\draw[gray, line width=1.0pt] (axis cs:27.700000000000003,20.9) -- (axis cs:27.700000000000003,21.1);
+\draw[gray, line width=1.0pt] (axis cs:21.599999999999998,22) -- (axis cs:25.2,22);
+\draw[gray, line width=1.0pt] (axis cs:21.599999999999998,21.9) -- (axis cs:21.599999999999998,22.1);
+\draw[gray, line width=1.0pt] (axis cs:25.2,21.9) -- (axis cs:25.2,22.1);
+\draw[gray, line width=1.0pt] (axis cs:21.599999999999998,23) -- (axis cs:25.2,23);
+\draw[gray, line width=1.0pt] (axis cs:21.599999999999998,22.9) -- (axis cs:21.599999999999998,23.1);
+\draw[gray, line width=1.0pt] (axis cs:25.2,22.9) -- (axis cs:25.2,23.1);
+\draw[gray, line width=1.0pt] (axis cs:17.0,24) -- (axis cs:30.4,24);
+\draw[gray, line width=1.0pt] (axis cs:17.0,23.9) -- (axis cs:17.0,24.1);
+\draw[gray, line width=1.0pt] (axis cs:30.4,23.9) -- (axis cs:30.4,24.1);
+\draw[gray, line width=1.0pt] (axis cs:18.240000000000002,25) -- (axis cs:29.36,25);
+\draw[gray, line width=1.0pt] (axis cs:18.240000000000002,24.9) -- (axis cs:18.240000000000002,25.1);
+\draw[gray, line width=1.0pt] (axis cs:29.36,24.9) -- (axis cs:29.36,25.1);
+\draw[gray, line width=1.0pt] (axis cs:22.6,26) -- (axis cs:25.0,26);
+\draw[gray, line width=1.0pt] (axis cs:22.6,25.9) -- (axis cs:22.6,26.1);
+\draw[gray, line width=1.0pt] (axis cs:25.0,25.9) -- (axis cs:25.0,26.1);
+\draw[gray, line width=1.0pt] (axis cs:21.29,28) -- (axis cs:26.79,28);
+\draw[gray, line width=1.0pt] (axis cs:21.29,27.9) -- (axis cs:21.29,28.1);
+\draw[gray, line width=1.0pt] (axis cs:26.79,27.9) -- (axis cs:26.79,28.1);
+\draw[gray, line width=1.0pt] (axis cs:21.8,29) -- (axis cs:26.400000000000002,29);
+\draw[gray, line width=1.0pt] (axis cs:21.8,28.9) -- (axis cs:21.8,29.1);
+\draw[gray, line width=1.0pt] (axis cs:26.400000000000002,28.9) -- (axis cs:26.400000000000002,29.1);
+\draw[gray, line width=1.0pt] (axis cs:21.8,30) -- (axis cs:26.400000000000002,30);
+\draw[gray, line width=1.0pt] (axis cs:21.8,29.9) -- (axis cs:21.8,30.1);
+\draw[gray, line width=1.0pt] (axis cs:26.400000000000002,29.9) -- (axis cs:26.400000000000002,30.1);
+\draw[gray, line width=1.0pt] (axis cs:21.32,31) -- (axis cs:26.92,31);
+\draw[gray, line width=1.0pt] (axis cs:21.32,30.9) -- (axis cs:21.32,31.1);
+\draw[gray, line width=1.0pt] (axis cs:26.92,30.9) -- (axis cs:26.92,31.1);
+\draw[gray, line width=1.0pt] (axis cs:20.8,32) -- (axis cs:27.540000000000003,32);
+\draw[gray, line width=1.0pt] (axis cs:20.8,31.9) -- (axis cs:20.8,32.1);
+\draw[gray, line width=1.0pt] (axis cs:27.540000000000003,31.9) -- (axis cs:27.540000000000003,32.1);
+\draw[gray, line width=1.0pt] (axis cs:23.23,33) -- (axis cs:25.77,33);
+\draw[gray, line width=1.0pt] (axis cs:23.23,32.9) -- (axis cs:23.23,33.1);
+\draw[gray, line width=1.0pt] (axis cs:25.77,32.9) -- (axis cs:25.77,33.1);
+\draw[gray, line width=1.0pt] (axis cs:22.169999999999998,34) -- (axis cs:27.13,34);
+\draw[gray, line width=1.0pt] (axis cs:22.169999999999998,33.9) -- (axis cs:22.169999999999998,34.1);
+\draw[gray, line width=1.0pt] (axis cs:27.13,33.9) -- (axis cs:27.13,34.1);
+\draw[gray, line width=1.0pt] (axis cs:21.2,35) -- (axis cs:28.400000000000002,35);
+\draw[gray, line width=1.0pt] (axis cs:21.2,34.9) -- (axis cs:21.2,35.1);
+\draw[gray, line width=1.0pt] (axis cs:28.400000000000002,34.9) -- (axis cs:28.400000000000002,35.1);
+\draw[gray, line width=1.0pt] (axis cs:22.8,36) -- (axis cs:27.2,36);
+\draw[gray, line width=1.0pt] (axis cs:22.8,35.9) -- (axis cs:22.8,36.1);
+\draw[gray, line width=1.0pt] (axis cs:27.2,35.9) -- (axis cs:27.2,36.1);
+\draw[gray, line width=1.0pt] (axis cs:19.7,37) -- (axis cs:30.3,37);
+\draw[gray, line width=1.0pt] (axis cs:19.7,36.9) -- (axis cs:19.7,37.1);
+\draw[gray, line width=1.0pt] (axis cs:30.3,36.9) -- (axis cs:30.3,37.1);
+\draw[gray, line width=1.0pt] (axis cs:22.13,39) -- (axis cs:29.330000000000002,39);
+\draw[gray, line width=1.0pt] (axis cs:22.13,38.9) -- (axis cs:22.13,39.1);
+\draw[gray, line width=1.0pt] (axis cs:29.330000000000002,38.9) -- (axis cs:29.330000000000002,39.1);
+\draw[gray, line width=1.0pt] (axis cs:23.900000000000002,40) -- (axis cs:27.7,40);
+\draw[gray, line width=1.0pt] (axis cs:23.900000000000002,39.9) -- (axis cs:23.900000000000002,40.1);
+\draw[gray, line width=1.0pt] (axis cs:27.7,39.9) -- (axis cs:27.7,40.1);
+\draw[gray, line width=1.0pt] (axis cs:20.38,41) -- (axis cs:33.019999999999996,41);
+\draw[gray, line width=1.0pt] (axis cs:20.38,40.9) -- (axis cs:20.38,41.1);
+\draw[gray, line width=1.0pt] (axis cs:33.019999999999996,40.9) -- (axis cs:33.019999999999996,41.1);
+\draw[gray, line width=1.0pt] (axis cs:19.0,42) -- (axis cs:35.0,42);
+\draw[gray, line width=1.0pt] (axis cs:19.0,41.9) -- (axis cs:19.0,42.1);
+\draw[gray, line width=1.0pt] (axis cs:35.0,41.9) -- (axis cs:35.0,42.1);
+\draw[gray, line width=1.0pt] (axis cs:19.8,43) -- (axis cs:34.8,43);
+\draw[gray, line width=1.0pt] (axis cs:19.8,42.9) -- (axis cs:19.8,43.1);
+\draw[gray, line width=1.0pt] (axis cs:34.8,42.9) -- (axis cs:34.8,43.1);
+\draw[gray, line width=1.0pt] (axis cs:22.490000000000002,44) -- (axis cs:33.71,44);
+\draw[gray, line width=1.0pt] (axis cs:22.490000000000002,43.9) -- (axis cs:22.490000000000002,44.1);
+\draw[gray, line width=1.0pt] (axis cs:33.71,43.9) -- (axis cs:33.71,44.1);
+\draw[gray, line width=1.0pt] (axis cs:25.400000000000002,45) -- (axis cs:32.2,45);
+\draw[gray, line width=1.0pt] (axis cs:25.400000000000002,44.9) -- (axis cs:25.400000000000002,45.1);
+\draw[gray, line width=1.0pt] (axis cs:32.2,44.9) -- (axis cs:32.2,45.1);
+\draw[gray, line width=1.0pt] (axis cs:26.0,46) -- (axis cs:31.799999999999997,46);
+\draw[gray, line width=1.0pt] (axis cs:26.0,45.9) -- (axis cs:26.0,46.1);
+\draw[gray, line width=1.0pt] (axis cs:31.799999999999997,45.9) -- (axis cs:31.799999999999997,46.1);
+\draw[gray, line width=1.0pt] (axis cs:17.08,48) -- (axis cs:42.68,48);
+\draw[gray, line width=1.0pt] (axis cs:17.08,47.9) -- (axis cs:17.08,48.1);
+\draw[gray, line width=1.0pt] (axis cs:42.68,47.9) -- (axis cs:42.68,48.1);
+
+% Legend entries
+\addlegendimage{gray, line width=1.0pt}
+\addlegendentry{Standard deviation}
+\addlegendimage{black, line width=1.0pt, densely dotted}
+\addlegendentry{Min/Max range}
+
+\end{axis}
+\end{tikzpicture}
+\caption{Age distribution across studies showing mean age (black dots) with age ranges (dotted black error bars) and standard deviations when available (solid gray error bars). The age range shows the minimum and maximum participant ages, while the standard deviation shows the typical spread around the mean age.}
+\label{fig:age_distribution}
+\end{figure}

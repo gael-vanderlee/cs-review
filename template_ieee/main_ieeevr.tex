@@ -1,0 +1,189 @@
+
+% \documentclass[journal]{template/vgtc}                     % final (journal style)
+%\documentclass[journal,hideappendix]{template/vgtc}        % final (journal style) without appendices
+\documentclass[review,journal]{template_ieee/vgtc}              % review (journal style)
+%\documentclass[review,journal,hideappendix]{template/vgtc} % review (journal style)
+%\documentclass[widereview]{template/vgtc}                  % wide-spaced review
+%\documentclass[preprint,journal]{template/vgtc}            % preprint (journal style)
+
+%% Uncomment one of the lines above depending on where your paper is
+%% in the conference process. ``review'' and ``widereview'' are for review
+%% submission, ``preprint'' is for pre-publication in an open access repository,
+%% and the final version doesn't use a specific qualifier.
+
+%% If you are submitting a paper to a conference for review with a double
+%% blind reviewing process, please use one of the ``review'' options and replace the value ``0'' below with your
+%% OnlineID. Otherwise, you may safely leave it at ``0''.
+\onlineid{1820}
+
+%% In preprint mode you may define your own headline. If not, the default IEEE copyright message will appear in preprint mode.
+%\preprinttext{To appear in IEEE Transactions on Visualization and Computer Graphics.}
+
+%% In preprint mode, this adds a link to the version of the paper on IEEEXplore
+%% Uncomment this line when you produce a preprint version of the article 
+%% after the article receives a DOI for the paper from IEEE
+%\ieeedoi{xx.xxxx/TVCG.201x.xxxxxxx}
+
+%% declare the category of your paper, only shown in review mode
+\vgtccategory{Methodological paper}
+
+%% please declare the paper type of your paper to help reviewers, only shown in review mode
+%% choices:
+%% * algorithm/technique
+%% * application/design study
+%% * evaluation
+%% * system
+%% * theory/model
+\vgtcpapertype{application/design study}
+
+%% Paper title.
+% \title{Mind in Motion: EEG Correlates of Vection Induced During Acceleration in Virtual Reality}
+\title{Towards the Automatic Detection of Vection in Virtual Reality Using EEG}
+% \rs{Electrophysiological markers of accelleration and vection in Virtual Reality: Implicatins for cybersickeness}
+%% Author ORCID IDs should be specified using \authororcid like below inside
+%% of the \author command. ORCID IDs can be registered at https://orcid.org/.
+%% Include only the 16-digit dashed ID.
+%% This is how authors are specified in the conference style
+\author{Gaël Van der Lee\thanks{e-mail: gael.vanderlee@univ-lille.fr}\\
+    \scriptsize University of Lille
+\and Anatole Lécuyer\\
+    \scriptsize Inria Rennes\thanks{anatole.lecuyer@inria.fr}
+\and Maxence Naud\\
+    \scriptsize University of Lille
+\and Reinhold Scherer\thanks{e-mail:r.scherer@essex.ac.uk}\\
+     \scriptsize University of Essex
+\and François Cabestaing\thanks{e-mail:francois.cabestaing@univ-lille.fr}\\
+    \scriptsize University of Lille
+\and Hakim Si-Mohammed\thanks{e-mail:hakim.simohammed@univ-lille.fr}\\
+    \scriptsize University of Lille}
+
+
+%% Abstract section.
+\abstract{%
+  \input{contents/abstract}
+  %
+  %% We recommend that you link to your supplemental material here in the abstract, as well
+  %% as in the Supplemental Materials section at the end.
+  
+}
+
+%% Keywords that describe your work. Will show as 'Index Terms' in journal
+%% please capitalize first letter and insert punctuation after last keyword
+\keywords{Human-centered computing, Human computer interaction (HCI), Interaction paradigms, Virtual reality}
+
+%% A teaser figure can be included as follows
+% \teaser{
+%   \centering
+%   \includegraphics[width=\linewidth, alt={A view of a city with buildings peeking out of the clouds.}]{CypressView}
+%   \caption{%
+%   	In the Clouds: Vancouver from Cypress Mountain.
+%   	Note that the teaser may not be wider than the abstract block.%
+%   }
+%   \label{fig:teaser}
+% }
+
+%% Uncomment below to disable the manuscript note
+%\renewcommand{\manuscriptnotetxt}{}
+
+%% Copyright space is enabled by default as required by guidelines.
+%% It is disabled by the 'review' option or via the following command:
+%\nocopyrightspace
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% LOAD PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Tell graphicx where to find files for figures when calling \includegraphics.
+%% Note that due to the \DeclareGraphicsExtensions{} call it is no longer necessary
+%% to provide the the path and extension of a graphics file:
+%% \includegraphics{diamondrule} is completely sufficient.
+\graphicspath{{figs/}{figures/}{pictures/}{images/}{./}{template_ieee/}} % where to search for the images
+
+%% Only used in the template examples. You can remove these lines.
+\usepackage{tabu}                      % only used for the table example
+\usepackage{booktabs}                  % only used for the table example
+\usepackage{lipsum}                    % used to generate placeholder text
+\usepackage{mwe}                       % used to generate placeholder figures
+
+%% We encourage the use of mathptmx for consistent usage of times font
+%% throughout the proceedings. However, if you encounter conflicts
+%% with other math-related packages, you may want to disable it.
+\usepackage{mathptmx}                  % use matching math font
+
+%% ----------------- My Packages ----------------- %%
+
+% To run some commands present in the .bib file
+\usepackage{manfnt}
+
+% Table from csv
+\PassOptionsToPackage{svgnames}{xcolor}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.18}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{soul}
+
+% Author comments
+\newcommand{\hsm}[1]{{\color{blue}{[H: #1]}}}
+\newcommand{\fc}[1]{{\color{red}{[F: #1]}}}
+\newcommand{\gv}[1]{{\color{orange}{[G: #1]}}}
+\newcommand{\rs}[1]{{\color{green}{[R: #1]}}}
+\newcommand{\al}[1]{{\color{violet}{[A: #1]}}}
+\newcommand{\changed}[1]{{\color{magenta}{#1}}}
+
+% Remove comments
+\renewcommand{\hsm}[1]{}
+\renewcommand{\fc}[1]{}
+\renewcommand{\gv}[1]{}
+\renewcommand{\rs}[1]{}
+\renewcommand{\al}[1]{}
+\renewcommand{\changed}[1]{#1}  % This will keep the changes but remove the color.
+
+
+% Capitalize section autorefs
+\newcommand\sectionautorefname{Section}
+
+% SVG support
+\usepackage{svg}
+
+% Merge footnotes
+% \usepackage{fixfoot}
+% \DeclareFixedFootnote*{\hidden}{Citation hidden for double-blind review}
+%% ----------------- End my Packages ----------------- %%
+
+\begin{document}
+
+\firstsection{Introduction}
+
+\maketitle
+
+%% \section{Introduction} %for journal use above \firstsection{..} instead
+\input{contents/introduction}
+\section{Related Work}\label{sec:related-works}
+\input{contents/related-work}
+
+\section{Experiment}\label{sec:methods}
+\input{contents/material-and-methods}
+
+\section{Results}\label{sec:results}
+\input{contents/results}
+
+\section{Discussion}\label{sec:discussion}
+\input{contents/discussion}
+
+\section{Conclusion}\label{sec:conclusion}
+\input{contents/conclusion}
+
+%% if specified like this, the section will be committed in review mode
+\acknowledgments{}
+
+% \bibliographystyle{template_ieee/abbrv}
+%\bibliographystyle{template_ieee/abbrv-doi}
+% \bibliographystyle{template_ieee/abbrv-doi-narrow}
+\bibliographystyle{template_ieee/abbrv-doi-hyperref}
+% \bibliographystyle{template_ieee/abbrv-doi-hyperref-narrow}
+
+\bibliography{references}
+
+\end{document}

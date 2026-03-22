@@ -1,0 +1,321 @@
+RE: TVCG-2025-09-0929, "The Neurophysiology of Cybersickness: A Review of BCI-based Characterization and Prediction"
+Manuscript Type: Survey
+
+Dear Mr. Lee,
+
+We have completed the review process of the above referenced paper for the IEEE Transactions on Visualization and Computer Graphics and recommend that your paper undergo a Major Revision.  
+
+Enclosed are your reviews. If you should choose to revise your paper, please prepare a separate document describing how each of the reviewers' and the associate editor’s comments are responded to in your revision and submit through ScholarOne Manuscripts by  
+
+                         22-May-2026.
+
+Please note, some reviewers may have recommended that you discuss additional literature when revising your manuscript. If you feel that the recommended literature does not contribute to the scholarly content of the article or is otherwise irrelevant, please note your concerns in your response to reviewer feedback.
+
+When you are ready to submit your revision, visit the following link:
+https://ieee.atyponrex.com/submission/submissionBoard/REX-PROD-2-DBBDDA3E-FE77-44D4-ACCA-710B61C786DF-57267BE2-D683-4F10-9F2C-E2D932AB2EAD-05688/current?idtype=external
+
+When submitting your revised manuscript, you will be able to respond to the comments made by the reviewer(s) in the space provided. You can use this space to document any changes you make to the original manuscript. In order to expedite the processing of the revised manuscript, please be as specific as possible in your response to the reviewer(s)'questions and comments. You may also upload your responses as separate files for review along with your revision.
+
+When the submission process is complete, you will receive an automated confirmation email immediately. If you did not receive that email, your submission is not yet complete.  
+
+The Administrator will contact you should we have any concerns or questions regarding your revision. Otherwise, your revision will be forwarded to the assigned Associate Editor with a request for a final decision.
+
+Please be mindful when making your revisions that you still need to maintain the size limitations for papers submitted to TVCG.  The manuscript types and submission length guidelines are found at,
+
+https://www.computer.org/csdl/journal/tg/write-for-us/15094?title=Author%20Information&periodical=IEEE%20Transactions%20on%20Vis
+
+We encourage you to use our double column template (regular papers 12 pages, with additional pages up to 18 with fee, survey papers 20 pages max) which can be found at,
+
+https://www.computer.org/csdl/journal/tg/write-for-us/15094?title=Author%20Information&periodical=IEEE%20Transactions%20on%20Vis
+
+Text in any color other than black is not acceptable. Your revised paper must include the following:
+
+- Abstract
+- Index terms
+- Author affiliation information
+- Main text
+- References
+- Figure captions
+- Table titles
+- Brief biography of each author
+(biographies are not required for concise papers or comments papers)
+
+NOTE: All materials must fit within the paging guidelines. Papers that exceed the page limit will be returned for further editing.
+
+Please do not hesitate in contacting me should you have any questions about our process or are experiencing technical difficulties. You can reach the Administrator, Dr. Soham Basu, at soham.basu@ieee.org.
+
+Thank you for your contribution to TVCG, and we look forward to receiving your revised manuscript.
+
+Sincerely,
+
+Dr. Wenping Wang, EIC
+IEEE Transactions on Visualization and Computer Graphics
+soham.basu@ieee.org
+**************
+
+Associate Editor
+Comments to the Author:
+Based on the reviews, I am recommending a major revision.  I strongly suggest reading carefully through the reviews and revising based on their recommendations. They were all highly detailed and very constructive. Although addressing these recommendations may be more work than usual for a survey paper getting a major revision, I believe it can be done in 3 months. To summarize their concerns, here are what I see as the main issues:
+
+Theoretical grounding: Several of the reviewers proposed ways that this manuscript could be better presented, with stronger theoretical grounding. That seems like a fairly easy revision. However, Reviewer 1 in particular suggests a rather extensive reframing, which may also affect the author's search terms, thereby requiring the authors to effectively redo a large part of the search.
+
+Missing references: All of the reviewers noted that there were a lot of missing references. Most notably, two of the reviewers recommended that the authors perform an additional literature search in the related area of neurostimulation, which was under-represented in the current search.
+
+Novelty: Perhaps the largest concern is from reviewer 1: "In 2023, Chang et al published a scoping review on brain activity during cybersickness. While the authors do cite this paper, they do not clearly state how and why the present review is needed and what it adds to the already existing review." I suggest that the authors very clearly state how their paper advances the field's understanding of this topic beyond this recent survey on seemingly the same topic.
+
+********************
+
+Reviewer Comments
+
+
+Reviewer: 1
+
+Recommendation: Author Should Prepare A Major Revision For A Second Review
+
+Comments:
+In their manuscript entitled “The neurophysiology of Cybersickness: A review of BCI-based characterization and prediction”, the authors present the results of a systematic review on neurophysiological studies (EEG, fMRI) in the context of cybersickness. A review of the topic is very timely, as cybersickness research has gained a lot of attention over the past years with many studies using neurophysiological measures to identify correlates or indicators of cybersickness. Thus, I really appreciate the authors’ efforts to summarize and analyze the current literature in this domain. Overall, the manuscript is well written and clearly structured. Importantly, the authors offer a critical evaluation of the problems this research area is facing, which to me is probably the most important part of this manuscript. The future recommendation are also very valuable.
+
+As much as I appreciate the authors’ effort, I do have a few serious concerns regarding the manuscript that need to be carefully addressed. These include:
+
+Major concerns:
+1. I am not convinced by the general framing of the manuscript. The authors repeatedly use BCI as their main narrative (even in the title), yet I cannot identify the relevance of BCI for this manuscript. Even though I am not an expert with BCI at all, my understanding of the concept of BCI is that neural signals will be translated into motor actions such as limb movement for patients recovering from stroke. If I am not mistaken, none of the studies included in this review did translate any neural signals into a certain action. Instead, these studies explored neurophysiological patterns or correlates to characterize cybersickness. I strongly recommend considering to replace the current BCUI-focused framing by simply focusing on cybersickness neurophysiology.
+
+2. I am also not convinced by the definition and terminology used for motion sickness and its subtypes, this section needs much more fine tuning. For instance, the authors state that many terms are used interchangeably and that their review considers findings across studies referring to cybersickness, Visually Induced Motion Sickness, Simulator Sickness, and Motion Sickness, where relevant. I have several comments with regards to this:
+
+a. I cannot see motion sickness as one of the terms included in the search string (page 2). Thus, neurophysiological studies on traditional motion sickness are most likely not included.
+
+b. I find it very odd to keep the umbrella term cybersickness in this review and say that it also comprises VIMS or simulator sickness. The authors can follow a simple distinction that I usually like to make in my own research work on motion sickness: Consider motion sickness the umbrella term that has two different types: classic motion sickness (with actual physical self-motion such as car sickness, sea sickness, space sickness etc) vs visually induced motion sickness (VIMS). The latter can be further categorized into simulator sickness, video gaming sickness, Cinerama sickness, and VR/cybersickness. Following this structure, I strongly recommend changing the wording from cybersickness to VIMS (and instead listing cybersickness, simulator sickness etc. as keywords).
+
+c. To introduce this complex terminology, I suggest to add relevant references that define and describe these constructs. These include:
+i. Kennedy, R. S., Drexler, J., & Kennedy, R. C. (2010). Research in visually induced motion sickness. Applied Ergonomics, 41(4), 494–503. https://doi.org/10.1016/j.apergo.2009.11.006
+ii. Keshavarz, B., & Golding, J. F. (2022). Motion sickness: Current concepts and management. Current Opinion in Neurology, 35(1), 107–112. https://doi.org/10.1097/WCO.0000000000001018
+iii. Lackner, J. R. (2014). Motion sickness: More than nausea and vomiting. Experimental Brain Research, 232(8), 2493–2510. https://doi.org/10.1007/s00221-014-4008-8
+iv. Cha, Y.-H., Golding, J. F., Keshavarz, B., Furman, J., Kim, J.-S., Lopez-Escamez, J. A., Magnusson, M., Yates, B. J., & Lawson, B. D. (n.d.). Motion sickness diagnostic criteria: Consensus Document of the Classification Committee of the Bárány Society. Journal of Vestibular Research, 31(5), 327–344. https://doi.org/10.3233/VES-200005
+
+3. At times, I found it difficult to fully capture the pattern of different studies that the authors refer to. Adding a table with the main details of the papers included in this review (separated by neurophysiological measure, sickness measure etc) would be very helpful and valuable. Maybe the plan is to add this as a supplementary file, but I suggest including it here in the paper.
+
+4. In 2023, Chang et al published a scoping review on brain activity during cybersickness. While the authors do cite this paper, they do not clearly state how and why the present review is needed and what it adds to the already existing review. This is crucial, as only a few years have passed since this review.
+
+5. Another concern that I have is the fit for the current journal. As this review is clearly not limited to cybersickness (see my previous point) and has a strong focus on neurophysiology, I wonder if TVCG is the best fit. I leave it to the editor to decide how good of a fit this study is.
+
+Other comments:
+- There is not really a vection theory of motion sickness. Hettinger et al. (1990) simply state that most of their participants (not even all of them, if I remember correctly) experienced vection when reporting motion sickness. This is in congruence with the sensory conflict theory. Again, I would refer to much better review papers for an overview of motion sickness theories than the ones cited here, such as the ones that I had mention above plus some chapters of the Handbook of Virtual Environments that provide great overviews:
+o Lawson, B. D. (2014). Motion sickness symptomatology and origins. In K. S. Hale & K. M. Stanney (Eds.), Handbook of Virtual Environments: Design, Implementation, and Applications (2nd ed., pp. 531–599). CRC Press.
+o Keshavarz, B., Hecht, H., & Lawson, B. D. (2014). Visually induced motion sickness: Characteristics, causes, and countermeasures. In K. S. Hale & K. M. Stanney (Eds.), Handbook of Virtual Environments: Design, Implementation, and Applications (2nd ed., pp. 648–697). CRC Press.
+
+- Although there is no vection theory of MS, there is another more recent theory that links unexpected vection to CS. This should be of relevance here:
+o Teixeira, J., Miellet, S., & Palmisano, S. (2022). Unexpected Vection Exacerbates Cybersickness During HMD-Based Virtual Reality. Frontiers in Virtual Reality, 3. https://www.frontiersin.org/articles/10.3389/frvir.2022.860919
+o Teixeira, J., Miellet, S., & Palmisano, S. (2025). Investigating the Relative Contributions of Unexpected Vection and Postural Instability to VR Cybersickness. International Journal of Human–Computer Interaction, 41(5), 3014–3030. https://doi.org/10.1080/10447318.2024.2330041
+
+- The statement that CS is more strongly associated with vection and disorientation in contrast to oculomotor or nausea-dominant profiles of SS or MS is simply not correct (page 2). First, vection is not a symptom, it is a different phenomenon. Second, oculomotor issues are highly prevalent in CS, so is nausea.
+
+- The references provided for the sensory conflict theory are poor. The authors should refer to the original work by Reason, Reason & Brand, or Oman when referring to the sensory conflict theory. The references here are somewhat arbitrary and random.
+
+- The poison theory does not explain how motion sickness occurs, but why. As such, this is not a competitor for motion sickness genesis like sensory conflict or postural instability. The authors should clarify this.
+
+- When referring to the FMS, the authors have to reference the original work (Keshavarz & Hecht, 2011), not random studies that used the scale.
+
+- It would be helpful to know how many of all the different studies in this review actually used EEG or fMRI (section B, page 5). Maybe this is listed somewhere, but it would be good to have it here in the text as well.
+
+- The authors state that fMRI studies have delineated a nausea network. Here, the authors have to relate this finding to other studies on nausea in the context of motion sickness, such as:
+o Yates, B. J., Catanzaro, M. F., Miller, D. J., & McCall, A. A. (2014). Integration of vestibular and emetic gastrointestinal signals that produce nausea and vomiting: Potential contributions to motion sickness. Experimental Brain Research, 232(8), 2455–2469. https://doi.org/10.1007/s00221-014-3937-6
+o Cohen, B., Dai, M., Yakushin, S. B., & Cho, C. (2019). The neural basis of motion sickness. Journal of Neurophysiology, 121(3), 973–982. https://doi.org/10.1152/jn.00674.2018
+o Schmäl, F. (2013). Neuronal mechanisms and the treatment of motion sickness. Pharmacology, 91(3–4), 229–241. https://doi.org/10.1159/000350185
+
+- At the same time, I find it complicated to refer to a nausea network based on a total of 4 fMRI studies.  Here, it might be useful to refer to neurophysiological studies on vection as well, as they do share some common neurological areas such as MT+ (see Berti, S., & Keshavarz, B. (2020). Neuropsychological Approaches to Visually-Induced Vection: An Overview and Evaluation of Neuroimaging and Neurophysiological Studies. Multisensory Research, 34(2), 153–186. https://doi.org/10.1163/22134808-bja10035)
+
+- I would move the section on ERPs up to go before fMRI studies, as ERPs are part of EEG measures.
+
+- I do not think that the section on other physiological correlates (page 8) is really needed. It is incomplete and does not add to the overall story. I suggest to remove.
+
+- Again, it would be helpful to know what “a substantial body of research…” (page 8) really means. How many studies? As I have mentioned previously, a table with all the papers would be helpful here.
+
+- I struggle quite a lot with the machine learning studies and their concept of accuracy. First, accuracy itself is not that meaningful if specificity and sensitivity are not individually reported and considered, which many of these studies unfortunately do not. Second, the cutoff to group participants into sick vs non-sick is very arbitrary (as the authors state in their limitations section), which questions the value of these studies. Something to consider when talking about accuracies.
+
+- Sex has been discussed in controversy in the literature, with many studies not finding difference between men and women (see Lawson, B. D., & Bolkhovsky, J. (2023). Attention Military/Commercial Simulation Developers, Users, & Trainers: Visually-induced or Motion-induced Sickness is not Necessarily More Severe for Women. Human Factors and Simulation, 83(83). https://doi.org/10.54941/ahfe1003571)
+
+- “Together, this research demonstrates that individual susceptibility to cybersickness
+
+- is not random but is rooted in measurable differences in baseline brain function, neural responses to sensory conflict, and demographic variables.” (page 11) – I find this statement too strong and not justified based on the literature. There are not many studies that investigated the resting state EEG with regards to susceptibility, and these studies used different approaches with different findings. Please rephrase this section.
+
+- Is section F (p 11) really necessary? I think the authors could consider removing this section, as it does not add much to the research question.
+
+- I fully second the authors hope to find objective measures for CS. However, CS and MS are subjective phenomena, and all objective measures would rely on subjective experiences first, which is per se complicated. The authors could list postural responses as one potential objective measure and pupil dilation as another eye-tracking measures.  
+
+
+Additional Questions:
+1. Which category describes this manuscript?: Research
+
+2. How relevant is this manuscript to the readers of this periodical? Please explain your rating under Public Comments below.: Interesting - but not very relevant
+
+1. Please explain how this manuscript advances this field of research and/or contributes something new to the literature. What do you see as the strongest and the weakest aspect of the paper? Please also comment on the paper’s novelty, its potential impact and, the replicability of the results and the method itself.: Please find my detailed review below.
+
+2. Is the manuscript technically sound? Please explain your answer under Public Comments below.: Partially
+
+1. Are the title, abstract, and keywords appropriate? Please explain under Public Comments below.: No
+
+2. Does the manuscript contain sufficient and appropriate references? Please explain and list missing references under Public Comments below.: Important references are missing; more references are needed
+
+If you are suggesting additional references they must be entered in the text box provided.  All suggestions must include full bibliographic information plus a DOI.
+
+
+If you are not suggesting any references, please type NA.: Please see references embedded in my review.
+
+3. Does the introduction state the objectives of the manuscript in terms that encourage the reader to read on? Please explain your answer under Public Comments below.: Yes
+
+4. How would you rate the organization of the manuscript? Is it focused? Is the length appropriate for the topic? Please explain under Public Comments below.: Could be improved
+
+5. Please rate the readability of the manuscript. Explain your rating under Public Comments below.: Easy to read
+
+6. Should the supplemental material be included? (Click on the Supplementary Files icon to view files): Does not apply, no supplementary files included
+
+7. If yes to 6, should it be accepted:
+
+Please rate the manuscript. Explain your choice.: Good
+
+
+Reviewer: 2
+
+Recommendation: Author Should Prepare A Minor Revision
+
+Comments:
+This is a timely paper that provides an extensive and valuable review of a rapidly growing research field. The Discussion section is a particular strength, offering constructive suggestions for future work. My primary concern, however, relates to the treatment of neurostimulation, where several highly relevant studies—some of which also incorporate EEG—appear to have been omitted.
+
+Major Point
+Search strategy and omission of neurostimulation literature
+In Section III, the search strategy does not appear to include any terms related to neurostimulation. It is unclear why this domain was excluded, particularly given that neurostimulation is explicitly discussed in the Results (Section IVE2) and can be considered as part of a BCI. Given the substantial conceptual overlap between neurostimulation, EEG, and vestibular processing in VR sickness research, I believe the review would be strengthened by explicitly incorporating this literature into the review. I’m not sure whether this would require a new search or whether they can be simply added. In any case, below are papers that I believe are missing related to EEG, neurostimulation, or both:
+• Benelli, A., Neri, F., Cinti, A., Pasqualetti, P., Romanella, S. M., Giannotta, A., … & Rossi, S. (2023). Frequency-dependent reduction of cybersickness in virtual reality by transcranial oscillatory stimulation of the vestibular cortex. Neurotherapeutics, 20(6), 1796–1807.
+• Li, G., McGill, M., Grant, A., Poehlmann, K., Holden, R., Brewster, S., & Pollick, F. (2025). Reduced motion sickness using vestibular EEG-guided tACS under mismatched physical rotation and VR visual motion. IEEE Transactions on Intelligent Transportation Systems, 26(8), 11603–11618. https://doi.org/10.1109/tits.2025.3578521
+• Li, G., Byeon, H. R., Cho, S. B., & Pollick, F. (2025). VR cybersickness classification using machine learning models on open-access EEG datasets from the human vestibular network. In Proceedings of the 2025 IEEE International Conference on Artificial Intelligence and eXtended and Virtual Reality (AIxVR) (pp. 171–175).
+• Li, G., Onuoha, O., McGill, M., Brewster, S., Chen, C. P., & Pollick, F. (2021). Comparing autonomic physiological and electroencephalography features for VR sickness detection using predictive models. In 2021 IEEE Symposium Series on Computational Intelligence (SSCI). https://doi.org/10.1109/SSCI50451.2021.9660126
+• Li, G., McGill, M., Brewster, S., Chen, C. P., Anguera, J. A., Gazzaley, A., & Pollick, F. (2021). Multimodal biosensing for vestibular network-based cybersickness detection. IEEE Journal of Biomedical and Health Informatics, 26(6), 2469–2480.
+
+Of particular concern is that Section IVB discusses the potential of tACS to modulate neural oscillations, yet the omitted literature is already operating within this “future” research space. While it may be reasonable to exclude Benelli et al. (2023) on the grounds that it involves tACS without EEG, I believe the remaining studies fall within the review’s stated scope and should be acknowledged.
+
+Minor Points
+1. Section IIB (fNIRS temporal resolution)
+The current wording suggests that fNIRS has superior temporal resolution compared to fMRI. As both techniques rely on haemodynamic responses, their effective temporal resolution is broadly comparable. Clarifying this would improve accuracy.
+2. Page 7, Section IVB2 (fNIRS spatial limitations)
+It would be helpful to note that fNIRS cannot readily measure deep brain structures such as the amygdala or insula, which are often implicated in affective and vestibular processing.
+3. Page 11, Section IVD (gender differences)
+The statement that “several studies have consistently reported…” appears overly strong. The literature is mixed:
+o Kourtesis et al. (2023) report no gender differences when controlling for video game experience.
+o Kelly et al. (2023) conclude that gender effects exist but are modest in magnitude.
+Citing one or more review papers and qualifying the claim would improve balance on this point.
+o Kelly, J. W., Gilbert, S. B., Dorneich, M. C., & Costabile, K. A. (2023). Gender differences in cybersickness: Clarifying confusion and identifying paths forward. IEEE VRW, 283–288. https://doi.org/10.1109/VRW58643.2023.00067
+o Kourtesis, P., Amir, R., Linnell, J., Argelaguet, F., & MacPherson, S. E. (2023). Cybersickness, cognition, & motor skills. IEEE Transactions on Visualization and Computer Graphics, 29(5), 2326–2336.
+4. Classical theories of motion sickness
+While the major theories of motion sickness and cybersickness are discussed, several foundational citations are missing. Including these would strengthen the theoretical grounding:
+o Oman, C. M. (1990). Motion sickness: A synthesis and evaluation of the sensory conflict theory.
+o Reason, J. T., & Brand, J. J. (1975). Motion sickness.
+o Reason, J. T. (1978). Motion sickness adaptation: A neural mismatch model.
+o Riccio, G. E., & Stoffregen, T. A. (1991). An ecological theory of motion sickness.
+o Stoffregen, T. A., & Smart, L. J. (1998). Postural instability precedes motion sickness.
+
+
+Additional Questions:
+1. Which category describes this manuscript?: Survey
+
+2. How relevant is this manuscript to the readers of this periodical? Please explain your rating under Public Comments below.: Very Relevant
+
+1. Please explain how this manuscript advances this field of research and/or contributes something new to the literature. What do you see as the strongest and the weakest aspect of the paper? Please also comment on the paper’s novelty, its potential impact and, the replicability of the results and the method itself.: The field of BCI for the measurement and mitigation of cybersickness is a large field with publications in many areas. This manuscript provides an authoritative review that will be helpful to advance the field.
+
+2. Is the manuscript technically sound? Please explain your answer under Public Comments below.: Yes
+
+1. Are the title, abstract, and keywords appropriate? Please explain under Public Comments below.: Yes
+
+2. Does the manuscript contain sufficient and appropriate references? Please explain and list missing references under Public Comments below.: Important references are missing; more references are needed
+
+If you are suggesting additional references they must be entered in the text box provided.  All suggestions must include full bibliographic information plus a DOI.
+
+
+If you are not suggesting any references, please type NA.: Benelli, A., Neri, F., Cinti, A., Pasqualetti, P., Romanella, S. M., Giannotta, A., ... & Rossi, S. (2023). Frequency-dependent reduction of cybersickness in virtual reality by transcranial oscillatory stimulation of the vestibular cortex. Neurotherapeutics, 20(6), 1796-1807.
+Li, G., McGill, M., Grant, A., Poehlmann, K., Holden, R., Brewster, S., & Pollick, F. (2025). Reduced motion sickness using vestibular EEG-guided tACS under mismatched physical rotation and VR visual motion. IEEE Transactions on Intelligent Transportation Systems, 26(8), 11603–11618. https://doi.org/10.1109/tits.2025.3578521
+Li, G., Byeon, H. R., Cho, S. B., & Pollick, F. (2025, January). VR Cybersickness Classification using Machine Learning Models on Open-Access EEG Datasets from the Human Vestibular Network. In 2025 IEEE International Conference on Artificial Intelligence and eXtended and Virtual Reality (AIxVR) (pp. 171-175). IEEE.
+Li, G., Onuoha, O., McGill, M., Brewster, S., Chen, C. P., & Pollick, F. (2021). Comparing autonomic physiological and electroencephalography features for VR sickness detection using predictive models. In 2021 IEEE Symposium Series on Computational Intelligence (SSCI). https://doi.org/10.1109/SSCI50451.2021.9660126
+Li, G., McGill, M., Brewster, S., Chen, C. P., Anguera, J. A., Gazzaley, A., & Pollick, F. (2021). Multimodal biosensing for vestibular network-based cybersickness detection. IEEE Journal of Biomedical and Health Informatics, 26(6), 2469-2480.
+
+J. W. Kelly, S. B. Gilbert, M. C. Dorneich and K. A. Costabile, "Gender differences in cybersickness: Clarifying confusion and identifying paths forward," 2023 IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (VRW), Shanghai, China, 2023, pp. 283-288, doi: 10.1109/VRW58643.2023.00067.
+
+3. Does the introduction state the objectives of the manuscript in terms that encourage the reader to read on? Please explain your answer under Public Comments below.: Yes
+
+4. How would you rate the organization of the manuscript? Is it focused? Is the length appropriate for the topic? Please explain under Public Comments below.: Satisfactory
+
+5. Please rate the readability of the manuscript. Explain your rating under Public Comments below.: Easy to read
+
+6. Should the supplemental material be included? (Click on the Supplementary Files icon to view files): Does not apply, no supplementary files included
+
+7. If yes to 6, should it be accepted: After revisions.  Please include explanation under Public Comments below.
+
+Please rate the manuscript. Explain your choice.: Excellent
+
+
+Reviewer: 3
+
+Recommendation: Author Should Prepare A Major Revision For A Second Review
+
+Comments:
+This survey provides a timely systematic review of the neurophysiological landscape of cybersickness and its characterization via Brain-Computer Interfaces. While the quantitative depth and identification of hardware-specific neural responses are commendable, the manuscript requires a more rigorous theoretical synthesis and a broader bibliographic scope to meet the standards of TVCG I recommend a Major Revision.
+
+---
+
+### **Strengths**
+
+**Quantitative Aggregation**: The authors provide a meticulous breakdown of experimental characteristics. This includes an insightful analysis of EEG channel configurations , participant demographics , and the substantial variability in signal preprocessing across the field.
+
+**Confounding Factors Analysis**: The investigation into how display technology and experiment protocols modulates neural markers is a highlight.
+
+**Systematic Rigor**: The adoption of the PRISMA 2020 statement ensures that the literature search and study selection process are transparent and reproducible.
+
+---
+
+### **Major Weaknesses**
+
+**Theoretical Disconnect**: There is a significant gap between the etiological theories introduced in Section II and the subsequent data synthesis. While the paper describes theories such as Sensory Conflict and Postural Instability, these frameworks are largely neglected in the Results and Discussion. Ironically, the authors correctly point out that many studies fail to state an explicit theoretical framework, yet this survey also falls short of re-categorizing existing findings through these theoretical lenses to provide a deeper synthesis.
+
+**Missing Research Fields (Neurostimulation)**: A major flaw is the omission of recent interventional research involving non-invasive brain stimulation. For instance, there is a growing body of work regarding tACS for mitigating motion sickness and cybersickness. Missing this line of inquiry is problematic for a survey focused on neurophysiology of cybersickness.
+
+**Missing Prediction Works**: The exclusion criteria for "original empirical data" may have inadvertently limited the scope of the machine learning results. Many significant advances in cybersickness prediction occur in AI-focused papers that utilize public datasets. By focusing only on human-subject experiments, the review provides an incomplete view of state-of-the-art computational models in the field.
+
+**Ref in Discussion**: The Discussion and Future Directions sections are narrative-heavy but lack sufficient references to the primary works cited in the survey. The discussion and future works of the survey should ground its future roadmap in specific, cited gaps within the defined corpus in the previous sections.
+
+---
+
+### **Minor Points and Inconsistencies**
+
+**PRISMA Discrepancy**: There is a conflict in the reporting of duplicate removal: the text states that 119 duplicates were removed , whereas the PRISMA flow diagram in Figure 1 lists 114.
+
+**Baseline Justification**: The critique of the "eyes-closed" baseline is valid, but it requires further clarification on why this specific practice confounds alpha suppression results (as it is also used in many other non-VR / non-motionsickness experiments) and what alternative baselines are recommended for immersive VR research.
+
+**Excluded Modalities**: The manuscript would benefit from a brief justification regarding the absence or exclusion of other neuroimaging modalities like PET or MEG, which have been relevant (albeit rare) to motion sickness research.
+
+
+Additional Questions:
+1. Which category describes this manuscript?: Survey
+
+2. How relevant is this manuscript to the readers of this periodical? Please explain your rating under Public Comments below.: Relevant
+
+1. Please explain how this manuscript advances this field of research and/or contributes something new to the literature. What do you see as the strongest and the weakest aspect of the paper? Please also comment on the paper’s novelty, its potential impact and, the replicability of the results and the method itself.: see my comment below
+
+2. Is the manuscript technically sound? Please explain your answer under Public Comments below.: Yes
+
+1. Are the title, abstract, and keywords appropriate? Please explain under Public Comments below.: Yes
+
+2. Does the manuscript contain sufficient and appropriate references? Please explain and list missing references under Public Comments below.: Important references are missing; more references are needed
+
+If you are suggesting additional references they must be entered in the text box provided.  All suggestions must include full bibliographic information plus a DOI.
+
+
+If you are not suggesting any references, please type NA.: see my comments below
+
+3. Does the introduction state the objectives of the manuscript in terms that encourage the reader to read on? Please explain your answer under Public Comments below.: Yes
+
+4. How would you rate the organization of the manuscript? Is it focused? Is the length appropriate for the topic? Please explain under Public Comments below.: Satisfactory
+
+5. Please rate the readability of the manuscript. Explain your rating under Public Comments below.: Easy to read
+
+6. Should the supplemental material be included? (Click on the Supplementary Files icon to view files): Does not apply, no supplementary files included
+
+7. If yes to 6, should it be accepted:
+
+Please rate the manuscript. Explain your choice.: Fair
