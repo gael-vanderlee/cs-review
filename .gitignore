@@ -1,0 +1,36 @@
+# macOS
+.DS_Store
+
+# latexmk output ($out_dir in latexmkrc)
+out/
+
+# LaTeX auxiliary and build products
+*.acn
+*.acr
+*.alg
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.glg
+*.glo
+*.gls
+*.idx
+*.ilg
+*.ind
+*.ist
+*.lof
+*.log
+*.lot
+*.nav
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+*.xdv
+
+# Regenerated sample PDFs next to IEEE TVCG template sources
+template_tvcg/*.pdf
