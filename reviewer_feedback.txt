@@ -278,11 +278,11 @@ This survey provides a timely systematic review of the neurophysiological landsc
 **Missing Prediction Works**: The exclusion criteria for "original empirical data" may have inadvertently limited the scope of the machine learning results. Many significant advances in cybersickness prediction occur in AI-focused papers that utilize public datasets. By focusing only on human-subject experiments, the review provides an incomplete view of state-of-the-art computational models in the field.
 
 **Ref in Discussion**: The Discussion and Future Directions sections are narrative-heavy but lack sufficient references to the primary works cited in the survey. The discussion and future works of the survey should ground its future roadmap in specific, cited gaps within the defined corpus in the previous sections.
-
+    
 ---
 
 ### **Minor Points and Inconsistencies**
-
+`
 **PRISMA Discrepancy**: There is a conflict in the reporting of duplicate removal: the text states that 119 duplicates were removed , whereas the PRISMA flow diagram in Figure 1 lists 114.
 
 **Baseline Justification**: The critique of the "eyes-closed" baseline is valid, but it requires further clarification on why this specific practice confounds alpha suppression results (as it is also used in many other non-VR / non-motionsickness experiments) and what alternative baselines are recommended for immersive VR research.
