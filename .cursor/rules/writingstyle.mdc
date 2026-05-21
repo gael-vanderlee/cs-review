@@ -1,0 +1,8 @@
+---
+alwaysApply: true
+---
+Writing Style Instructions for Latex:
+*   **Tone:** Formal, objective, and strictly factual.
+*   **Language:** Use precise, specific, and unambiguous terminology. All language must be **literal**, avoiding metaphors or figurative expressions.
+*   **Clarity:** Prioritize a clear and logical flow. The language must be precise without being convoluted, ensuring the core point is always understandable.
+*   **Objectivity Rules:** Strictly avoid all superlatives, exaggeration, emotional language, and **value judgments**. Do not characterize a subject with subjective descriptors (e.g., do not call a method "simple," "elegant," or "complex"). Present the facts and allow the reader to draw their own conclusions.
