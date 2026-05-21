@@ -35,6 +35,12 @@
 \newcommand{\al}[1]{{\color{violet}{[A: #1]}}}
 \newcommand{\changed}[1]{{\color{magenta}{#1}}}
 
+% Revision placeholder macro. Usage: \TODO[topic:tag]{current-or-best-guess}
+% Renders the value in bright red with the tag as a footnote-style marker so
+% unresolved items are visible in the compiled PDF and grep-able from source.
+% Phase 8 sweeps `\TODO` to zero before submission.
+\newcommand{\TODO}[2][?]{\textbf{\color{red}#2}\textsuperscript{\color{red}\tiny[TODO:#1]}}
+
 % Remove comments
 \renewcommand{\hsm}[1]{}
 \renewcommand{\fc}[1]{}
@@ -81,7 +87,7 @@
 % \bstctlcite{IEEEexample:BSTcontrol}  % Commented out - missing bibliography entry
 
 
-\title{The Neurophysiology of Cybersickness: A Review of BCI-based Characterization and Prediction}
+\title{The Neurophysiology of Cybersickness in Virtual Reality: A Systematic Review of Neural Correlates and Neurostimulation}
 
 \ifanonymous
 \author{Authors names removed for double-blind reviewing}

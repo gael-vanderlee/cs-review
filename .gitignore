@@ -4,6 +4,8 @@
 # latexmk writes to out/; track *.pdf there, ignore aux/logs via patterns below
 template_tvcg/out/
 
+revision_notes/assets/  
+
 # LaTeX auxiliary and build products
 *.acn
 *.acr
