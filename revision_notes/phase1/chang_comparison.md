@@ -1,6 +1,6 @@
 # Side job — Chang et al. (2023) comparison
 
-**Status**: COMPLETE (2026-05-21). Source PDF: [revision_notes/assets/Brain activity during cybersickness a scoping.pdf](assets/Brain%20activity%20during%20cybersickness%20a%20scoping.pdf). All claims below sourced from page numbers given.
+**Status**: COMPLETE (2026-05-21). Source PDF: [revision_notes/assets/Brain activity during cybersickness a scoping.pdf](../assets/Brain%20activity%20during%20cybersickness%20a%20scoping.pdf). All claims below sourced from page numbers given.
 
 ## Comparison matrix
 

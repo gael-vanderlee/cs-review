@@ -1,35 +1,42 @@
-\subsection{The Etiology of Cybersickness}
-The precise etiology of cybersickness remains a subject of investigation, with several theories proposed to explain its multifaceted nature.
-These theories are not always mutually exclusive and often provide complementary perspectives on the phenomenon.
+\subsection{Terminology and Etiological Frameworks}
+Before surveying the theories proposed to explain cybersickness, it is useful to delimit the construct itself and to distinguish it from related forms of sickness and from perceptual phenomena that often co-occur with it.
 
-The most dominant framework is the \textit{Sensory Conflict Theory}, which posits that cybersickness arises from a discrepancy between information received from different sensory channels, particularly the visual, vestibular, and proprioceptive systems \cite{davisSystematicReviewCybersickness2014, zhangMotionSicknessCurrent2016}.
-Several specific hypotheses branch from this core theory.
-The \textit{Vection conflict hypothesis} is more specific and states that the visual system needs to perceive vection while the vestibular and proprioceptive systems report a stationary or incongruent physical state to experience cybersickness \cite{hettingerVectionSimulatorSickness1990}.
-The \textit{Subjective Vertical Mismatch Theory} suggests a conflict between the perceived gravitational vertical and the one predicted by the brain based on visual cues \cite{blesMotionSicknessOnly1998}.
-The \textit{Rest Frame Conflict Hypothesis} attributes sickness to ambiguity in identifying a stable, stationary frame of reference within the environment \cite{protheroUnifiedApproachPresence2003}. 
-Furthermore, the \textit{Poison Theory} offers an evolutionary explanation, proposing that the brain misinterprets the sensory mismatch as a sign of neurotoxin ingestion, triggering a defensive response that includes nausea and vomiting \cite{treismanMotionSicknessEvolutionary1977}. % et pareil aussi pour cette citaiton
+Motion sickness is the broadest construct, encompassing adverse responses to both physical and visually specified motion \cite{lacknerMotionSicknessMore2014, keshavarzMotionSicknessCurrent2022}.
+Within it, visually induced motion sickness (VIMS) designates sickness elicited primarily by visual motion, including cases where physical body motion is absent or inconsistent with the visual scene \cite{kennedyResearchVisuallyInduced2010, chaMotionSicknessDiagnostic}.
+Cybersickness is most often treated as the VR-specific instance of VIMS; simulator sickness, gaming sickness, and related labels denote overlapping exposure contexts rather than distinct symptom categories \cite{cakirHandbookVirtualEnvironments2015, stanneyCybersicknessNotSimulator1997, rebenitschReviewCybersicknessApplications2016}.
+This review adopts the above hierarchy when introducing constructs, but reports each included study using the terminology its authors chose, in order to avoid imposing a uniform vocabulary on a literature that does not yet share one.
 
-A second prominent framework is the \textit{Postural Instability Theory}.
-This theory proposes that cybersickness is not a direct result of sensory mismatch, but rather a consequence of a prolonged inability to maintain stable postural control \cite{cortesEEGbasedExperimentVR2023a}.
-According to this view, the unfamiliar sensory dynamics of a virtual environment challenge the user's postural control system; the resulting instability, which can be measured objectively, precedes and predicts the subjective experience of sickness.
+Symptom measures in this literature must also be distinguished from related perceptual phenomena.
+The dominant instrument is the Simulator Sickness Questionnaire (SSQ), which yields nausea, oculomotor, and disorientation subscales \cite{kennedySimulatorSicknessQuestionnaire1993}; it is frequently complemented by the single-item Fast Motion Sickness Scale (FMS) for continuous, in-task ratings \cite{keshavarzValidatingEfficientMethod2011}.
+Broader diagnostic criteria for motion sickness and VIMS extend these subscales to gastrointestinal, thermoregulatory, arousal, dizziness or vertigo, headache, and visual or oculomotor domains \cite{chaMotionSicknessDiagnostic}.
+Distinct from these symptom measures, vection denotes the visually induced illusion of self-motion: it frequently covaries with sickness and figures in several etiological theories, but is not itself a symptom category \cite{hettingerVectionSimulatorSickness1990, keshavarzVectionVisuallyInduced2015}.
 
-Other theories focus on more specific physiological mechanisms.
-The \textit{Vergence-Accommodation Conflict} is a factor unique to stereoscopic displays like HMDs.
-It describes the mismatch between the distance at which the eyes converge to fuse a stereoscopic image and the fixed focal distance of the device's screen, leading to eyestrain and discomfort \cite{kramidaResolvingVergenceAccommodationConflict2016}. % pareil pour la citation
-The \textit{Eye Movement Theory} suggests that sickness is caused not by the sensory conflict itself, but by the specific patterns of eye movements (e.g., nystagmus, torsion) that are generated by the vestibular system in an attempt to compensate for the perceived motion \cite{ebenholtzMotionSicknessOculomotor1992}. 
+Several etiological frameworks have been proposed to explain cybersickness and the wider VIMS phenomenon; they are not mutually exclusive and often emphasise complementary mechanisms.
 
-More recently, these concepts have been integrated within a \textit{Predictive Coding Framework} \cite{nurnbergerMismatchVisualVestibularInformation2021}.
-This view re-contextualizes sensory conflict as a failure of predictive processing.
-The brain is conceptualized as a prediction engine, constantly generating models of the world to anticipate sensory inputs.
-When there is a persistent and unresolvable prediction error, a large discrepancy between expected and actual sensory signals, the brain fails to update its internal model.
-This failure to reconcile the conflict is hypothesized to manifest as the aversive experience of cybersickness.
+The most influential of these is \textit{sensory conflict theory}, which attributes sickness to inconsistency between visual, vestibular, and proprioceptive signals, or between current sensory input and the prior exposure history encoded by the observer \cite{reasonMotionSickness1975, reasonMotionSicknessAdaptation1978, omanMotionSicknessSynthesis1990}.
+Two refinements within this family further specify the nature of the conflict: subjective vertical mismatch frames it as a discrepancy between sensed and expected gravitational vertical \cite{blesMotionSicknessOnly1998}, while rest-frame conflict locates it in the observer's difficulty identifying a stable spatial reference \cite{protheroUnifiedApproachPresence2003}.
+This family is particularly pertinent to VR, where HMDs routinely present visual self-motion while vestibular and proprioceptive signals indicate little or no corresponding physical movement.
 
-\subsection{Neuroimaging Modalities for Cybersickness Research}
-While cybersickness assessment has traditionally relied on subjective measures such as questionnaires, the need for objective, real-time metrics has driven researchers toward neuroimaging approaches to measure corresponding brain activity.
-Electroencephalography (EEG) is the most widely adopted modality in the reviewed literature.
-Its principal advantages are its excellent temporal resolution, allowing for the tracking of rapid changes in neural dynamics, its portability, which facilitates studies in mobile and interactive VR paradigms \cite{cortesEEGbasedExperimentVR2023a, krokosQuantifyingVRCybersickness2022}, as well as its relative affordability.
-Functional Near-Infrared Spectroscopy (fNIRS) is an emerging optical imaging technique that measures hemodynamic changes in cortical blood flow.
-It offers a practical balance between temporal and spatial resolution and is notably more robust to motion artifacts than Functional Magnetic Resonance Imaging (fMRI), making it well-suited for cybersickness research involving movement \cite{yamamuraHemodynamicVRAdaptingUsers2021a, zhangAnalysisMotionSickness2020}.
-Finally, fMRI provides unparalleled spatial resolution, enabling the precise localization of activity in both cortical and subcortical structures.
-However, it also has a lower temporal resolution and requires the subject to be immobile, which can be problematic for the study of cybersickness.
-Despite these limitations, fMRI has been instrumental in identifying the core brain networks underlying nausea and sensory integration, such as the insular and cingulate cortices \cite{napadowBrainCircuitryUnderlying2013, toschiMotionSicknessIncreases2017}.
+A second framework, \textit{postural instability theory}, locates the cause of sickness not in sensory mismatch but in a sustained inability to maintain postural control under unfamiliar sensorimotor demands \cite{riccioEcologicalTheoryMotion1991, stoffregenPosturalInstabilityPrecedes1998}.
+The theory is most directly testable in VR paradigms involving standing, walking, or large-field optic flow, where body sway and control dynamics can be measured objectively and have been reported to precede or accompany subjective sickness \cite{cortesEEGbasedExperimentVR2023a}.
+A related strand of recent VR work returns to the role of vection itself, showing that sickness intensifies when visually induced self-motion violates the user's expected motion or control state \cite{teixeiraUnexpectedVectionExacerbates2022, teixeiraInvestigatingRelativeContributions2024}; vection is treated here as a perceptual condition that may contribute to sickness rather than as a separate theory of motion sickness in its own right.
+
+A further set of proposals address narrower mechanisms or different levels of explanation.
+Vergence-accommodation conflict identifies a mismatch between binocular convergence and the fixed focal distance of stereoscopic displays as a source of oculomotor discomfort \cite{kramidaResolvingVergenceAccommodationConflict2016}, while oculomotor theories more broadly relate sickness to specific eye-movement patterns, such as nystagmus or ocular torsion, evoked by the visual stimulus \cite{ebenholtzMotionSicknessOculomotor1992}.
+At an evolutionary level, Treisman's toxin-defense hypothesis explains why disturbed sensory integration should give rise to nausea and emesis, but does not specify the proximate sensory conditions that trigger them \cite{treismanMotionSicknessEvolutionary1977}.
+Finally, predictive-coding formulations recast sensory mismatch as a persistent prediction error between expected and observed input, offering a unifying computational vocabulary for the preceding theories \cite{nurnbergerMismatchVisualVestibularInformation2021}.
+
+\subsection{Neural Recording and Modulation Modalities}
+Cybersickness has historically been assessed through subjective reports, but a growing body of work uses neural recordings, and more recently non-invasive brain stimulation, to characterise the user's state during VR exposure or to actively modulate it.
+
+Electroencephalography (EEG) is the most widely used recording modality in this literature.
+Its high temporal resolution supports the study of spectral power, event-related potentials, and connectivity dynamics throughout the development of sickness, and its portability makes it compatible with HMD-based and other interactive VR paradigms \cite{cortesEEGbasedExperimentVR2023a, krokosQuantifyingVRCybersickness2022}.
+These strengths are offset by limited spatial specificity, particularly for deep vestibular and autonomic structures, and by methodological sensitivities, such as motion artifacts, electrode density, reference choice, and baseline selection, which constrain the interpretation of reported effects.
+
+Functional near-infrared spectroscopy (fNIRS) is an emerging optical technique that measures cortical hemodynamic changes via near-infrared light \cite{scholkmannReviewContinuousWave2014, PresentFutureUse}.
+It offers an intermediate trade-off between temporal and spatial resolution and tolerates moderate movement, making it well suited to VR paradigms such as HMD-based roller-coaster exposure, VR locomotion, or stereoscopic viewing \cite{yeoInvestigatingCorticalActivity2024, yamamuraHemodynamicVRAdaptingUsers2021, yamamuraPleasantLocomotionReducing2020, tanimuraEffectsLowResolution3D2019}.
+Because it relies on hemodynamic rather than electrical signals, its temporal resolution remains substantially lower than that of EEG, and its optical penetration restricts measurement to superficial cortical regions.
+
+Beyond recording, non-invasive neurostimulation has begun to be used to modulate sickness-relevant processes during VR or visually induced motion exposure.
+Reported approaches include galvanic vestibular stimulation, transcranial direct-current stimulation, transcranial alternating-current stimulation, and related techniques \cite{benelliFrequencyDependentReductionCybersickness2023}.
+By directly perturbing vestibular or cortical activity, these methods provide a causal complement to the correlational evidence offered by EEG and fNIRS.
