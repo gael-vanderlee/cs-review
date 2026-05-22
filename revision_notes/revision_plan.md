@@ -47,6 +47,13 @@ Planning document for the TVCG revision of TVCG-2025-09-0929. Effort tags: **S**
 - **Placeholders**: every unresolved value in source uses `\TODO[tag]{current-or-best-guess}`, rendered bright red in the PDF and grep-able from `contents/`. Tags use `topic:specifier` form (e.g. `\TODO[stat:alpha-p]{0.0036}`, `\TODO[chang:corpus-size]{n=??}`). Phase 8 sweeps `\TODO` to zero.
 - **Side jobs**: each phase has a "Side jobs" subsection listing verification / info-gathering tasks that must complete *before* drafting prose for that phase. Outputs land in `revision_notes/phaseN/<topic>.md` as bullet notes, not prose. Rule: no prose claim enters a `.tex` file without a corresponding side-job note backing it.
 - **Change log**: every phase appends to `revision_notes/change_log.md` (one line per change, tagged with the reviewer comment it addresses). Feeds Phase 9 response letter directly. Make sure to also keep the `TODO.md` file up to date
+- **Drafting workflow (per phase)**: gather → reverse-outline → target outline → delta → draft → light flow pass. Concretely:
+  1. **Gather** via the side-jobs listed for the phase. No prose yet.
+  2. **Reverse-outline** the existing prose into `phaseN/current_outline.md`: one bullet per existing paragraph capturing its role, opening, claims, and citations. Mechanical transcription, not judgement. Skip this step only for sections receiving surface tweaks (a few citations swapped, a sentence softened); for substantially reworked sections (at minimum Theory, Results, Discussion) it is required.
+  3. **Target outline** in `phaseN/outline.md`. Encodes flow, not just topics: per subsection, the argument it advances and its orienting sentence; per paragraph, its role (claim / evidence / refinement / consequence), what it opens with, what it hands to the next paragraph, and which side-job notes / corpus counts / citations anchor it. Ordering decisions (broader→narrower vs. punchline-last) made here. A paragraph with no anchor in side-job notes is flagged before drafting.
+  4. **Delta** in `phaseN/delta.md`: per current-outline paragraph, tag `keep / revise / restructure / replace / delete`, plus a list of `new` paragraphs from the target outline that have no current counterpart. Structural sibling of `claims_audit.md` (which does the same at the claim level). Delta is ratified with the user before drafting.
+  5. **Draft** into `contents/*.tex`, executing the delta. Structural reordering at this stage means the target outline was wrong — go back to step 3, do not improvise in prose.
+  6. **Light flow pass** with [prompts/improve-flow.md](../prompts/improve-flow.md) as a sentence-level polish only (its scope: smoothing, no structural change, word count stable). If the flow pass wants to reorder paragraphs or move content, that is a signal the outline needs revisiting, not a license to restructure in-place.
 
 ## Corpus-derived facts locked in Phase 0
 
@@ -109,7 +116,7 @@ Generate a single table of all 92 studies (modality, sample size, VR device, sti
   - `phase4/table_key_finding_rules.md` — define rules for the "key finding" column to keep cells ≤ ~12 words and avoid value-judgment language (per AGENTS.md). Use the `Main Contribution` field from `PDF_HighLevel_Analysis_GPT54.csv` as input; manual review pass before commit.
 
 ### Phase 5 — Results rewrite, corpus-grounded (L)
-Rewrite `contents/results.tex` against the regenerated stats:
+Regenerate every figure and statistic against the V4/Stim corpus *before* touching prose, then rewrite `contents/results.tex` against those outputs:
 - Replace narrative with counts everywhere (R1 High #7).
 - Move ERPs before fMRI (Medium #1).
 - Cut or merge "other physiological correlates" (Medium #2) and Section F (Medium #3) per Phase 0 decisions.
@@ -119,7 +126,9 @@ Rewrite `contents/results.tex` against the regenerated stats:
 - Soften sex/gender claims with Kelly 2023, Kourtesis 2023, Lawson & Bolkhovsky 2023 (High #12); rephrase the "not random" baseline-brain claim (High #13).
 - Justify eyes-closed critique and propose alternative baselines (High #10).
 - Addresses: **Critical #5 (part 2), #7, #8**; High #7, #8, #10, #11, #12, #13; Medium #1, #2, #3.
-- **Side jobs**:
+- **Side jobs (do first, in order)**:
+  - `phase5/figure_regeneration.md` — re-run every script under `review_scripts/analysis/` against `V4/Stim/Plots_Analysis_GPT54.csv` + `PDF_HighLevel_Analysis_GPT54.csv`. Produce a manifest mapping each figure in [figures/](figures/) to its generating script, input CSV columns, and the regenerated `unified_statistical_report.txt` section. Diff regenerated outputs against the prior draft's figures and flag any whose interpretation changes. Figures with no script or no clear V4-corpus provenance are flagged for removal or rebuild. **Blocks all other Phase 5 work.**
+  - `phase5/claims_audit.md` — walk every quantitative and qualitative claim currently in `contents/results.tex` (and any claim in `abstract.tex`/`introduction.tex` that depends on Results). Tag each as `keep` / `revise` / `discard` / `new` against the regenerated stats and the V4 corpus. Output is a checklist; the Results rewrite consumes it row by row. No claim survives into the new draft without an explicit tag.
   - `phase5/stats_provenance.md` — for every statistic that will appear in Results (or be referenced in Abstract/Discussion), record the exact source line in `unified_statistical_report.txt` or the relevant plot's underlying script, the numbers, and the test that produced it. No statistic enters prose without an entry here.
   - `phase5/eyes_closed_alternatives.md` — short literature check on what baselines are recommended for immersive VR EEG (R3 High #10). Identify 2–3 concrete alternatives before writing the critique.
   - `phase5/accuracy_audit.md` — for the classification papers (n=38 per `Primary_objective`), record which report sens/spec, which report AUC/F1, which only report accuracy, and which expose the sick/non-sick threshold. Drives the High #11 rewrite with actual counts.

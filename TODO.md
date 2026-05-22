@@ -23,7 +23,7 @@
    - Done: Hybrid policy adopted — VIMS introduced as umbrella term in Background/Theory; each cited paper's own term preserved in Results.
 7. `[R1, R3]` Comment: The synthesis of the included studies is difficult to follow, and a table of all reviewed studies would make the patterns, modalities, and sickness measures much clearer.
    - Decision: add a table of all studies.
-   - Done (decision): Table will appear in-text. Generation pending.
+   - Done: Generated landscape longtable of all 92 studies (8 columns: Ref, Modality, N, VR device, Stimulus, CS measure, Objective, Key finding) at `contents/tables/all_studies.tex`, `\input` from Results intro. Spans 4 landscape pages (2 over the 2-page allocation in Decision 13; tightening deferred to Phase 7). Per-row Key-finding cells hand-written from `Main Contribution` per `revision_notes/phase4/table_key_finding_rules.md`; all ≤12 words, banned-word audit clean. User review of cells pending.
 8. `[R3]` Comment: The Discussion and Future Directions sections are too narrative and are not grounded enough in the reviewed corpus.
 
 ## High priority
