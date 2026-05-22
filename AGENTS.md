@@ -17,10 +17,10 @@ User in the loop: When you are working on high level planning or important decis
 *   **Language:** Use precise, specific, and unambiguous terminology. All language must be **literal**, avoiding metaphors or figurative expressions.
 *   **Clarity:** Prioritize a clear and logical flow. The language must be precise without being convoluted, ensuring the core point is always understandable.
 *   **Objectivity Rules:** Strictly avoid all superlatives, exaggeration, emotional language, and **value judgments**. Do not characterize a subject with subjective descriptors (e.g., do not call a method "simple," "elegant," or "complex"). Present the facts and allow the reader to draw their own conclusions.
+*   **Flow:** Open each (sub)section with one orienting sentence stating its aim before any definition or detail. Move from larger to smaller (broader construct → narrower instance, dominant framework → refinements, general claim → consequence). Connect adjacent sentences with explicit logical links (cause, contrast, consequence) rather than juxtaposing standalone facts.
+*   **Vocabulary and structure:** Vary nouns when one would otherwise repeat more than 3–4 times in a paragraph. Use parallel structure when comparing siblings (e.g. modalities on the same axes). Cross-reference (`\autoref`) terms already introduced earlier rather than redefining them. Place each fact in the section where its topic belongs.
 
 **IMPORTANT**: Do not make assumptions or guess claims, numbers or citations. Each claim must be made not from something that is likely true, but from something that has been verified to be true. Run scripts, read sources, ask the user, be careful not to hallucinate.
-
-## Companion project
 
 The analysis pipeline lives in a sibling repo: `/mnt/Space/Projects/PhD/Latex/review_scripts` (see its own `AGENTS.md` for structure). It hosts search exports, the merge/screen/extract pipeline, and the figure/stats scripts. That repo was also used for a separate Vection review — **the Vection track is out of scope for this manuscript**; only the cybersickness track matters here.
 

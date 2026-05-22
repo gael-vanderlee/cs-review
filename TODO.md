@@ -10,10 +10,10 @@
    - Done: Chang comparison paragraph added to Introduction with four verified differentiators: corpus size (33 vs 92), search window (2021-09 vs 2025-03), modality coverage (EEG-only vs multi-modal incl. neurostim), and theoretical engagement scope.
 3. `[AE, R2, R3]` Comment: The search strategy appears to miss relevant neurostimulation literature, and the manuscript should clarify the scope regarding other modalities such as `PET` and `MEG`.
    - Decision: expand search terms to `Neurostimulation` and `PET`, and no further.
-   - Done (search): Search query updated to include neurostimulation terms (tDCS, tACS, TMS, GVS); 0 eligible PET and 0 MEG studies returned. Methods will state this explicitly.
+   - Done (search): Search query updated to include neurostimulation terms (tDCS, tACS, TMS, GVS); 0 eligible PET and 0 MEG studies returned. Methods now states this explicitly with the verbatim query and database search dates.
 4. `[R3]` Comment: The current eligibility criteria may exclude dataset-based prediction papers, which could make the prediction literature coverage incomplete.
    - Decision: Yes
-   - Done (scope decision): 6 dataset-reuse papers retained in corpus; Methods and Discussion will acknowledge these as borderline inclusions and note that pure-dataset ML prediction is a related but distinct literature.
+   - Done: 6 dataset-reuse papers retained in corpus; Methods acknowledges these as borderline inclusions and notes that pure-dataset ML prediction is a related but distinct literature focused on classification benchmarking rather than neuromarker discovery. Discussion pass still pending.
 5. `[AE, R1, R2, R3]` Comment: The theoretical grounding is not strong enough, and the theories introduced early are not sufficiently used to structure the synthesis in the Results and Discussion.
    - Decision: add papers to the theory discussion.
    - Decision: the results and discussion will explicitly address that an overwhelming majority of papers rely on sensory conflict theory.
@@ -29,6 +29,7 @@
 ## High priority
 
 1. `[R3]` Comment: There is a PRISMA inconsistency: the text reports `119` duplicates removed, while Figure 1 reports `114`.
+   - Done (prose): V3 counts replaced with the V4/Stim PRISMA flow (443 identified, 224 duplicates removed, 219 screened, 119 excluded at title/abstract, 100 sought for retrieval, 8 not retrieved, 92 included). Figure regeneration pending (flagged with \TODO[prisma:figure]).
 2. `[R1, R2]` Comment: Important references are missing across the theory and background sections, including foundational motion sickness references and more appropriate review sources.
    - Done: ~15 new references added and verified (Reason 1988/2002, Reason & Brand 1975, Oman 1990, Lackner 2014, Keshavarz & Golding 2022, Teixeira 2022/2025, Berti & Keshavarz 2020, Yates 2014, Cohen 2019, Schmäl 2013, Kennedy/Drexler/Kennedy 2010, Hettinger 1990, Lawson 2014, Keshavarz/Hecht/Lawson 2014).
 3. `[R1]` Comment: The manuscript refers to a `vection theory` of motion sickness, but Reviewer 1 argues this is not a correct characterization and suggests engaging instead with work on unexpected vection.
