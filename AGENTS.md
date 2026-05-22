@@ -9,6 +9,8 @@ The manuscript is under revision for TVCG; reviewer feedback is in [reviewer_fee
 
 When drafting Background/Theory, ask: *Could this sentence appear in a textbook chapter before the reader knows our search existed?* If it requires our CSV or screening, move it to Methods or Results.
 
+User in the loop: When you are working on high level planning or important decisions and encounter a non obvious choice where there are compromises, or the path hasn't been explicitely defined: **ask the user**. Do not make assumptions or decide for him, let the user steer the direction of this project. Likewise, if you need more information to produce a quality output: external papers, figures, information, ask the user.
+
 ## Writing Style Instructions for Latex
 
 *   **Tone:** Formal, objective, and strictly factual.
