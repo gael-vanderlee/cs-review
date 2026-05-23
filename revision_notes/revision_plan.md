@@ -53,7 +53,7 @@ Planning document for the TVCG revision of TVCG-2025-09-0929. Effort tags: **S**
   3. **Target outline** in `phaseN/outline.md`. Encodes flow, not just topics: per subsection, the argument it advances and its orienting sentence; per paragraph, its role (claim / evidence / refinement / consequence), what it opens with, what it hands to the next paragraph, and which side-job notes / corpus counts / citations anchor it. Ordering decisions (broader→narrower vs. punchline-last) made here. A paragraph with no anchor in side-job notes is flagged before drafting.
   4. **Delta** in `phaseN/delta.md`: per current-outline paragraph, tag `keep / revise / restructure / replace / delete`, plus a list of `new` paragraphs from the target outline that have no current counterpart. Structural sibling of `claims_audit.md` (which does the same at the claim level). Delta is ratified with the user before drafting.
   5. **Draft** into `contents/*.tex`, executing the delta. Structural reordering at this stage means the target outline was wrong — go back to step 3, do not improvise in prose.
-  6. **Light flow pass** with [prompts/improve-flow.md](../prompts/improve-flow.md) as a sentence-level polish only (its scope: smoothing, no structural change, word count stable). If the flow pass wants to reorder paragraphs or move content, that is a signal the outline needs revisiting, not a license to restructure in-place.
+  6. **Light flow pass** with [prompts/improve-flow.md](../prompts/improve-flow.md) as a sentence-level polish only (its scope: smoothing, no structural change, word count stable). If the flow pass wants to reorder paragraphs or move content, that is a signal the outline needs revisiting, not a license to restructure in-place. This pass should also make sure the tone and vocabulary is academic: no subjective assessments, no unsubstanciated adjectives, objective tone, factual reporting.
 
 ## Corpus-derived facts locked in Phase 0
 
@@ -136,10 +136,24 @@ Regenerate every figure and statistic against the V4/Stim corpus *before* touchi
 
 ### Phase 6 — Discussion + Future Directions rewrite (M)
 Re-anchor `contents/discussion.tex` and `contents/future.tex` in the cited corpus (no claims without a corpus-derived count or a cited paper). Add objective-measures caveat that CS/MS are intrinsically subjective; list postural sway and pupillometry as candidate objective signals (High #14). Use the Egger result and the publication-bias question to motivate concrete methodological recommendations.
-- Addresses: **Critical #8**; High #11, #14.
+
+**Content carried forward from Phase 5** (these are interpretive / recommendation-shaped claims that Phase 5 explicitly kept observational so they could be developed here):
+
+- **Eyes-closed baseline critique + alternatives** (R3 minor "Baseline Justification"). Phase 5 §3.1.5 P9 only states the prevalence (5/77 EEG studies). Phase 6 develops the full critique: why eyes-closed differs (alpha rebound — anchor Klimesch 2007 `65LDI5W8`, Barry 2007 `ZVG4XJXN`), and three recommended alternatives (eyes-open static-scene in HMD, pre-stimulus epochs, sham VR exposure) with in-corpus exemplars (Li 2023, Wu 2020, Takeuchi 2018) and a methodological anchor for "EEG works in HMD" (Gramann 2011 `PKWP4ZF7`). Full content already drafted in `phase5/eyes_closed_alternatives.md`.
+- **Classification metric/threshold recommendations** (R1 / R3 High #11). Phase 5 §3.3 P22+P26 only state the corpus counts (13/38 accuracy-only, 7/38 sens/spec, 10/38 AUC/F1, 19/38 threshold-exposed). Phase 6 develops the interpretive critique (accuracy is uninformative under class imbalance with arbitrary thresholds) and recommends what classification studies should report.
+- **Egger publication-bias interpretation + recommendations**. Phase 5 §3.6 P41 only states p=0.011. Phase 6 develops the caveats (Egger sensitive to heterogeneity in small-study samples) and the recommendations (pre-registration, null-finding venues, larger replication studies). One of the load-bearing pieces of Contribution #3.
+- **Gender / sex Discussion paragraph**. Phase 5 §3.4 P33 states the calibrated facts (3/92 F>M, 11/92 male-only, with Kelly/Lawson/Kourtesis context). Phase 6 engages with Kelly 2023's mediation/moderation framework as a *future-directions* prescription: large-sample studies, separate-by-sex reporting even when underpowered, mediator analyses (VIMSSQ, postural instability, IPD, gaming experience). Anchor `phase5/gender_findings_audit.md` + Kelly fulltext.
+- **Demoted Section-F content**. Recovery (Woo 2023, Miyazaki 2021 — 1 paragraph), Datasets (Kim 2019, Dasdemir 2023, Demirel 2025 + dataset-only acknowledgement per Decision 9 — 1 paragraph), Cognition (deduplicate against §3.2 ERP content; mention Mimnaugh / Wu / Berger findings in functional-impairment framing — 1 paragraph).
+
+- Addresses: **Critical #8**; High #10, #11, #12, #13, #14; R3 baseline justification; Medium #3.
 - **Side jobs**:
   - `phase6/discussion_citation_map.md` — for every paragraph slated for Discussion/Future, list which corpus papers it draws on; flag any paragraph that lacks specific citations before drafting.
   - `phase6/objective_measures_evidence.md` — short note on postural sway and pupillometry as candidate objective CS measures (R1 High #14): a few primary refs + what they actually claim.
+  - `phase6/eyes_closed_critique.md` — full draft of the eyes-closed critique paragraph + alternatives. Inputs: `phase5/eyes_closed_alternatives.md`, Barry 2007, Klimesch 2007, Gramann 2011 fulltexts.
+  - `phase6/classification_recommendations.md` — reporting-checklist recommendations for the 38-paper classification subset (sens/spec/AUC/F1 minimum set, threshold-disclosure, validation-scheme reporting). Inputs: `phase5/accuracy_audit.md` + audit CSV.
+  - `phase6/egger_interpretation.md` — funnel-plot interpretation caveats + concrete pre-registration / replication recommendations. Inputs: `unified_statistical_report.txt` PUB-01 + statistical-bias literature.
+  - `phase6/gender_recommendations.md` — Kelly's mediation/moderation framework operationalised as future-directions text. Inputs: Kelly 2023 fulltext, `phase5/gender_findings_audit.md`.
+  - `phase6/demoted_content.md` — three short paragraph drafts (Recovery, Datasets, Cognition) with dedup against §3.2 ERPs and §3.5 Mitigation already-cited material.
 
 ### Phase 7 — Page-fit + style sweep (S–M)
 Compile, measure against budget, cut. Sweep for value-judgment language and metaphor per AGENTS.md. Verify every figure/table is referenced and every claim has a citation or a corpus count.
@@ -161,6 +175,16 @@ Items deferred from earlier phases:
 
 ### Phase 9 — Response letter (S, draws on `revision_notes/change_log.md`)
 Structured **by theme**, not per reviewer (per meeting notes), with a per-comment cross-reference and a diff. Themes likely: framing & terminology, search & scope, theory grounding, all-studies table & corpus counts, methodological audit, missing references, minor corrections. Separate document.
+
+**Phase-5-specific themes to surface explicitly** (gathered during Phase 5 outline work):
+
+- **Hardware confounder reframe** — current paper reports alpha HMD-vs-Screen p=0.044, δ=0.455. Revised draft reports p=0.0036, δ=0.875 (large effect), plus new beta finding (p=0.015, δ=0.664). The headline R3 specifically praised was *understated* in the current paper — flag the upward revision.
+- **Gender claim reframe** — emphasize the §3.4 P33 change is **not a retraction** of the women-more-susceptible claim; it is a **calibration to a small effect detectable only in large samples** (Kelly 2023 r≈0.21; Lawson 37/76 = 48.7%; Kourtesis gaming-experience moderation). Useful framing for R1's High #12 / #13.
+- **Stim-duration test change** — old L338 (HMD-vs-Screen, U=242, p<0.001, Cohen's d=0.76) replaced with HMD-vs-non-HMD (U=364, p=0.0014, Cliff's δ=−0.467). Explain (a) the comparison rule changed (Screen-only had n=4, too small), (b) Cliff's δ adopted for consistency with the other two hardware tests.
+- **Reporting-gap counts placement** — explain why the metric/threshold counts (13/38 / 7/38 / 10/38 / 19/38) live inline in §3.3 instead of in §3.6, per R1's specific direction ("something to consider when talking about accuracies").
+- **Eyes-closed prevalence reframe** — the critique stands but the prevalence is 5/77 EEG studies, not the dominant pattern; cite R3's request for justification + alternatives and point at the Phase-6 Challenges paragraph + Barry 2007 + Gramann 2011.
+- **FLAG-G dropped finding** — the prior "driving 46.7% vs navigation 15.8% alpha-increase" claim does not reproduce against the V4 corpus (both 33.3%); silently removed from §3.6; mention in response letter for completeness.
+
 - Addresses: Editor letter Medium #6.
 
 ## Open risks carried into drafting
