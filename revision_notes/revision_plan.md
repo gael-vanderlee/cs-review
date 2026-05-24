@@ -36,10 +36,10 @@ Planning document for the TVCG revision of TVCG-2025-09-0929. Effort tags: **S**
     | References | 2 |
     | **Total** | **20** |
 
-14. **Contributions (3, locked)**:
+14. **Contributions (3, locked; #3 reframed in Phase 6)**:
     1. Most current and broadest systematic synthesis of cybersickness neuromarkers in VR (92 studies, includes neurostimulation alongside neuroimaging, post-dates Chang 2023).
-    2. Meta-analytic evidence that VR display hardware modulates band-power responses — VR-device type significantly affects alpha (p=0.0036, large effect) and beta (p=0.0146); reframes prior contradictions in the EEG-cybersickness literature as partly hardware-attributable.
-    3. Methodological audit of the field — detection of publication bias (Egger's test, p=0.011), prevalence of accuracy-only ML reporting, weak baselines — leading to concrete reporting recommendations.
+    2. Meta-analytic evidence that VR display hardware modulates band-power responses — HMD vs screen alpha Cliff's δ = 0.875 (p = 0.004, large effect) and beta δ = 0.664 (p = 0.015); reframes prior contradictions in the EEG-cybersickness literature as partly hardware-attributable.
+    3. Methodological audit of the classification literature — across 38 classification or prediction studies, only 1 reports leave-one-subject-out validation, 19 expose no sick/non-sick threshold, and 13 report accuracy alone (no sens/spec, AUC, or F1) — leading to concrete reporting recommendations. (Earlier Egger publication-bias headline retired in Phase 6: the prior p=0.011 was produced by a methodology that double-counted within+cross accuracies and imputed n=30; corrected re-run yields p=0.036 / k=27 and is reported in Discussion as exploratory only, not as a contribution anchor.)
 
 ## Working conventions
 
@@ -76,7 +76,7 @@ Reframe away from BCI before touching anything downstream — every section curr
   - `phase1/chang_comparison.md` — read Chang et al. 2023 in full; build a matrix (scope, corpus size, time window, modalities covered, meta-analytic depth, recommendations). Use a model to extract, but verify every claim against the PDF. Only then draft the Intro paragraph.
   - `phase1/tvcg_fit_thread.md` — list concrete VR-practitioner takeaways the paper supports (e.g. hardware-confounder advice), to seed the Intro's TVCG-fit defense.
 - **Draft order**: frame sentence → title (locked) → abstract spine with `\TODO[abs:*]{...}` placeholders for numbers → intro spine. Full intro prose only after spine ratified.
-- **Second-pass deferred to Phase 8**: abstract numbers re-pinned after Phases 5–6 stabilize.
+- **Second-pass deferred to Phase 8**: abstract and conclusion rewritten holistically after Phases 5–7 stabilize (numbers re-pinned; claims aligned with final Results/Discussion; both sections kept appropriately high level).
 
 ### Phase 2 — Theory/Background rewrite (L, parallelizable with Phase 3)
 Rewrite `contents/theoretical.tex` and the relevant background subsections in `contents/introduction.tex`:
@@ -128,7 +128,7 @@ Regenerate every figure and statistic against the V4/Stim corpus *before* touchi
 - Addresses: **Critical #5 (part 2), #7, #8**; High #7, #8, #10, #11, #12, #13; Medium #1, #2, #3.
 - **Side jobs (do first, in order)**:
   - `phase5/figure_regeneration.md` — re-run every script under `review_scripts/analysis/` against `V4/Stim/Plots_Analysis_GPT54.csv` + `PDF_HighLevel_Analysis_GPT54.csv`. Produce a manifest mapping each figure in [figures/](figures/) to its generating script, input CSV columns, and the regenerated `unified_statistical_report.txt` section. Diff regenerated outputs against the prior draft's figures and flag any whose interpretation changes. Figures with no script or no clear V4-corpus provenance are flagged for removal or rebuild. **Blocks all other Phase 5 work.**
-  - `phase5/claims_audit.md` — walk every quantitative and qualitative claim currently in `contents/results.tex` (and any claim in `abstract.tex`/`introduction.tex` that depends on Results). Tag each as `keep` / `revise` / `discard` / `new` against the regenerated stats and the V4 corpus. Output is a checklist; the Results rewrite consumes it row by row. No claim survives into the new draft without an explicit tag.
+  - `phase5/claims_audit.md` — walk every quantitative and qualitative claim currently in `contents/results.tex` (and any claim in `abstract.tex`, `introduction.tex`, or `conclusion.tex` that depends on Results). Tag each as `keep` / `revise` / `discard` / `new` against the regenerated stats and the V4 corpus. Output is a checklist; the Results rewrite consumes it row by row. No claim survives into the new draft without an explicit tag.
   - `phase5/stats_provenance.md` — for every statistic that will appear in Results (or be referenced in Abstract/Discussion), record the exact source line in `unified_statistical_report.txt` or the relevant plot's underlying script, the numbers, and the test that produced it. No statistic enters prose without an entry here.
   - `phase5/eyes_closed_alternatives.md` — short literature check on what baselines are recommended for immersive VR EEG (R3 High #10). Identify 2–3 concrete alternatives before writing the critique.
   - `phase5/accuracy_audit.md` — for the classification papers (n=38 per `Primary_objective`), record which report sens/spec, which report AUC/F1, which only report accuracy, and which expose the sick/non-sick threshold. Drives the High #11 rewrite with actual counts.
@@ -155,13 +155,27 @@ Re-anchor `contents/discussion.tex` and `contents/future.tex` in the cited corpu
   - `phase6/gender_recommendations.md` — Kelly's mediation/moderation framework operationalised as future-directions text. Inputs: Kelly 2023 fulltext, `phase5/gender_findings_audit.md`.
   - `phase6/demoted_content.md` — three short paragraph drafts (Recovery, Datasets, Cognition) with dedup against §3.2 ERPs and §3.5 Mitigation already-cited material.
 
-### Phase 7 — Page-fit + style sweep (S–M)
-Compile, measure against budget, cut. Sweep for value-judgment language and metaphor per AGENTS.md. Verify every figure/table is referenced and every claim has a citation or a corpus count.
+### Phase 7 — Substantive audit (M, must precede page-fit)
+Fact-check the full draft against corpus artefacts and Phase 5–6 side-job notes before any cutting or polish. Anchored on Phase-6 lessons: Egger methodology fix (p=0.036, k=27 — reconcile every Egger mention against `unified_statistical_report.txt` after regen), sway/eye-tracker count re-derived (25/92, not 16), Berger single-lab gender evidence (3/92 papers, one lab), CLF denominator drift (38 vs 41 — see `phase6/classification_recommendations.md`), and unverified `[NEW]` refs flagged in `phase6/ref_verification.md` and `phase6/discussion_citation_map.md`.
+
+Checklist (work through in order; log resolutions in `phase7/substantive_audit.md`):
+1. **Stat methodology** — every p-value, effect size, and n in prose matches `stats_provenance.md` / regenerated `unified_statistical_report.txt`; test choice and comparison groups match what the script actually ran (e.g. HMD-vs-non-HMD, Cliff's δ).
+2. **Subagent number audit** — re-derive every corpus count quoted in Discussion/Challenges/Future (not only Results); flag any count that came from an LLM pass without a traced CSV query.
+3. **Lab-count vs paper-count** — wherever a finding is attributed to "studies," confirm whether the evidence is one lab/protocol repeated (Berger gender block) vs independent replications; rephrase if needed.
+4. **Stale-artefact sweep** — grep for retired stats (old alpha p=0.044, old Egger p=0.011, driving-vs-navigation 46.7%, n=41 classification denominator where prose says 38), wrong bibkeys, and figure snippets regenerated from stale scripts (`figures/*.tex`, `age_range_intervals_latex.tex`).
+5. **Cross-note consistency** — `change_log.md`, `stats_provenance.md`, and phase side-job notes agree with what landed in `contents/*.tex`; patch prose or notes, not both silently diverging.
+6. **Reference verification** — commit or replace every `[NEW]` / `[UNVERIFIED]` entry from Phase 6 (methodology refs in Challenges/Future, Egger/funnel-plot set, Kelly mediators if cited). No citation enters the submission build without DOI confirmed.
+
+- Addresses: corpus-grounded accuracy across all sections; closes Phase-6 verification debt.
+
+### Phase 7b — Page-fit + style sweep (S–M)
+Compile, measure against budget, cut. Sweep for value-judgment language and metaphor per AGENTS.md. Verify every figure/table is referenced and every claim has a citation or a corpus count. Flag obvious cross-section repetition (same statistic or contribution bullet stated in multiple sections with divergent wording) for resolution in Phase 8.
 - Addresses: Medium #5; AGENTS.md style rules.
 
 ### Phase 8 — Polish & second-pass (M)
 Items deferred from earlier phases:
-- **Abstract second pass**: re-pin numbers (`\TODO[abs:*]{...}` placeholders), tighten now that Results/Discussion are final.
+- **Abstract and conclusion (holistic rewrite)**: Rewrite `contents/abstract.tex` and `contents/conclusion.tex` in light of the finalized manuscript — not only re-pin `\TODO[abs:*]{...}` placeholders and corpus counts, but realign scope statements, the three contribution bullets, and closing takeaways with what Results and Discussion actually deliver. Keep both sections appropriately high level (no new methods detail, no subsection-by-subsection recap). After drafting, verify they do not re-introduce retired framing (BCI, outdated stats, demoted Section-F themes) or duplicate prose already stated in the Introduction or Discussion.
+- **Cross-section consistency audit** (presentation layer; assumes Phase 7 substantive audit is clean): Read abstract, introduction, results, discussion, and conclusion as a set; flag and fix (a) contradictory *framing* or scope statements, (b) terminology drift (cybersickness vs VIMS vs SS) against Decision 2, (c) repeated paragraphs or near-duplicate claims (e.g. Chang comparison, hardware-confounder headline, Egger finding, contribution trio restated with divergent wording). Do not re-litigate corpus counts here — send discrepancies back to Phase 7. Log findings and resolutions in `phase8/consistency_audit.md`.
 - **Title sanity check**: only revisit if scope shifted during drafting.
 - **Placeholder sweep**: `grep -r "\\\\TODO" contents/` must return zero. Each placeholder resolved against its side-job note.
 - **Cross-reference audit**: every `\ref`/`\cite` resolves; every figure/table is referenced from prose at least once.
@@ -171,6 +185,9 @@ Items deferred from earlier phases:
 - **Final style pass**: AGENTS.md formality/objectivity rules, no metaphor, no value judgments.
 - **Compile clean** under TVCG template; verify 20-page cap is met with all required elements (biographies, affiliations, index terms).
 - **Side jobs**:
+  - `phase7/substantive_audit.md` — row-by-row log for the Phase 7 checklist (stat, count, ref, stale-artefact); each row tagged `verified / fixed / deferred-with-justification`.
+  - `phase8/abstract_conclusion_outline.md` — target outline for abstract and conclusion (orienting sentence per paragraph, which contribution/result each paragraph reflects, explicit “do not repeat from Intro/Discussion” notes). Ratify before drafting.
+  - `phase8/consistency_audit.md` — checklist of cross-section *framing* (contribution wording, terminology, intentional vs accidental repeats); each row tagged `aligned / fixed / intentional-repeat`.
   - `phase8/citation_audit.md` — produced by a script that takes (a) the 92-row corpus, (b) `references.bib`, (c) the list of `\cite` keys actually used in `contents/*.tex`, and outputs three lists: corpus-papers-without-bib-entry, corpus-papers-not-cited-in-prose, and v3-not-v4-papers-still-cited. Each list is reviewed manually and resolved before submission.
 
 ### Phase 9 — Response letter (S, draws on `revision_notes/change_log.md`)
@@ -185,9 +202,22 @@ Structured **by theme**, not per reviewer (per meeting notes), with a per-commen
 - **Eyes-closed prevalence reframe** — the critique stands but the prevalence is 5/77 EEG studies, not the dominant pattern; cite R3's request for justification + alternatives and point at the Phase-6 Challenges paragraph + Barry 2007 + Gramann 2011.
 - **FLAG-G dropped finding** — the prior "driving 46.7% vs navigation 15.8% alpha-increase" claim does not reproduce against the V4 corpus (both 33.3%); silently removed from §3.6; mention in response letter for completeness.
 
+**Phase-6-specific themes to surface explicitly** (gathered during Phase 6 outline + audit-of-audit work):
+
+- **Contribution #3 reframe** — the original Egger publication-bias headline was retired. Two distinct issues: (a) the prior methodology entered within-subject and cross-subject accuracies as two non-independent rows per study and imputed n=30 for missing sample sizes, violating Egger's independence assumption; (b) even after the methodology fix (one effect per study, no imputation; corrected p=0.036, k=27), the pool is too small and the corpus too heterogeneous (we ourselves show large hardware effects on band power) to anchor a contribution. The methodological-audit contribution is now anchored on the corpus-direct reporting-gap counts (1/38 LOSO-CV; 19/38 no threshold; 13/38 accuracy-only). The corrected Egger result appears in Challenges as one exploratory sentence. The script fix is in `review_scripts/.../stats_tests.py` `assess_publication_bias`.
+- **Discussion + Future wholesale rewrite** — `discussion.tex`, `challenges.tex`, `future.tex` rewritten across 17 paragraph slots. Every Discussion claim is anchored to a corpus count or cited primary source (no remaining "substantial body" / "many studies" phrases). Word count grew by ~755 words across the three files; expected, since reviewer-required content (objective-markers caveat, sex/gender future direction, reporting checklist) had no prior home.
+- **Sex/gender as a future direction** (R1 High #12 / #13) — `future.tex` previously contained zero content on sex/gender. Phase 6 F4 adds a paragraph anchored on Kelly et al. 2023, Kourtesis et al. 2023 (cognition-motor), and Lawson & Bolkhovsky 2023, with three prescriptions: sex-stratified outcome reporting, IPD + gaming-experience covariates, multi-site pooled cohorts. Results §3.4 keeps the calibrated F>M count (3/92, single lab, not independently replicated); Discussion-side framing is "no independent replication" rather than "consistently reported."
+- **Objective markers as a Discussion subsection** (R1 High #14) — new Discussion subsection "Objective Markers and the Limits of Self-Report." Postural sway anchored on Riccio & Stoffregen 1991 + Stoffregen & Smart 1998 with VR-specific coupling refs (Palmisano 2014, Dennison & D'Zmura 2018, Teixeira 2024); pupillometry on Kourtesis 2023 ×2 with arousal / cognitive-load confounds; 25/92 corpus studies already co-record force-plate, balance-board, eye-tracker, or pupillometry alongside EEG but treat them as covariates rather than candidate ground truth.
+- **Section F demotion executed** (Decision 10) — Recovery (2 papers) folded into a final clause of the Objective Markers paragraph; Cognition (4 papers, `Primary_objective == "Cognitive effects"`) folded as context for the same paragraph; Datasets stays in Methods §"Modalities and Dataset-Reuse Studies" (already covered, no Discussion paragraph added).
+- **Eyes-closed baseline critique** (R3 baseline-justification) — Phase 6 added a dedicated Challenges paragraph (5/77 EEG corpus prevalence) anchored on Berger 1929, Klimesch 2007, Barry 2007; F1 prescribes three matched alternatives with corpus exemplars (Li 2023 EO-HMD, Wu 2020 pre-stim, Takeuchi 2018 sham-VR).
+- **Reporting checklist in Future Directions** (R1 / R3 High #11) — F1 enumerates the minimum reporting set: AUC or balanced accuracy with 95% CI, sens/spec at a stated operating point, class balance, numeric SSQ/FMS cutoff, subject-stratified validation, chance + non-neural feature baselines. Mirrors the C1 critique as a positive prescription.
+
 - Addresses: Editor letter Medium #6.
 
 ## Open risks carried into drafting
 
-- **TVCG-fit thread** (R1 Major #5): removing BCI strengthens scientific framing but weakens the "belongs in TVCG" argument. Compensated by the explicit VR-hardware/practitioner thread seeded in Phase 1 (`phase1/tvcg_fit_thread.md`) and closed in Phase 6 Discussion. If reviewers re-raise this, the meta-analytic VR-device finding (Contribution #2) is the load-bearing rebuttal.
 - **Terminology hybrid** (Decision 2): declines R1's full request. Pre-draft the response-letter justification during Phase 2 so Background prose stays consistent — likely: "imposing a single hierarchy across the corpus would misrepresent cited authors who use different umbrella terms."
+
+## Risks closed
+
+- **TVCG-fit thread** (R1 Major #5) — closed. Practitioner thread is now triangulated across (a) the Intro TVCG-fit paragraph from Phase 1, (b) the explicit Cliff's δ hardware-confounder magnitudes in Challenges §C3 from Phase 6, (c) the Objective Markers Discussion subsection naming signals VR systems can already collect (sway, pupillometry), and (d) the F1 reporting standards aimed at the studies the TVCG audience produces. If reviewers re-raise this, the meta-analytic VR-device finding (Contribution #2) is the load-bearing rebuttal.

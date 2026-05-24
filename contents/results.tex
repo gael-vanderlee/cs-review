@@ -211,7 +211,6 @@ The two distributions are compared in \autoref{fig:accuracy_comparison}, and the
 
 These headline accuracies are reported on heterogeneous discrimination metrics.
 Of the 38 classification studies, 9 (23.7\%) report accuracy as the sole discrimination metric, 10 (26.3\%) report only regression metrics ($R^2$, RMSE), 11 (28.9\%) report accuracy alongside both sensitivity/specificity and AUC or F1, 6 (15.8\%) report accuracy in combination with other metric types (sens/spec or AUC/F1 or regression), and 2 (5.3\%) report no quantitative performance.
-This is an observational corpus-level fact; the interpretive critique --- that accuracy is uninformative under class imbalance and arbitrary thresholds --- is taken up in \autoref{sec:discussion}.
 
 \subsubsection{Classification Tasks}
 Across the 38-study subset, binary classification of a ``sick'' versus ``not sick'' state is the most common task.
@@ -289,7 +288,7 @@ These findings illustrate a methodological challenge for any neuromarker-driven 
 
 \subsection{Corpus-Level Methodological Observations}\label{sec:confounders}
 
-Meta-analytic comparison across the 92 corpus studies reveals that VR display hardware substantially modulates EEG band-power responses, that stimulus-exposure duration is confounded with hardware, and that the corpus shows signs of funnel-plot asymmetry consistent with publication bias.
+Meta-analytic comparison across the 92 corpus studies reveals that VR display hardware substantially modulates EEG band-power responses and that stimulus-exposure duration is confounded with hardware.
 The findings in this subsection are observational; the interpretive critique and reporting recommendations they motivate are developed in \autoref{sec:discussion}.
 
 Alpha-band cybersickness responses differ between head-mounted-display and screen-based studies.
@@ -304,8 +303,5 @@ The hardware effect does not extend to delta, theta, or gamma, which show no sig
 Stimulus-exposure duration is itself confounded with hardware.
 HMD studies use shorter exposure periods (mean 12.8 $\pm$ 14.6 minutes, $n = 64$) than non-HMD studies (mean 22.1 $\pm$ 15.9 minutes, $n = 22$); Mann--Whitney $U = 412.5$, $p = 0.004$, Cliff's $\delta = -0.414$ (medium effect).
 The hardware confound therefore covaries with how long the user is exposed, not only with the display optics; comparisons of band-power changes between HMD and screen studies necessarily mix the two effects.
-
-Across all reported classification accuracies in the corpus, Egger's regression test of funnel-plot asymmetry yields $p = 0.011$, consistent with possible publication bias toward high-accuracy results.
-Egger's test is sensitive to between-study heterogeneity and small-study effects, and the present result should not be read as a definitive demonstration of bias; the interpretive caveats and the methodological recommendations that follow from it are developed in \autoref{sec:discussion}.
 
 These corpus-level observations, together with the inline reporting-gap counts in \autoref{sec:classification} and the baseline-heterogeneity findings in \autoref{sec:corpus-characteristics}, seed the design and reporting recommendations developed in \autoref{sec:discussion}.

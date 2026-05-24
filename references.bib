@@ -830,6 +830,23 @@
   file = {/home/gael/Zotero/storage/I9SKYMLH/Cohen et al. - 2019 - The neural basis of motion sickness.pdf}
 }
 
+@article{combrissonExceedingChanceLevel2015,
+  title = {Exceeding Chance Level by Chance: {{The}} Caveat of Theoretical Chance Levels in Brain Signal Classification and Statistical Assessment of Decoding Accuracy},
+  shorttitle = {Exceeding Chance Level by Chance},
+  author = {Combrisson, Etienne and Jerbi, Karim},
+  year = 2015,
+  month = jul,
+  journal = {Journal of Neuroscience Methods},
+  volume = {250},
+  pages = {126--136},
+  issn = {01650270},
+  doi = {10.1016/j.jneumeth.2015.01.010},
+  urldate = {2026-05-24},
+  abstract = {Machine learning techniques are increasingly used in neuroscience to classify brain signals. Decoding performance is reflected by how much the classification results depart from the rate achieved by purely random classification. In a 2-class or 4-class classification problem, the chance levels are thus 50\% or 25\% respectively. However, such thresholds hold for an infinite number of data samples but not for small data sets. While this limitation is widely recognized in the machine learning field, it is unfortunately sometimes still overlooked or ignored in the emerging field of brain signal classification. Incidentally, this field is often faced with the difficulty of low sample size. In this study we demonstrate how applying signal classification to Gaussian random signals can yield decoding accuracies of up to 70\% or higher in two-class decoding with small sample sets. Most importantly, we provide a thorough quantification of the severity and the parameters affecting this limitation using simulations in which we manipulate sample size, class number, cross-validation parameters (k-fold, leave-one-out and repetition number) and classifier type (Linear-Discriminant Analysis, Na\"ive Bayesian and Support Vector Machine). In addition to raising a red flag of caution, we illustrate the use of analytical and empirical solutions (binomial formula and permutation tests) that tackle the problem by providing statistical significance levels (p-values) for the decoding accuracy, taking sample size into account. Finally, we illustrate the relevance of our simulations and statistical tests on real brain data by assessing noise-level classifications in Magnetoencephalography (MEG) and intracranial EEG (iEEG) baseline recordings.},
+  langid = {english},
+  file = {/home/gael/Zotero/storage/2J553RDA/Combrisson and Jerbi - 2015 - Exceeding chance level by chance The caveat of theoretical chance levels in brain signal classifica.pdf}
+}
+
 @inproceedings{cortesEEGbasedExperimentVR2023,
   title = {An {{EEG-based Experiment}} on {{VR Sickness}} and {{Postural Instability While Walking}} in {{Virtual Environments}}},
   booktitle = {2023 {{IEEE Conference Virtual Reality}} and {{3D User Interfaces}} ({{VR}})},
@@ -4523,6 +4540,25 @@ NTRS Research Center: Legacy CDMS (CDMS)},
   annotation = {80 citations (Semantic Scholar/DOI) [2022-12-15]}
 }
 
+@article{saitoPrecisionRecallPlotMore2015,
+  title = {The {{Precision-Recall Plot Is More Informative}} than the {{ROC Plot When Evaluating Binary Classifiers}} on {{Imbalanced Datasets}}},
+  author = {Saito, Takaya and Rehmsmeier, Marc},
+  year = 2015,
+  month = mar,
+  journal = {PLOS ONE},
+  volume = {10},
+  number = {3},
+  pages = {e0118432},
+  publisher = {Public Library of Science},
+  issn = {1932-6203},
+  doi = {10.1371/journal.pone.0118432},
+  urldate = {2026-05-24},
+  abstract = {Binary classifiers are routinely evaluated with performance measures such as sensitivity and specificity, and performance is frequently illustrated with Receiver Operating Characteristics (ROC) plots. Alternative measures such as positive predictive value (PPV) and the associated Precision/Recall (PRC) plots are used less frequently. Many bioinformatics studies develop and evaluate classifiers that are to be applied to strongly imbalanced datasets in which the number of negatives outweighs the number of positives significantly. While ROC plots are visually appealing and provide an overview of a classifier's performance across a wide range of specificities, one can ask whether ROC plots could be misleading when applied in imbalanced classification scenarios. We show here that the visual interpretability of ROC plots in the context of imbalanced datasets can be deceptive with respect to conclusions about the reliability of classification performance, owing to an intuitive but wrong interpretation of specificity. PRC plots, on the other hand, can provide the viewer with an accurate prediction of future classification performance due to the fact that they evaluate the fraction of true positives among positive predictions. Our findings have potential implications for the interpretation of a large number of studies that use ROC plots on imbalanced datasets.},
+  langid = {english},
+  keywords = {Bioinformatics,Caenorhabditis elegans,Exponential functions,Genome-wide association studies,Interpolation,Measurement,MicroRNAs,Support vector machines},
+  file = {/home/gael/Zotero/storage/UZN8NW92/Saito and Rehmsmeier - 2015 - The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers o.pdf}
+}
+
 @article{sameriPhysiologydrivenCybersicknessDetection2024,
   title = {Physiology-Driven Cybersickness Detection in Virtual Reality: A Machine Learning and Explainable {{AI}} Approach},
   shorttitle = {Physiology-Driven Cybersickness Detection in Virtual Reality},
@@ -5309,6 +5345,25 @@ NTRS Research Center: Legacy CDMS (CDMS)},
   keywords = {Brain-Computer Interfaces,Genesis Project,Virtual Reality},
   annotation = {Published: CORTICO 2023 - Journ\'ees de COllectif pour la Recherche Transdisciplinaires sur les Interfaces Cerveau-Ordinateur},
   file = {/home/gael/Zotero/storage/HZ9KSKKD/van der Lee et al. - 2023 - Enhancing the Virtual Reality experience using Brain-Computer Interfaces.pdf}
+}
+
+@article{varoquauxCrossvalidationFailureSmall2018,
+  title = {Cross-Validation Failure: {{Small}} Sample Sizes Lead to Large Error Bars},
+  shorttitle = {Cross-Validation Failure},
+  author = {Varoquaux, Ga{\"e}l},
+  year = 2018,
+  month = oct,
+  journal = {NeuroImage},
+  volume = {180},
+  number = {Pt A},
+  pages = {68--77},
+  issn = {1095-9572},
+  doi = {10.1016/j.neuroimage.2017.06.061},
+  abstract = {Predictive models ground many state-of-the-art developments in statistical brain image analysis: decoding, MVPA, searchlight, or extraction of biomarkers. The principled approach to establish their validity and usefulness is cross-validation, testing prediction on unseen data. Here, I would like to raise awareness on error bars of cross-validation, which are often underestimated. Simple experiments show that sample sizes of many neuroimaging studies inherently lead to large error bars, eg\textpm 10\% for 100 samples. The standard error across folds strongly underestimates them. These large error bars compromise the reliability of conclusions drawn with predictive models, such as biomarkers or methods developments where, unlike with cognitive neuroimaging MVPA approaches, more samples cannot be acquired by repeating the experiment across many subjects. Solutions to increase sample size must be investigated, tackling possible increases in heterogeneity of the data.},
+  langid = {english},
+  pmid = {28655633},
+  keywords = {Biomarkers,Brain Mapping,Cross-validation,Decoding,fMRI,Humans,Image Processing Computer-Assisted,Magnetic Resonance Imaging,Model selection,MVPA,Reproducibility of Results,Sample Size,Statistics},
+  file = {/home/gael/Zotero/storage/Q3STM4HQ/Varoquaux - 2018 - Cross-validation failure Small sample sizes lead to large error bars.pdf}
 }
 
 @misc{vaswaniAttentionAllYou2023,
