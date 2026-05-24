@@ -6,7 +6,7 @@
 \end{figure*}
 
 The 92 corpus studies address four main research objectives: classification or prediction of cybersickness from physiological signals (38 studies), identification of neural and physiological correlates (24), development of mitigation strategies (18), and characterisation of individual susceptibility (3).
-A residual nine studies have primary objectives in cognitive effects (4), recovery (1), dataset contributions (1), or other framings (3); their corpus-relevant findings are integrated into the relevant subsections, and their full discussion is deferred to \autoref{sec:discussion}.
+Nine residual studies (cognitive effects, recovery, dataset contributions, other framings) are integrated into the relevant subsections, with full discussion deferred to \autoref{sec:discussion}.
 This section adds two cross-cutting layers on top of these objectives: \autoref{sec:corpus-characteristics} describes the corpus as a whole, and \autoref{sec:confounders} reports meta-analytic observations across the 92 studies.
 
 Activity in the field has accelerated in recent years: 63.0\% of the corpus (58 of 92 studies) was published from 2021 onwards, with a corresponding shift toward classification, mitigation, and susceptibility objectives (\autoref{fig:stacked}).
@@ -47,9 +47,7 @@ Channel count is positively correlated with reported within-subject classificati
     \label{fig:eeg_channels}
 \end{figure}
 
-Concurrent physiological recording is reported in 36 of 92 studies (39.1\%), with the criterion restricted to physiological sensors (electrocardiography, galvanic skin response, electro-oculography, electromyography, electrogastrography, photoplethysmography, respiration, skin temperature, blood pressure).
-The most common adjuncts are electro-oculography (18 studies), electrocardiography (16), galvanic skin response (9), photoplethysmography (7), and electrogastrography and skin temperature (4 each).
-Other co-recorded signals (head tracking, joystick, button input) are listed separately in the all-studies table.
+Concurrent physiological recording is reported in 36 of 92 studies (39.1\%), restricted to physiological sensors (electrocardiography, galvanic skin response, electro-oculography, electromyography, electrogastrography, photoplethysmography, respiration, skin temperature, blood pressure); the most common adjuncts are electro-oculography (18 studies), electrocardiography (16), and galvanic skin response (9).
 
 \subsubsection{Experimental Design and Data Collection Protocols}
 Study designs predominantly employ within-subject comparisons (78 of 92, 84.8\%), with 7.6\% employing between-subject designs exclusively and 7.6\% using both.
@@ -70,16 +68,13 @@ The joint distribution of device type and environment is shown in \autoref{fig:v
 \subsubsection{Cybersickness Assessment Methods}
 Cybersickness is measured through questionnaire instruments in 70 of 92 studies (76.1\%), continuous ratings during exposure in 20 (21.7\%), single-item Likert scales in 15 (16.3\%), and behavioural indices in 8 (8.7\%); these categories sum above 100\% because 19 studies use more than one method on the same exposure.
 Among studies using questionnaires, the Simulator Sickness Questionnaire is the most common instrument (59 of 92), followed by the Fast Motion Sickness Scale (6), the Motion Sickness Susceptibility Questionnaire (3), the Virtual Reality Sickness Questionnaire (2), and other instruments (6); 16 studies do not specify the questionnaire used.
-The use of multiple measurement methods on the same exposure indicates that the operational definition of cybersickness varies across the corpus, which constrains cross-study comparability.
+Multiple-method use on the same exposure indicates operational-definition variation that constrains cross-study comparability.
 
 \subsubsection{Baseline Conditions and Preprocessing Heterogeneity}
 Baseline conditions vary across the corpus: 39 of 92 studies use a task baseline, 16 use an eyes-open resting baseline, 8 use a pre-stimulus segment of the same recording, 5 use an eyes-closed resting baseline, and the remainder either do not specify a baseline (3) or do not report one (21 missing or not applicable, including the neurostimulation-only studies).
 The five eyes-closed cases are a minority of the corpus, but alpha-band reactivity to eye closure overlaps with the alpha modulations attributed to cybersickness; \autoref{sec:discussion} develops this critique and discusses recommended alternatives.
 
-EEG signal preprocessing is also heterogeneous in filter selection.
-Band-pass filtering ranges from very low frequencies (0.01 Hz) to high gamma (100 Hz), with the most frequent configurations being 1--50 Hz (9 studies), 0.5--50 Hz (7), 0.5--100 Hz (4), and 0.5--45 Hz (4); 25 studies do not specify a band-pass filter.
-A 50 or 60 Hz notch filter is applied in 18 studies; 72 studies do not specify a notch filter.
-The full distribution of band-pass configurations is shown in \autoref{fig:bandpass_distribution}.
+EEG signal preprocessing is heterogeneous in filter selection: band-pass configurations range from 0.01 Hz to 100 Hz with no dominant choice, 25 studies do not specify a band-pass filter, and 72 do not specify a notch filter (\autoref{fig:bandpass_distribution}).
 
 \input{figures/bandpass_frequencies_latex}
 
@@ -108,8 +103,7 @@ Individual reports range from beta suppression \cite{kimCharacteristicChangesPhy
 Of the 21 studies reporting a gamma-band change, 7 (33.3\%) report an increase, 6 no change, 5 a mixed pattern, and 3 a decrease.
 The full distribution of rhythm changes across anatomical regions is shown in \autoref{fig:rhythm_changes}; as with alpha, the beta result is partly attributable to display hardware (\autoref{sec:confounders}).
 
-The test-retest reliability of these spectral markers has been assessed in one study, which reported good reliability for delta, theta, and alpha power changes in frontal and central areas across multiple sessions \cite{limTestretestReliabilityVirtual2021}.
-Delta-band normalisation has also been used as an objective marker of the post-exposure recovery time course \cite{wooRecoveryTimeVR2023}; the recovery literature is discussed further in \autoref{sec:discussion}.
+Test-retest reliability for delta, theta, and alpha power changes in frontal and central areas has been reported in one corpus study \cite{limTestretestReliabilityVirtual2021}, and delta-band normalisation has been used as a marker of the post-exposure recovery time course \cite{wooRecoveryTimeVR2023}; the recovery literature is discussed in \autoref{sec:discussion}.
 
 \begin{figure}[t]
     \centering
@@ -118,10 +112,9 @@ Delta-band normalisation has also been used as an objective marker of the post-e
     \label{fig:rhythm_changes}
 \end{figure}
 
-Beyond band-power, a subset of studies has examined complex spectral and information-theoretic features of the EEG signal, including spectral entropy and skew \cite{fengComprehensiveExplorationMotion2025}, Gravity Frequency and Kolmogorov Complexity \cite{liuPilotStudyEEGBased2020, liuMeasuringVisuallyInduced2017}, amplitude-modulation features \cite{rosannePreprocessNotPreprocess2025}, and the mean frequency of the theta band as a direct sickness index \cite{liEEGbasedEvaluationMotion2022}.
-Functional connectivity has also been investigated, although reporting is sparse: of the 16 studies that report a connectivity change, 7 report a mixed pattern, 4 a decrease, 3 an increase, and 2 no change.
-Specific findings include a decrease in information transfer measured via transfer entropy with the onset of VIMS \cite{nurnbergerMismatchVisualVestibularInformation2021}, microstate-level alterations of canonical brain networks and decreased connectivity between visual cortex (V5) and vestibular processing regions \cite{namElectroencephalogramMicrostatesFunctional2022}, and phase-locking-value features that serve as inputs to deep classification models \cite{shenClassificationVisuallyInduced2024, huaDualpathwayEEGModel2025}.
-The causal relevance of these spectral and connectivity patterns is suggested by intervention studies in which symptom mitigation correlates with a normalisation of the same EEG bands \cite{molefiVibromotorReprocessingTherapy2022, yeoEEGbasedAnalysisVarious2022}.
+Beyond band-power, a subset of studies has examined additional spectral and information-theoretic features (entropy, complexity measures, amplitude modulation, mean theta-band frequency) \cite{fengComprehensiveExplorationMotion2025, liuPilotStudyEEGBased2020, liuMeasuringVisuallyInduced2017, rosannePreprocessNotPreprocess2025, liEEGbasedEvaluationMotion2022}.
+Functional connectivity is investigated in 16 studies with mixed direction (7 mixed, 4 decrease, 3 increase, 2 no change), including transfer-entropy decreases at VIMS onset \cite{nurnbergerMismatchVisualVestibularInformation2021} and reduced connectivity between visual area V5 and vestibular regions \cite{namElectroencephalogramMicrostatesFunctional2022}; phase-locking-value features have also been used as inputs to deep classification models \cite{shenClassificationVisuallyInduced2024, huaDualpathwayEEGModel2025}.
+The causal relevance of these patterns is supported by intervention studies in which symptom mitigation correlates with normalisation of the same EEG bands \cite{molefiVibromotorReprocessingTherapy2022, yeoEEGbasedAnalysisVarious2022}.
 
 \subsubsection{Event-Related Potentials and Evoked Responses}
 Beyond ongoing oscillations, a subset of studies has used event-related potentials (ERPs) to characterise how cybersickness affects discrete cognitive processes.
@@ -153,22 +146,12 @@ Across these 38 studies, accuracy is the dominant reported performance metric, b
 
 \subsubsection{Methodological Approaches and Feature Engineering}
 Computational approaches across the 38-study subset divide between traditional machine learning (15 of 38, 39.5\%), deep learning (14, 36.8\%), and regression (6, 15.8\%); thresholding (1) and other approaches (2) account for the remainder.
-A subset of these studies uses multimodal pipelines that combine EEG with physiological signals or with VR content features.
+Traditional pipelines rely on hand-crafted features (Power Spectral Density, wavelet-derived energy ratios \cite{liVRMotionSickness2020}, spectral entropy and skew \cite{fengComprehensiveExplorationMotion2025}, time-domain statistics such as signal variance \cite{mawalidClassificationEEGSignal2018}) fed to Support Vector Machines, k-Nearest Neighbours, or Linear Discriminant Analysis \cite{yuEEGbasedClassificationSystem2010, chaiEEGStudyVirtual2023}; dimensionality reduction is addressed through Correlation Feature Selection \cite{khoirunnisaaChannelSelectionEEGBased2018} or genetic algorithms \cite{weiGeneticFeatureSelection2011}.
 
-Traditional machine-learning pipelines rely on hand-crafted features, with Support Vector Machines, k-Nearest Neighbours, and Linear Discriminant Analysis as the most common classifiers \cite{yuEEGbasedClassificationSystem2010, chaiEEGStudyVirtual2023}.
-Features derived from EEG include Power Spectral Density, wavelet-derived energy ratios \cite{liVRMotionSickness2020}, spectral entropy and skew \cite{fengComprehensiveExplorationMotion2025}, and time-domain statistics such as signal variance \cite{mawalidClassificationEEGSignal2018}.
-Dimensionality reduction is addressed through feature selection algorithms such as Correlation Feature Selection \cite{khoirunnisaaChannelSelectionEEGBased2018} and genetic algorithms \cite{weiGeneticFeatureSelection2011}.
-
-Deep-learning pipelines learn task-relevant features directly from the data.
-Convolutional Neural Networks (CNNs) are widely used to extract spatial and spectral features from EEG time series, spectrograms, or topographic scalp maps \cite{jeongCybersicknessAnalysisEEG2019}.
-Temporal dynamics are captured through recurrent layers, including Long Short-Term Memory \cite{liaoUsingEEGDeep2020} and Gated Recurrent Units \cite{luoFeatureExtractionMethod2024}.
-Other architectures include spiking neural networks \cite{yangPredictionDetectionVirtual2023} and shallow CNNs designed for real-time detection in mitigation systems \cite{uyanCDMSRealtimeSystem2024}.
-Recent models employ hybrid architectures combining CNNs with LSTMs \cite{shenClassificationVisuallyInduced2024}, dual-pathway designs that process raw EEG and functional-connectivity inputs in parallel \cite{huaDualpathwayEEGModel2025}, and attention mechanisms that weight the contribution of different channels or time points \cite{huaEEGClassificationModel2024}.
-Inputs to these models have diversified to include functional-connectivity matrices \cite{shenClassificationVisuallyInduced2024} and cross-frequency coupling asymmetries \cite{huaDetectionVirtualReality2024}.
-
-Multimodal fusion combines EEG with peripheral physiological signals such as galvanic skin response and blood volume pulse \cite{sameriPhysiologydrivenCybersicknessDetection2024}, or with non-neural signals such as electromyography from postural muscles, which has been reported as more informative than concurrently recorded EEG in one study \cite{recentiPredictingMotionSickness2021}.
-Other approaches use fNIRS as a regression input \cite{renAssessingPassengersMotion2023} or transfer knowledge from EEG-trained models to enable prediction from VR video content alone \cite{kimDeepCybersicknessPredictor2019}.
-Explainable-AI techniques have been incorporated in a subset of studies to interpret model decisions \cite{sameriPhysiologydrivenCybersicknessDetection2024}.
+Deep-learning pipelines learn features directly from the data.
+Convolutional Neural Networks extract spatial and spectral features from EEG time series, spectrograms, or topographic scalp maps \cite{jeongCybersicknessAnalysisEEG2019}, with recurrent layers (Long Short-Term Memory \cite{liaoUsingEEGDeep2020}, Gated Recurrent Units \cite{luoFeatureExtractionMethod2024}) capturing temporal dynamics.
+Other architectures include spiking neural networks \cite{yangPredictionDetectionVirtual2023}, shallow CNNs designed for real-time detection in mitigation systems \cite{uyanCDMSRealtimeSystem2024}, hybrid CNN--LSTM models \cite{shenClassificationVisuallyInduced2024}, dual-pathway designs that process raw EEG and functional-connectivity inputs in parallel \cite{huaDualpathwayEEGModel2025}, and channel-attention mechanisms \cite{huaEEGClassificationModel2024, huaDetectionVirtualReality2024}.
+Multimodal fusion combines EEG with peripheral physiological signals \cite{sameriPhysiologydrivenCybersicknessDetection2024}, with electromyography from postural muscles (reported as more informative than concurrent EEG in one study) \cite{recentiPredictingMotionSickness2021}, or with VR video features via transfer learning \cite{kimDeepCybersicknessPredictor2019}; fNIRS regression \cite{renAssessingPassengersMotion2023} and explainable-AI interpretation \cite{sameriPhysiologydrivenCybersicknessDetection2024} round out the subset.
 
 \begin{figure}[t]
     \centering
@@ -221,11 +204,9 @@ The sick/non-sick label that grounds these accuracies varies in how it is operat
 A second task is multi-level classification, which categorises cybersickness into several discrete levels of severity.
 Three-level classification has been demonstrated with multimodal fusion \cite{liMachineLearningAssessment2019, dennisonImprovingMotionSickness2019} and with EEG alone using rule-based induction \cite{paneIdentifyingSeverityLevel2018} or a genetic algorithm combined with a Support Vector Machine \cite{linMotionSicknessEstimation2012}.
 
-A third task is continuous prediction or regression of a cybersickness severity score.
-Performance is measured by correlation coefficients and error metrics.
-Deep-learning models have demonstrated high correlations between predicted and actual SSQ scores \cite{liuExploringBrainPhysiological2024, huaAssessmentVirtualReality2023, xuSECNNAttentionStructure2023, liuExploringQuantitativeAssessment2024}; earlier work used Support Vector Regression \cite{weiEEGbasedEvaluationSystem2011, koEstimatingLevelMotion2011} and linear regression \cite{weiImplementationMotionSickness2011}.
-Current architectures include Siamese LSTMs \cite{huaSiamLSTMModelMultichannel2024} and frameworks that fuse physiological signals with VR video features \cite{leeAssessingIndividualVR2022}.
-Addressing the threshold-heterogeneity problem raised above, one recent study develops a method for continuous, calibration-free detection directly from physiological data with dynamic, real-time ground-truth labels \cite{demirelSubjectivityContinuousCybersickness2025}.
+A third task is continuous prediction or regression of a cybersickness severity score, measured by correlation coefficients and error metrics.
+Deep-learning models have demonstrated high correlations between predicted and actual SSQ scores \cite{liuExploringBrainPhysiological2024, huaAssessmentVirtualReality2023, xuSECNNAttentionStructure2023, liuExploringQuantitativeAssessment2024, huaSiamLSTMModelMultichannel2024, leeAssessingIndividualVR2022}, while earlier work used Support Vector Regression \cite{weiEEGbasedEvaluationSystem2011, koEstimatingLevelMotion2011} and linear regression \cite{weiImplementationMotionSickness2011}.
+Addressing the threshold-heterogeneity problem raised above, one recent study develops continuous, calibration-free detection directly from physiological data with dynamic real-time ground-truth labels \cite{demirelSubjectivityContinuousCybersickness2025}.
 
 \begin{figure}[t]
     \centering
@@ -252,7 +233,7 @@ Susceptible individuals show excessive parietal N2 ERP amplitudes and impaired t
 One study reports that the cybersickness condition produces increased delta and decreased alpha power in both susceptible and non-susceptible groups, but susceptible participants additionally show lower absolute power in the beta and gamma bands at baseline \cite{jangEstimatingObjectiveEEG2022}.
 An earlier study using a long-duration driving task found that the ratio of theta to total EEG power in frontal and parietal lobes differed between sick and non-sick groups, proposing this ratio as a physiological index of sensitivity \cite{parkLongTermStudySimulator2008}.
 
-Sex and gender differences are reported in 3 of 92 corpus studies, all from a single laboratory using a VR-neurofeedback paradigm \cite{bergerSexDifferencesUser2021, bergerInfluencePlaceboTDCS2024, bergerManipulatingCybersicknessVirtual2025}; an additional 11 corpus studies use male-only samples, and the remaining 78 do not analyse sex effects.
+Sex and gender differences are reported in 3 of 92 corpus studies, all from a single laboratory using a VR-neurofeedback paradigm \cite{bergerSexDifferencesUser2021, bergerInfluencePlaceboTDCS2024, bergerManipulatingCybersicknessVirtual2025}; an additional 11 corpus studies use male-only samples (precluding sex comparisons) and 15 do not report participant sex composition, leaving 63 mixed-sex studies that report composition without analysing sex effects.
 The broader cybersickness literature outside the corpus calibrates these findings.
 A recent meta-analytic synthesis concludes that women experience greater cybersickness than men, but that the effect size is modest (meta-analytic $r \approx 0.21$) and that the field is widely underpowered, requiring approximately 176 participants per arm for 80\% statistical power to reliably detect the effect \cite{kellyGenderDifferencesCybersickness2023}.
 A separate review of 76 studies finds that only 37 of those studies (48.7\%) are consistent with the assertion that women are more susceptible than men \cite{lawsonAttentionMilitaryCommercial2023}.
