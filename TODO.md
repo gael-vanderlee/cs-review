@@ -26,7 +26,7 @@
    - Done: Hybrid policy adopted — VIMS introduced as umbrella term in Background/Theory; each cited paper's own term preserved in Results.
 7. `[R1, R3]` Comment: The synthesis of the included studies is difficult to follow, and a table of all reviewed studies would make the patterns, modalities, and sickness measures much clearer.
    - Decision: add a table of all studies.
-   - Done: Generated landscape longtable of all 92 studies (8 columns: Ref, Modality, N, VR device, Stimulus, CS measure, Objective, Topic) at `contents/tables/all_studies.tex`, `\input` from Results intro. Spans 2 landscape pages (tightened in Phase 4 from 4→2 pages via Topic column + raggedright). Per-row cells hand-written from `Main Contribution` per `revision_notes/phase4/table_key_finding_rules.md`; all ≤8 words, banned-word audit clean. User review of cells pending.
+   - Done: Generated landscape longtable of all 92 studies (8 columns: Ref, Modality, N, VR device, Stimulus, CS measure, Objective, Topic) at `contents/tables/all_studies.tex`, `\input` from Results intro. Spans 2 landscape pages (tightened in Phase 4 from 4→2 pages via Topic column + raggedright). Per-row cells hand-written from `Main Contribution` per `revision_notes/phase4/table_key_finding_rules.md`; all ≤8 words, banned-word audit clean.
 8. `[R3]` Comment: The Discussion and Future Directions sections are too narrative and are not grounded enough in the reviewed corpus.
    - Done: Phase 6 wholesale rewrite of `discussion.tex`, `challenges.tex`, `future.tex` (17 paragraph slots). Every Discussion claim anchored to a corpus count (16/30 delta, 20/35 theta, 16/92 sway/eye-tracker co-recording, 5/77 eyes-closed baseline, 13/38 accuracy-only, 19/38 no threshold, 8/38 numeric cutoff, 1/38 LOSO-CV, 58/72 ≤32 channels, 14/72 ≤10 channels, 43/77 no reference electrode, 59/77 no notch filter, 11/92 male-only, 12.8/22.1 min stimulus-duration confound) or a cited primary source. Chang comparison repurposed from scope-recap (already in Intro) to findings-comparison.
    - Done (infra): Egger publication-bias headline formally dropped in Phase 7 (small k, high corpus heterogeneity); the paper's methodological-audit contribution is anchored on the reporting-gap counts above. Egger sentence absent from contents/; corresponding refs (Egger, Sterne, Peters, Macaskill, Duval-Tweedie, Poldrack) confirmed absent from `references.bib`.
@@ -34,7 +34,7 @@
 ## High priority
 
 1. `[R3]` Comment: There is a PRISMA inconsistency: the text reports `119` duplicates removed, while Figure 1 reports `114`.
-   - Done (prose): V3 counts replaced with the V4/Stim PRISMA flow (443 identified, 224 duplicates removed, 219 screened, 119 excluded at title/abstract, 100 sought for retrieval, 8 not retrieved, 92 included). Figure regeneration pending (flagged with \TODO[prisma:figure]).
+   - Done (prose): V3 counts replaced with the V4/Stim PRISMA flow (443 identified, 224 duplicates removed, 219 screened, 119 excluded at title/abstract, 100 sought for retrieval, 8 not retrieved, 92 included). Figure regeneration completed and \TODO placeholders resolved in Phase 8.
 2. `[R1, R2]` Comment: Important references are missing across the theory and background sections, including foundational motion sickness references and more appropriate review sources.
    - Done: ~15 new references added and verified (Reason 1988/2002, Reason & Brand 1975, Oman 1990, Lackner 2014, Keshavarz & Golding 2022, Teixeira 2022/2025, Berti & Keshavarz 2020, Yates 2014, Cohen 2019, Schmäl 2013, Kennedy/Drexler/Kennedy 2010, Hettinger 1990, Lawson 2014, Keshavarz/Hecht/Lawson 2014).
 3. `[R1]` Comment: The manuscript refers to a `vection theory` of motion sickness, but Reviewer 1 argues this is not a correct characterization and suggests engaging instead with work on unexpected vection.
@@ -82,8 +82,8 @@
    - Done (Results): Confounding Factors promoted to standalone §3.6 (Phase 5).
    - Done (Discussion + Future): re-homed demoted themes — recovery (Woo, Miyazaki) in Discussion objective-markers closing + Future longitudinal paragraph; cognition (Mimnaugh, Wu, Xu, Berger 2025) folded into objective-markers opening; public datasets (Kim, Dasdemir, Demirel) in Future F1 open-science paragraph; dataset-reuse scope stays in Methods only.
 4. `[R1, AE]` Comment: The manuscript's fit for `TVCG` was questioned because of the current framing and breadth.
-   - Done (partial): TVCG-fit paragraph added to Introduction linking the VR-hardware confounder finding to practitioner implications.
+   - Done (Intro): TVCG-fit paragraph added to Introduction linking the VR-hardware confounder finding to practitioner implications.
    - Done (Discussion + Future): Phase 6 reinforces the practitioner thread via (a) the hardware-confounder uplift in Challenges with explicit Cliff's δ magnitudes for HMD vs screen (alpha and beta), (b) the objective-markers paragraph that names sway and pupillometry as candidate signals VR systems can already collect, and (c) the F1 reporting standards aimed at studies the TVCG audience produces.
 5. `[Editor letter]` Comment: The revised manuscript must stay within TVCG page limits and include all required submission elements.
-   - Done (decision): 20-page hard cap confirmed; per-section budget allocated. Compliance check pending.
+   - Done (decision): 20-page hard cap confirmed; per-section budget allocated. Compliance check completed in Phase 8 (manuscript compiles to exactly 20 pages).
 6. `[Editor letter]` Comment: The revision should be accompanied by a separate, specific response to every Associate Editor and reviewer comment.

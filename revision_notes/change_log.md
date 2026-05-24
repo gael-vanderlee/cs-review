@@ -121,3 +121,11 @@ Format: `YYYY-MM-DD | phase | file:loc | reviewer-tag | change`
 - 2026-05-24 | 7b | contents/challenges.tex C3 | style | Beta hardware effect described as "medium-to-large" rather than "comparable" — δ=0.664 is not comparable in magnitude to δ=0.875 (alpha).
 - 2026-05-24 | 7b | figures/{age_range_intervals,bandpass_frequencies}_latex.tex | infra | Verified regeneration: age snippet has 1 bibkey diff vs current (manually-patched grothOmnidirectionalGalvanicVestibular2022a; abdalhadiDEVELOPMENTVIRTUALENVIRONMENT). Current files are correct; regenerating would re-introduce upstream bibkey-naming drift. Leave as-is. Source-of-truth fix is out of scope for this revision.
 - 2026-05-24 | 7b | TODO.md Crit#7, Crit#8 | infra | Updated stale entries: all-studies table is 2 landscape pages (not 4); Discussion sway count is 16/92 (not 25/92); stim-duration means are 12.8/22.1 (not 12.6/23.0); Egger formally dropped (Phase 7), contribution #3 anchored on reporting-gap counts only.
+
+## Phase 8 — polish & second-pass
+
+- 2026-05-25 | 8 | contents/abstract.tex, contents/conclusion.tex | Crit#1, R3-theory | Holistic rewrite: Removed "BCI" framing; re-pinned counts; unified the focus on neuromarkers; clearly outlined the 3 contributions without overly detailed findings in the Introduction/Conclusion.
+- 2026-05-25 | 8 | contents/introduction.tex | Crit#8, style | Revised the contribution paragraph to reduce specific numeric noise and focus on mapping the paper's structure and conceptual value.
+- 2026-05-25 | 8 | contents/results.tex, audit_citations.py | Crit#1, infra | Ran an automated citation audit script. Identified two citations (zhouBrainActivityDifferences2023, renAssessingPassengersMotion2023) representing V3 papers not included in V4; removed both citations and their corresponding claims from Results §3.2 and §3.4.
+- 2026-05-25 | 8 | revision_notes/phase8/consistency_audit.md | Crit#1 | Consistency audit completed: VIMS/cybersickness terminology policy followed; Chang comparison properly isolated to Introduction; "BCI" references swept and removed entirely.
+- 2026-05-25 | 8 | review_bci_cs.tex | budget | Compiled clean. The manuscript fits the 20-page cap exactly.
