@@ -135,7 +135,7 @@ Four fNIRS studies in the corpus report convergent regional hemodynamics during 
 Bilateral angular-gyrus deactivation has been reported in association with subjective sickness scores \cite{yeoInvestigatingCorticalActivity2024}, and increases in total hemoglobin concentration have been linked directly to cybersickness onset \cite{yamamuraHemodynamicVRAdaptingUsers2021,yamamuraPleasantLocomotionReducing2020}.
 Reduced cortical activation during low-resolution stereoscopic exposure has also been documented \cite{tanimuraEffectsLowResolution3D2019}.
 
-The direction of the hemodynamic effect is not uniform across the small fNIRS literature: regional perfusion increases in some cortical areas coexist with decreases in others, and fNIRS-derived hemoglobin signals have been used as input features for regression models predicting cybersickness severity \cite{renAssessingPassengersMotion2023}.
+The direction of the hemodynamic effect is not uniform across the small fNIRS literature: regional perfusion increases in some cortical areas coexist with decreases in others.
 Yamamura et al.\ also demonstrate the only fNIRS-based closed-loop mitigation system in the corpus, which is taken up in \autoref{sec:mitigation}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%           Classification          %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -153,7 +153,7 @@ Traditional pipelines rely on hand-crafted features (Power Spectral Density, wav
 Deep-learning pipelines learn features directly from the data.
 Convolutional Neural Networks extract spatial and spectral features from EEG time series, spectrograms, or topographic scalp maps \cite{jeongCybersicknessAnalysisEEG2019}, with recurrent layers (Long Short-Term Memory \cite{liaoUsingEEGDeep2020}, Gated Recurrent Units \cite{luoFeatureExtractionMethod2024}) capturing temporal dynamics.
 Other architectures include spiking neural networks \cite{yangPredictionDetectionVirtual2023}, shallow CNNs designed for real-time detection in mitigation systems \cite{uyanCDMSRealtimeSystem2024}, hybrid CNN--LSTM models \cite{shenClassificationVisuallyInduced2024}, dual-pathway designs that process raw EEG and functional-connectivity inputs in parallel \cite{huaDualpathwayEEGModel2025}, and channel-attention mechanisms \cite{huaEEGClassificationModel2024, huaDetectionVirtualReality2024}.
-Multimodal fusion combines EEG with peripheral physiological signals \cite{sameriPhysiologydrivenCybersicknessDetection2024}, with electromyography from postural muscles (reported as more informative than concurrent EEG in one study) \cite{recentiPredictingMotionSickness2021}, or with VR video features via transfer learning \cite{kimDeepCybersicknessPredictor2019}; fNIRS regression \cite{renAssessingPassengersMotion2023} and explainable-AI interpretation \cite{sameriPhysiologydrivenCybersicknessDetection2024} round out the subset.
+Multimodal fusion combines EEG with peripheral physiological signals \cite{sameriPhysiologydrivenCybersicknessDetection2024}, with electromyography from postural muscles (reported as more informative than concurrent EEG in one study) \cite{recentiPredictingMotionSickness2021}, or with VR video features via transfer learning \cite{kimDeepCybersicknessPredictor2019}; explainable-AI interpretation \cite{sameriPhysiologydrivenCybersicknessDetection2024} rounds out the subset.
 
 \begin{figure}[t]
     \centering
@@ -231,7 +231,7 @@ These findings point to pre-existing neural traits that influence susceptibility
 
 During cybersickness exposure, resistant and susceptible individuals show distinct neural signatures.
 Resistant individuals exhibit enhanced theta activity in the left parietal cortex, a candidate biomarker of resilience \cite{liExploringNeuralBiomarkers2023}.
-Susceptible individuals show excessive parietal N2 ERP amplitudes and impaired theta-band phase synchronisation \cite{weiMotionSicknesssusceptibleParticipants2019}, higher P3 amplitudes during sensory-mismatch conditions \cite{ahnTemporalDynamicsVisually2020}, and differential spectral and source-space activation patterns during vection \cite{zhouBrainActivityDifferences2023}.
+Susceptible individuals show excessive parietal N2 ERP amplitudes and impaired theta-band phase synchronisation \cite{weiMotionSicknesssusceptibleParticipants2019}, and higher P3 amplitudes during sensory-mismatch conditions \cite{ahnTemporalDynamicsVisually2020}.
 One study reports that the cybersickness condition produces increased delta and decreased alpha power in both susceptible and non-susceptible groups, but susceptible participants additionally show lower absolute power in the beta and gamma bands at baseline \cite{jangEstimatingObjectiveEEG2022}.
 An earlier study using a long-duration driving task found that the ratio of theta to total EEG power in frontal and parietal lobes differed between sick and non-sick groups, proposing this ratio as a physiological index of sensitivity \cite{parkLongTermStudySimulator2008}.
 
