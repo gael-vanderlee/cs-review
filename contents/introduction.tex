@@ -1,38 +1,35 @@
 Virtual Reality (VR) technology has permeated numerous sectors beyond entertainment, becoming integral tools in fields such as healthcare, professional training, and education \cite{chatainGraspingDerivativesTeaching2022}.
-Generally, VR is defined as a computer-generated simulation that enables users to perceive and interact with a three-dimensional environment through real-time multisensory feedback.
-A typical VR system includes a head-mounted display for stereoscopic rendering, motion-tracked controllers or sensors for user input, and a computing unit for environment simulation and rendering.
-However, there is no unifying definition of VR \cite{kardong-edgrenCallUnifyDefinitions2019}.
+VR has been characterized as ``the illusion of participation in a synthetic environment rather than external observation of such an environment,'' relying on stereoscopic head-tracked displays, hand/body tracking, and binaural sound to constitute an immersive, multisensory experience \cite{gigante1VirtualReality1993}, though no single definition has been universally adopted \cite{kardong-edgrenCallUnifyDefinitions2019}.
 
 A barrier to widespread VR adoption is the onset of cybersickness (CS) \cite{casermanCybersicknessCurrentgenerationVirtual2021}.
 Cybersickness is a form of visually induced motion sickness (VIMS) \cite{weechPresenceCybersicknessVirtual2019} characterized by symptoms such as nausea, dizziness, and disorientation that arise during or after immersion in a virtual environment \cite{casermanCybersicknessCurrentgenerationVirtual2021}.
 The relationship between cybersickness, VIMS, simulator sickness, and motion sickness is treated in detail in Section~\ref{sec:theoretical}; the present review uses VIMS as the umbrella term when introducing constructs and uses the term each cited study employs when reporting its findings.
-Cybersickness affects a substantial portion of the user population, with studies reporting prevalence between 60\% and 95\% \cite{casermanCybersicknessCurrentgenerationVirtual2021}, degrades user experience, impairs task performance, and can lead to premature session termination \cite{mimnaughVirtualRealitySickness2023}.
-
-Assessment of cybersickness has historically relied on subjective post-hoc questionnaires such as the Simulator Sickness Questionnaire \cite{kennedySimulatorSicknessQuestionnaire1993}.
-Such instruments are retrospective, prone to recall bias, and do not capture the dynamic nature of the experience \cite{changBrainActivityCybersickness2023, dennisonImprovingMotionSickness2019}.
+Cybersickness affects a substantial portion of the user population, with studies reporting prevalence between 60\% and 95\% and premature session termination in 6--12.9\% of participants \cite{casermanCybersicknessCurrentgenerationVirtual2021}; cybersickness also degrades user experience and impairs task performance \cite{mimnaughVirtualRealitySickness2023}.
+Assessment of VIMS has historically relied on subjective post-hoc questionnaires such as the Simulator Sickness Questionnaire \cite{kennedySimulatorSicknessQuestionnaire1993}.
+Such instruments are retrospective, prone to recall bias, and do not capture the continuous nature of the experience \cite{changBrainActivityCybersickness2023, dennisonImprovingMotionSickness2019}.
 This limitation creates a need for objective measures grounded in the user's physiology and for interventions that can modulate the user's state during exposure rather than after the fact.
 
 Two converging lines of research have responded by examining the brain.
-The first records neural activity, primarily electroencephalography (EEG), and to a lesser extent functional near-infrared spectroscopy (fNIRS), to identify signals that index the onset, severity, or trajectory of cybersickness.
+The first records neural activity, primarily electroencephalography (EEG) and functional near-infrared spectroscopy (fNIRS), to identify signals that index the onset, severity, or trajectory of VIMS.
 The second applies non-invasive brain stimulation, including galvanic vestibular stimulation (GVS), transcranial direct-current stimulation (tDCS), and transcranial alternating-current stimulation (tACS), to modulate the underlying processes that produce sickness.
 We use the term \emph{neuromarkers} to refer to signals derived from either non-invasive recording or non-invasive modulation of brain activity in this context.
-For a VR system designer, neuromarkers carry information that subjective questionnaires cannot: continuous, time-resolved indices of user state that can in principle drive adaptive content, comfort thresholds, and closed-loop mitigation.
+In a VR context, neuromarkers can carry information that subjective questionnaires cannot: continuous, time-resolved indices of user state that can in principle drive adaptive content, comfort thresholds, and closed-loop mitigation \cite{uyanCDMSRealtimeSystem2024, yamamuraHemodynamicVRAdaptingUsers2021}.
 
-Chang et al.~\cite{changBrainActivityCybersickness2023} synthesized 33 EEG studies published before September 2021 in a scoping review and characterized the EEG analysis pipeline used in cybersickness research.
+In a previous review, Chang et al.~\cite{changBrainActivityCybersickness2023} synthesized 33 EEG studies published before September 2021 and characterized the EEG analysis pipeline used in cybersickness research.
 The present systematic review differs in four respects.
 First, the scope extends beyond EEG to include functional near-infrared spectroscopy and non-invasive neurostimulation, consistent with the integrated frame of neuromarkers.
 Second, the corpus is larger and more recent: 92 studies retrieved up to 27~March~2025 from three curated databases (PubMed, Web of Science, Scopus), compared with 33 studies retrieved from Web of Science and Google Scholar up to September~2021.
 Third, the synthesis includes corpus-level inferential statistics on hardware and methodological confounders, in addition to the pipeline characterization shared with prior work.
-Fourth, this review situates the empirical findings within the broader context of the field: the theoretical frameworks invoked to explain cybersickness, the terminology used across the cybersickness, VIMS, simulator sickness, and motion sickness literatures, and a critical appraisal of recurring methodological shortcomings.
+Fourth, this review situates the empirical findings within the broader context of the field: the theoretical frameworks invoked to explain VIMS, the terminology used across the cybersickness, VIMS, simulator sickness, and motion sickness literatures, and a critical appraisal of recurring methodological shortcomings.
 Where the prior scoping review concentrates on findings and pipelines, this review additionally examines the conceptual and methodological scaffolding in which those findings are produced.
 
 The contributions of this review are threefold.
-First, we provide a systematic synthesis of cybersickness neuromarkers in VR across 92 studies, covering neuroimaging and neurostimulation under a unified frame.
-Second, we report meta-analytic evidence that VR display hardware systematically modulates the neural responses associated with cybersickness, recasting prior contradictions in the literature as partly attributable to hardware confounds rather than to differences in cybersickness per se.
+First, we provide a systematic synthesis of VIMS neuromarkers in VR across 92 studies, covering neuroimaging and neurostimulation under a unified frame.
+Second, we report meta-analytic evidence that VR display hardware systematically modulates the neural responses associated with VIMS, recasting prior contradictions in the literature as partly attributable to hardware confounds rather than to differences in VIMS per se.
 Third, we conduct a methodological audit of the field's experimental designs and classification pipelines, identifying critical gaps in cross-subject validation and threshold reporting; we derive concrete reporting recommendations from this audit to guide future VR-EEG and VR-stimulation work.
 
 The remainder of this paper is organized as follows.
-Section~\ref{sec:theoretical} reviews the relevant theoretical frameworks for cybersickness and the principal neuroimaging and stimulation modalities.
+Section~\ref{sec:theoretical} reviews the relevant theoretical frameworks for VIMS and the principal neuroimaging and stimulation modalities.
 Section~\ref{sec:methodology} describes the review methodology and search strategy.
 Section~\ref{sec:results} presents the corpus, the per-modality synthesis, and the corpus-level meta-analytic findings.
 Section~\ref{sec:discussion} critically evaluates the methodological challenges identified in our audit and outlines a roadmap for future work.

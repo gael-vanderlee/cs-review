@@ -30,7 +30,7 @@ User in the loop: When you are working on high level planning or important decis
 ## Writing Style Instructions for Latex
 
 *   **Tone:** Formal, objective, and strictly factual.
-*   **Language:** Use precise, specific, and unambiguous terminology. All language must be **literal**, avoiding metaphors or figurative expressions.
+*   **Language:** Use precise, specific, and unambiguous terminology. All language must be **literal**, avoiding metaphors or figurative expressions. Do NOT use em dashes (`---` in latex)
 *   **Clarity:** Prioritize a clear and logical flow. The language must be precise without being convoluted, ensuring the core point is always understandable.
 *   **Objectivity Rules:** Strictly avoid all superlatives, exaggeration, emotional language, and **value judgments**. Do not characterize a subject with subjective descriptors (e.g., do not call a method "simple," "elegant," or "complex"). Present the facts and allow the reader to draw their own conclusions.
 *   **Flow:** The reader should be able to follow the argument without backtracking. Tell them what a passage is about before the details when a new line of argument starts; let continuations continue. Move from broader to narrower when that makes the argument visible (construct → instance, framework → refinements, claim → consequence), and the other way when the broader point is the punchline. Connect adjacent sentences with explicit logical links rather than juxtaposing standalone facts; a paragraph that reads as a list usually has missing connectives or facts that belong elsewhere.
