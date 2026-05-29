@@ -4,7 +4,7 @@
 
 1. `[AE, R1]` Comment: The manuscript framing around `BCI` is not convincing, and the title, abstract, and keywords are affected by that framing.
    - Decision: remove the `BCI` framing.
-   - Done: Title changed to "Decoding Discomfort: A Systematic Review of Neuromarkers and Neurostimulation for Visually Induced Motion Sickness in Virtual Reality"; abstract and introduction rewritten around "neuromarkers" as the scope-defining concept; "BCI" removed throughout.
+   - Done: Title changed to "The Neurophysiology of Cybersickness: A Systematic Review of Neuromarkers, Neurostimulation, and Reporting Practice in Virtual Reality"; abstract and introduction rewritten around "neuromarkers" as the scope-defining concept; "BCI" removed throughout.
 2. `[AE, R1]` Comment: The paper does not clearly establish its novelty relative to `Chang et al. (2023)` or explain why a new review is needed now.
    - Decision: Compare more in depth (scope, number of papers), move comparison to the Intro
    - Done (Intro): Chang comparison paragraph with four verified differentiators: corpus size (33 vs 92), search window (2021-09 vs 2025-03), modality coverage (EEG-only vs multi-modal incl. neurostim), and theoretical engagement scope.
