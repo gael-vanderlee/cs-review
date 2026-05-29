@@ -1,0 +1,267 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage[protrusion=true,expansion=false]{microtype}
+\usepackage{parskip}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black}
+
+\setlist[itemize]{leftmargin=*,topsep=2pt,itemsep=2pt}
+\setlist[description]{leftmargin=0pt,labelindent=0pt,topsep=2pt,itemsep=4pt}
+
+% Compact diff macro: rendered as a two-column table for clarity
+\newcommand{\diffbox}[2]{%
+  \begin{center}
+  \small
+  \begin{tabular}{@{}p{0.46\textwidth}@{\hspace{2em}}p{0.46\textwidth}@{}}
+  \toprule
+  \textbf{Before} & \textbf{After} \\
+  \midrule
+  #1 & #2 \\
+  \bottomrule
+  \end{tabular}
+  \end{center}}
+
+\newcommand{\addresses}[1]{\par\noindent\textbf{\small Addresses:} {\small #1}\par\smallskip}
+\newcommand{\xref}[1]{\textcolor{blue!50!black}{[\,#1\,]}}
+
+\title{\vspace{-2em}Response to Reviewers\\[0.3em]
+  \large Manuscript TVCG-2025-09-0929: Major Revision}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\vspace{-3em}
+
+\noindent Dear Associate Editor and Reviewers,\medskip
+
+\noindent We thank you all for the valuable feedback. The reviews converged on several points: the BCI framing, the engagement with motion-sickness theory, the omission of the neurostimulation literature, the position relative to Chang et al.\ 2023, and the absence of a per-study summary table. Addressing them required revisions across most sections of the manuscript, but hopefully resulted in a significant overhaul to the paper.
+
+\noindent One change deserves explicit mention: to address the comments related to potential missing literature,we re-executed the literature search from scratch (Section~\ref{sec:search}). The new search adds neurostimulation terms (raised by R2 and R3) and, on inspection of the returned set, also tightens the eligibility criteria to require explicit VR terminology. The resulting corpus contains 92 studies (vs.\ 83 previously): 61 carried over, 31 newly identified (including the 11 neurostimulation studies), and 22 previously included studies removed under the explicit-VR criterion. The methodological synthesis and meta-analytic findings are computed against the revised corpus.
+
+\noindent The response is organised by theme, each theme lists the comments it addresses, and a per-comment cross-reference appears at the end as Table~\ref{tab:xref}. Where applicable, we include short before/after excerpts; full changes are in the revised manuscript at the cited sections.
+
+\clearpage
+\tableofcontents
+\clearpage
+\bigskip
+
+% ---------------------------------------------------------------
+\section{Reframing: from BCI to neurophysiology and neuromarkers}\label{sec:framing}
+\addresses{Associate Editor (framing); R1 Major~\#1.}
+
+We agree that the BCI terminology might not fit the corpus exactly as of the included studies translate neural signals into control of an external device; they characterise neural correlates, classify sickness state, or attempt to modulate sickness via stimulation. Thus BCI has been removed as the organising concept throughout. The scope-defining term is now \emph{neuromarker}, defined as a signal derived from non-invasive recording or modulation of brain activity that indexes or modulates the cybersickness state.
+
+\diffbox{Title: ``The Neurophysiology of Cybersickness: A Review of BCI-based Characterization and Prediction.''}{Title: ``The Neurophysiology of Cybersickness: A Systematic Review of Neuromarkers, Neurostimulation, and Reporting Practice in Virtual Reality''}
+
+The Abstract, Introduction, and Conclusion have been rewritten around this frame. The term ``BCI'' has been removed from all section prose; the Future Directions paragraph on adaptive systems retains a single mention only in describing what the field could become.
+
+% ---------------------------------------------------------------
+\section{Search strategy: re-execution with neurostimulation and explicit VR criteria}\label{sec:search}
+\addresses{Associate Editor (missing references / neurostimulation); R2 Major (neurostimulation); R3 Major (missing neurostimulation works); R3 Minor (PET/MEG).}
+
+R2 and R3 are correct that the original search omitted neurostimulation. Rather than splicing additional papers into the existing corpus, we re-ran the search from scratch on PubMed, Web of Science, and Scopus with two changes:
+\begin{itemize}
+  \item \textbf{Added neurostimulation terms:} \texttt{tDCS}, \texttt{tACS}, \texttt{TMS}, \texttt{GVS}, and related terms. We also added explicit terms for \texttt{PET} and \texttt{MEG} so we could report on their absence rather than rely on their non-appearance.
+  \item \textbf{Added explicit VR eligibility:} ``virtual reality'', ``head-mounted display'', ``HMD'', or equivalents. The earlier query had relied on \texttt{cybersickness} as an implicit VR filter, and on review we found that while the vast majority of non VR papers had been manually excluded, a small number of non-VR motion-sickness papers had been retained, prompting the change in query for explicit VR mention.
+\end{itemize}
+
+\noindent The verbatim queries, database search dates, and the 2025-03-27 publication-date cut-off are reported in \S~III. The PRISMA flow is: 443 records identified (PM 57 / WoS 147 / Sc 239) $\rightarrow$ 224 duplicates removed $\rightarrow$ 219 screened $\rightarrow$ 119 excluded at title/abstract $\rightarrow$ 100 sought for retrieval $\rightarrow$ 8 not retrieved $\rightarrow$ 92 included.
+
+\paragraph{Corpus delta.} Of the 83 papers in the previous corpus, 61 are retained; 31 new papers are added; 22 are removed. The 11 neurostimulation studies are among the new additions (5~GVS, 3~tDCS, 2~tACS, 1~other; see Table~I of the manuscript). The 22 dropped papers are predominantly non-VR motion-sickness work: vehicle and autonomous-driving simulator studies, auricular vagus nerve stimulation, rotating-dot pattern viewing, transcutaneous Doppler hemodynamics, classical simulator-sickness paradigms, and the three fMRI nausea-network studies (Napadow et al.\ $\times 2$; Toschi et al.), whose removal motivated the reframing described in Section~\ref{sec:fnirs}. The corpus is now more tightly VR-focused, covers neurostimulation explicitly, and the meta-analytic and methodological findings reported in \S~3.6 and \S~3.3 are computed against the revised set. We did not broaden the scope to classical motion sickness as a whole: the search would be too wide and the construct space too heterogeneous to support corpus-grounded synthesis.
+
+\paragraph{PET / MEG / fMRI scope.} The new query explicitly includes PET and MEG; both return zero eligible studies in the cybersickness/VIMS-in-VR scope. fMRI was not excluded by query design; the three eligible fMRI studies from the previous corpus do not satisfy the strict-VR criterion (they used non-VR visual stimulation in scanner). \S~III states all three results plainly.
+
+% ---------------------------------------------------------------
+\section{Novelty: positioning relative to Chang et al.\ (2023)}\label{sec:novelty}
+\addresses{Associate Editor (novelty); R1 Major~\#4.}
+
+A dedicated paragraph at the end of the Introduction now contrasts our review with Chang et al.\ (2023) on four verified dimensions:
+\begin{itemize}
+  \item \textbf{Corpus size and recency:} 92 studies through March 2025, vs.\ 33 through September 2021.
+  \item \textbf{Modality coverage:} multimodal, including 11 neurostimulation studies and 4 fNIRS studies, vs.\ EEG-only.
+  \item \textbf{Theoretical and methodological scope:} this review engages explicitly with theoretical frameworks, terminology, and field-level methodological practices; Chang's research questions are findings- and pipeline-focused.
+  \item \textbf{Meta-analytic synthesis:} this review provides corpus-level statistics on the influence of VR hardware on band-power responses (a finding Chang's paper could not derive given its EEG-only scope and earlier window).
+\end{itemize}
+
+\noindent The Discussion section repurposes a separate Chang comparison from scope-recap (now redundant with the Intro) to a findings-level comparison: the dominant correlates (delta and theta increases) reproduce in our larger corpus (16/30 and 20/35 of studies reporting those bands), and the previously reported inconsistency in alpha is partly explained by HMD vs.\ screen hardware effects we quantify in \S~3.6.
+
+% ---------------------------------------------------------------
+\section{TVCG fit}\label{sec:tvcg}
+\addresses{Associate Editor; R1 Major~\#5.}
+
+The revised manuscript anchors its TVCG relevance on a practitioner thread visible across four sections: (a) the meta-analytic VR-hardware confounder (alpha Cliff's $\delta = 0.875$, beta $\delta = 0.664$; \S~3.6) directly informs hardware choices for VR research; (b) the Objective Markers Discussion subsection identifies signals (postural sway, pupillometry) that VR systems can already collect; (c) the Future Directions reporting checklist targets the methodological choices made by VR-EEG study designers; and (d) the all-studies table makes the corpus accessible to VR practitioners who want to identify comparators for their own studies. The Introduction now closes with a TVCG-fit sentence stating these implications explicitly.
+
+% ---------------------------------------------------------------
+\section{Terminology and theoretical grounding}\label{sec:theory}
+\addresses{R1 Major~\#2 (a, b, c); R1 ``vection theory'', ``CS vs SS vs MS'', ``sensory conflict references'', ``poison theory'', ``FMS''; R2 Minor~\#4 (classical theories); R3 Major (Theoretical Disconnect).}
+
+\paragraph{Terminology policy.} We adopted a hybrid approach. Background (\S~II) introduces motion sickness as the umbrella construct with VIMS and cybersickness as nested subtypes (per R1 Major~\#2b), citing Kennedy/Drexler/Kennedy~2010, Keshavarz \& Golding~2022, Lackner~2014, and Cha et al. Results and Discussion preserve each cited paper's own term. We elected not to enforce a single hierarchy across the corpus: doing so would misrepresent authors who use different umbrella terms, and the corpus is heterogeneous enough that any forced reclassification would be opaque.
+
+\paragraph{Theoretical accounts in Background.} Section~II now presents the etiological accounts as distinct frameworks: sensory conflict (anchored on Reason 1978, Reason \& Brand 1975, Oman 1990, no longer on the previously cited weaker sources), postural instability (Riccio \& Stoffregen 1991; Stoffregen \& Smart 1998), unexpected vection (Teixeira 2022, 2025; Berti \& Keshavarz 2020), poison/toxin (reframed as a ``why'' hypothesis, not a competitor to mechanistic theories per R1), display-specific (vergence-accommodation), oculomotor, and predictive coding. Lawson 2014 and Keshavarz/Hecht/Lawson 2014 are included as integrative chapter references.
+
+\paragraph{R1-flagged inaccurate statements.}
+\diffbox{``Cybersickness is more strongly associated with vection and disorientation, in contrast to oculomotor or nausea-dominant profiles of SS or MS.''}{This sentence has been removed. Background now states that cybersickness symptoms span disorientation, oculomotor, and nausea components (Kennedy SSQ subscale literature), and that vection is a related but distinct visual-motion phenomenon, not a symptom.}
+\diffbox{``$\ldots$ vection theory of motion sickness $\ldots$''}{``Vection theory'' framing removed. Background presents an \emph{unexpected-vection} account (Teixeira 2022/2025) instead.}
+
+\paragraph{FMS attribution.} The FMS is now cited to Keshavarz \& Hecht 2011 (original source), not to later studies using the scale.
+
+\paragraph{Theory threading in Results and Discussion.} The Results modality subsections now thread the sensory-conflict, postural-instability, and unexpected-vection accounts through the synthesis. The Discussion's Objective Markers subsection is anchored on the postural-instability account (Riccio \& Stoffregen; Stoffregen \& Smart). Background reports the corpus theory-engagement counts (73/92 explicit; 75/87 of those cite sensory conflict), and the Challenges section explicitly notes that few studies return to their stated theory when interpreting findings.
+
+% ---------------------------------------------------------------
+\section{All-studies table}\label{sec:table}
+\addresses{R1 Major~\#3; R1 ``substantial body of research''.}
+
+A landscape long\-table of all 92 included studies is added to the Results section. Columns: reference, modality, sample size, VR device, stimulus paradigm, cybersickness measure, primary objective, and topic. The table spans 2 landscape pages and lets the rest of Results refer to specific studies by reference rather than by vague aggregates. Vague phrases such as ``a substantial body of research'' have been replaced by exact corpus counts throughout.
+
+% ---------------------------------------------------------------
+\section{Methodological audit: classification reporting practices}\label{sec:audit}
+\addresses{R1 (accuracy and sick/non-sick threshold); R3 Major (Discussion grounding).}
+
+We agree with R1's observation that accuracy alone is uninformative when class balance and the sick/non-sick threshold are unstated. This observation is adopted as one of the paper's three contributions. In the 38-study classification subset:
+\begin{itemize}
+  \item \textbf{13/38} report accuracy as the sole discrimination metric;
+  \item \textbf{7/38} report sensitivity and specificity;
+  \item \textbf{10/38} report AUC or F1;
+  \item \textbf{19/38} expose no numeric sick/non-sick threshold;
+  \item \textbf{8/38} use an explicit numeric SSQ/FMS cutoff;
+  \item \textbf{1/38} reports leave-one-subject-out cross-validation.
+\end{itemize}
+
+\noindent These counts are placed inline in Results~\S~3.3 (per R1's specific suggestion ``something to consider when talking about accuracies''). The Challenges section develops the critique with statistical anchors (Saito \& Rehmsmeier 2015 on PR vs.\ ROC under imbalance; Combrisson \& Jerbi 2015 on empirical chance levels; Varoquaux 2018 on subject leakage in k-fold). Future Directions specifies the minimum reporting set we recommend: primary AUC or balanced accuracy with 95\% CI; sensitivity/specificity at a stated operating point; class balance; numeric SSQ/FMS cutoff; subject-stratified validation; chance and non-neural feature baselines.
+
+% ---------------------------------------------------------------
+\section{Claims about sex/gender and baseline brain function}\label{sec:gender}
+\addresses{R1 (sex/gender consistency, baseline-brain claim, Lawson \& Bolkhovsky 2023); R2 Minor~\#3 (Kelly 2023, Kourtesis 2023).}
+
+We agree with both reviewers that the previous wording was too strong. The corpus contains only three studies reporting a female-greater-than-male effect, and all three are from a single laboratory operating a single neurofeedback paradigm. Results~\S~3.4 now reports the calibrated counts (3/92 F$>$M from one lab; 11/92 male-only; 15/92 sex not reported; 63/92 mixed-sex without a sex analysis) alongside the comparator review evidence: Kelly 2023 ($r \approx 0.21$, modest effect detectable only in large samples), Lawson \& Bolkhovsky 2023 (37/76 studies with no consistent F$>$M difference), and Kourtesis 2023 (no difference once gaming experience is controlled).
+
+\diffbox{``$\ldots$ individual susceptibility to cybersickness is not random but is rooted in measurable differences in baseline brain function, neural responses to sensory conflict, and demographic variables.''}{``Neural correlates of susceptibility are measurable, but demographic moderators remain weak, and the corpus is underpowered for either as a deployable biomarker.''}
+
+\noindent Future Directions develops sex/gender as a primary direction anchored on Kelly's mediation/moderation framework, with three prescriptions: sex-stratified outcome reporting, IPD and gaming-experience covariates, and multi-site pooled cohorts.
+
+% ---------------------------------------------------------------
+\section{Eyes-closed baseline and objective measures}\label{sec:baseline}
+\addresses{R3 Minor (Baseline Justification); R1 (objective measures: postural sway, pupillometry).}
+
+\paragraph{Eyes-closed baseline (R3).} Results~\S~3.1.5 now reports the corpus prevalence (5/77 EEG studies use a pure eyes-closed resting baseline; a minority, not the dominant practice). Challenges develops the critique anchored on Berger 1929, Klimesch 2007, and Barry 2007: closing the eyes elicits a large posterior alpha increase relative to eyes-open, and the VR exposure condition (eyes-open inside an HMD) is not matched on visual input, oculomotor state, or vigilance. Future Directions proposes three matched alternatives with corpus exemplars: eyes-open resting with HMD on a static scene (Li 2023), pre-stimulus segment (Wu 2020), and sham non-nauseogenic VR exposure (Takeuchi 2018).
+
+\paragraph{Objective measures (R1).} A new Discussion subsection, ``Objective Markers and the Limits of Self-Report,'' states that cybersickness has no diagnostic biomarker and that ground truth is self-report. Postural sway is presented as the theoretically anchored candidate (postural-instability account; Riccio \& Stoffregen 1991, Stoffregen \& Smart 1998; VR-specific coupling in Palmisano 2014, Dennison \& D'Zmura 2018, Teixeira 2024). Pupillometry is presented as a second candidate (Kourtesis 2023) with arousal and cognitive-load confounds explicitly named. 16 of 92 corpus studies already co-record force-plate, balance-board, eye-tracker, or pupillometry alongside EEG but typically treat them as covariates rather than candidate ground truth; Future Directions F5 reframes them as outcome variables.
+
+% ---------------------------------------------------------------
+\section{Structural cleanup: ERP order, Section F, ``other physiological correlates''}\label{sec:structure}
+\addresses{R1 (ERP before fMRI; ``other physiological correlates'' removal; Section F removal).}
+
+\begin{itemize}
+  \item \textbf{ERP placement.} ERPs now precede fNIRS in Results~\S~3.2. (The corpus contains no fMRI, so R1's literal request (ERP before fMRI) maps to ERP before fNIRS.)
+  \item \textbf{Other physiological correlates.} The standalone subsection has been removed. Sway and pupillometry are covered in the Discussion's Objective Markers subsection (Section~\ref{sec:baseline}) at the level of detail their evidence warrants.
+  \item \textbf{Section F.} Removed per R1. Confounding Factors was promoted to a standalone subsection (\S~3.6) carrying the corpus-level meta-analytic findings on VR hardware. Recovery (Woo 2023; plus external fMRI evidence from Miyazaki 2021) and Cognition (Mimnaugh, Wu, Xu, Berger 2025) are folded into the Objective Markers Discussion paragraph as functional-impairment context. Public Datasets are covered in Methods and Future Directions; no standalone Discussion subsection.
+\end{itemize}
+
+% ---------------------------------------------------------------
+\section{fNIRS background and nausea network}\label{sec:fnirs}
+\addresses{R2 Minor~\#1 (fNIRS temporal resolution); R2 Minor~\#2 (fNIRS spatial limits); R1 (nausea network overstated given few fMRI studies).}
+
+The revised corpus contains zero fMRI studies (Section~\ref{sec:search}). The fMRI paragraph and the nausea-network discussion that R1 flagged have therefore been removed from Background entirely, rather than corrected in place. The fNIRS paragraph has been rewritten to drop the implicit fMRI comparison and to state R2's two corrections directly:
+
+\diffbox{Original fNIRS prose contrasted fNIRS with fMRI (``more robust to motion artifacts than fMRI'') and contained no statement of fNIRS's spatial-depth limitation. A separate fMRI paragraph identified Napadow et al.\ and Toschi et al.\ with a ``nausea network'' (insular and cingulate cortices).}{fNIRS is now described as a hemodynamic technique with temporal resolution substantially lower than EEG and optical penetration that restricts measurement to superficial cortical regions; the fMRI paragraph and the nausea-network claim are removed.}
+
+% ---------------------------------------------------------------
+\section{Dataset-based prediction papers}\label{sec:datasets}
+\addresses{R3 Major (Missing Prediction Works).}
+
+The 6 papers in the corpus that train classifiers on previously released datasets (4 pure reuse, 2 combining reuse with newly recorded data) are retained because they satisfied all eligibility criteria; they are flagged where relevant in the synthesis. We did not, however, expand the search to actively pull in pure-dataset benchmarking work beyond what the systematic search returned. The rationale, now stated in Methods \S~III, is scoped to the review's framing: this is a review of neuromarker discovery (signals that index or modulate the cybersickness state), and pure-dataset benchmarking is a methodologically distinct literature whose primary objective is classification performance on a fixed recording rather than the identification of new neural correlates. Treating that literature systematically would require its own search strategy and inclusion criteria.
+
+% ---------------------------------------------------------------
+\section{Minor inconsistencies and remaining corrections}\label{sec:minor}
+\addresses{R3 Minor (PRISMA discrepancy); R3 Minor (excluded modalities); R1 (EEG/fMRI counts); R2 Minor~\#4 (foundational MS refs).}
+
+\begin{itemize}
+  \item \textbf{PRISMA discrepancy (R3).} The old text-vs-figure mismatch (119 vs.\ 114) is moot under the re-executed search; \S~III now reports the revised counts consistently (text and figure both: 224 duplicates removed, 219 screened, 119 excluded at title/abstract, 100 sought for retrieval, 8 not retrieved, 92 included).
+  \item \textbf{Excluded modalities (R3).} \S~III states explicitly: PET and MEG were included in the search query, both return zero eligible studies; fMRI was not excluded by query design but no in-corpus study satisfies the strict-VR criterion.
+  \item \textbf{EEG/fNIRS counts in Background (R1).} Background now reports the corpus modality counts inline (77 EEG, 4 fNIRS, 11 neurostimulation-only; 0 fMRI/MEG/PET).
+  \item \textbf{Foundational MS references (R2 Minor~\#4).} Oman 1990, Reason \& Brand 1975, Reason 1978, Riccio \& Stoffregen 1991, Stoffregen \& Smart 1998 are now cited in the appropriate Background paragraphs (Section~\ref{sec:theory}).
+\end{itemize}
+
+% ---------------------------------------------------------------
+\section{Page budget and submission compliance}\label{sec:budget}
+\addresses{Editor letter (page limit).}
+
+The revised manuscript compiles to 19 pages exactly under the TVCG double-column survey cap, including the all-studies table (2 landscape pages), Abstract, Index Terms, affiliations, references, figure captions, and author biographies. All required submission elements are present.
+
+% ---------------------------------------------------------------
+\section{Per-comment cross-reference}\label{sec:xref}
+
+Table~\ref{tab:xref} lists every Associate Editor and reviewer comment with the response section that addresses it.
+
+\begin{longtable}{p{0.36\textwidth} p{0.40\textwidth} p{0.16\textwidth}}
+\caption{Per-comment cross-reference. Bracketed numbers refer to sections of this letter.}\label{tab:xref}\\
+\toprule
+\textbf{Comment} & \textbf{Summary} & \textbf{Response} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Comment} & \textbf{Summary} & \textbf{Response} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+
+\multicolumn{3}{l}{\textit{Associate Editor}}\\
+AE : theory & Stronger theoretical grounding & \xref{\ref{sec:theory}} \\
+AE : references & Missing references, especially neurostimulation & \xref{\ref{sec:search}}, \xref{\ref{sec:theory}} \\
+AE : novelty & Position relative to Chang et al.\ 2023 & \xref{\ref{sec:novelty}} \\
+\midrule
+\multicolumn{3}{l}{\textit{Reviewer 1}}\\
+R1 Major \#1 & BCI framing not convincing & \xref{\ref{sec:framing}} \\
+R1 Major \#2a & Motion sickness missing from search & \xref{\ref{sec:search}}, \xref{\ref{sec:theory}} \\
+R1 Major \#2b & VIMS as umbrella, not cybersickness & \xref{\ref{sec:theory}} \\
+R1 Major \#2c & Add definitional references & \xref{\ref{sec:theory}} \\
+R1 Major \#3 & Add table of all studies & \xref{\ref{sec:table}} \\
+R1 Major \#4 & Novelty vs.\ Chang 2023 & \xref{\ref{sec:novelty}} \\
+R1 Major \#5 & TVCG fit & \xref{\ref{sec:tvcg}} \\
+R1 : vection theory & No ``vection theory'' of MS; use unexpected-vection & \xref{\ref{sec:theory}} \\
+R1 : CS vs SS vs MS sentence & Statement incorrect & \xref{\ref{sec:theory}} \\
+R1 : sensory conflict refs & Replace weak with Reason / Reason \& Brand / Oman & \xref{\ref{sec:theory}} \\
+R1 : poison theory & Reframe as ``why'' not mechanistic competitor & \xref{\ref{sec:theory}} \\
+R1 : FMS reference & Cite Keshavarz \& Hecht 2011 & \xref{\ref{sec:theory}} \\
+R1 : modality counts & State EEG / fNIRS / fMRI counts in text & \xref{\ref{sec:minor}} \\
+R1 : nausea network & Overstated given few fMRI; link to vection / MS lit & \xref{\ref{sec:fnirs}} \\
+R1 : ERP placement & Move ERP before fMRI & \xref{\ref{sec:structure}} \\
+R1 : ``other phys'' section & Remove & \xref{\ref{sec:structure}} \\
+R1 : ``substantial body'' & Replace with counts & \xref{\ref{sec:table}}, \xref{\ref{sec:audit}} \\
+R1 : ML accuracy & Sens/spec, sick/non-sick threshold & \xref{\ref{sec:audit}} \\
+R1 : sex/gender & Cite Lawson \& Bolkhovsky 2023, soften & \xref{\ref{sec:gender}} \\
+R1 : ``not random'' baseline & Statement too strong & \xref{\ref{sec:gender}} \\
+R1 : Section F & Necessary? & \xref{\ref{sec:structure}} \\
+R1 : objective measures & Postural responses, pupil dilation & \xref{\ref{sec:baseline}} \\
+\midrule
+\multicolumn{3}{l}{\textit{Reviewer 2}}\\
+R2 Major & Neurostimulation literature missing & \xref{\ref{sec:search}} \\
+R2 Minor \#1 & fNIRS temporal resolution & \xref{\ref{sec:fnirs}} \\
+R2 Minor \#2 & fNIRS deep structures & \xref{\ref{sec:fnirs}} \\
+R2 Minor \#3 & Gender claims too strong (Kelly, Kourtesis) & \xref{\ref{sec:gender}} \\
+R2 Minor \#4 & Classical theories (Oman, Reason, Riccio, Stoffregen) & \xref{\ref{sec:theory}} \\
+\midrule
+\multicolumn{3}{l}{\textit{Reviewer 3}}\\
+R3 Major : Theoretical Disconnect & Theories not used to structure synthesis & \xref{\ref{sec:theory}} \\
+R3 Major : Neurostimulation & Omission of tACS / GVS literature & \xref{\ref{sec:search}} \\
+R3 Major : Prediction works & Dataset-based ML papers excluded & \xref{\ref{sec:datasets}} \\
+R3 Major : Refs in Discussion & Narrative-heavy, lacks specific citations & \xref{\ref{sec:audit}}, \xref{\ref{sec:baseline}}, \xref{\ref{sec:gender}} \\
+R3 Minor : PRISMA & 119 vs.\ 114 mismatch & \xref{\ref{sec:minor}} \\
+R3 Minor : Baseline & Eyes-closed justification + alternatives & \xref{\ref{sec:baseline}} \\
+R3 Minor : PET/MEG & Justify absence of other modalities & \xref{\ref{sec:search}}, \xref{\ref{sec:minor}} \\
+
+\end{longtable}
+
+\bigskip
+\noindent We thank the reviewers for the depth of their comments and remain available for any further clarification.
+
+\end{document}
