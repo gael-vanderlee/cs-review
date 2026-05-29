@@ -72,7 +72,7 @@ Among studies using questionnaires, the Simulator Sickness Questionnaire is the 
 
 \subsubsection{Baseline Conditions and Preprocessing Heterogeneity}
 Baseline conditions vary across the corpus: 39 of 92 studies use a task baseline, 16 use an eyes-open resting baseline, 8 use a pre-stimulus segment of the same recording, 5 use an eyes-closed resting baseline, and the remainder either do not specify a baseline (3) or do not report one (21 missing, including the neurostimulation-only studies).
-The five eyes-closed cases are a minority of the corpus, but alpha-band reactivity to eye closure overlaps with the alpha modulations attributed to VIMS; \autoref{sec:discussion} develops this critique and discusses recommended alternatives.
+The 5 eyes-closed cases are a minority of the corpus, but alpha-band reactivity to eye closure overlaps with the alpha modulations attributed to VIMS; \autoref{sec:discussion} develops this critique and discusses recommended alternatives.
 
 Across the 77 EEG corpus studies, band-pass and notch-filter reporting is heterogeneous: 11 (14.3\%) do not report a band-pass filter, and 59 (76.6\%) do not state a notch-filter frequency.
 Of the 66 that report a band-pass setting, 59 give numeric low and high cutoffs, summarised in \autoref{fig:bandpass_distribution}; among these, low cutoffs span 0--8 Hz and high cutoffs 15--100 Hz, and no configuration predominates in the corpus.
@@ -104,7 +104,7 @@ Individual reports range from beta suppression \cite{kimCharacteristicChangesPhy
 Of the 21 studies reporting a gamma-band change, 7 (33.3\%) report an increase, 6 no change, 5 a mixed pattern, and 3 a decrease.
 The full distribution of rhythm changes across anatomical regions is shown in \autoref{fig:rhythm_changes}; as with alpha, the beta result is partly attributable to display hardware (\autoref{sec:confounders}).
 
-Test-retest reliability for delta, theta, and alpha power changes in frontal and central areas has been reported in one corpus study \cite{limTestretestReliabilityVirtual2021}, and delta-band normalisation has been used as a marker of the post-exposure recovery time course \cite{wooRecoveryTimeVR2023}; the recovery literature is discussed in \autoref{sec:discussion}.
+Test-retest reliability for delta, theta, and alpha power changes in frontal and central areas has been reported in 1 corpus study \cite{limTestretestReliabilityVirtual2021}, and delta-band normalisation has been used as a marker of the post-exposure recovery time course \cite{wooRecoveryTimeVR2023}; the recovery literature is discussed in \autoref{sec:discussion}.
 
 \begin{figure}[t]
     \centering
@@ -135,7 +135,7 @@ Bilateral angular-gyrus deactivation has been reported in association with subje
 Reduced cortical activation during low-resolution stereoscopic exposure has also been documented \cite{tanimuraEffectsLowResolution3D2019}.
 
 The direction of the hemodynamic effect is not uniform across the small fNIRS literature: regional perfusion increases in some cortical areas coexist with decreases in others.
-Yamamura et al.\ also demonstrate the only fNIRS-based closed-loop mitigation system in the corpus, which is taken up in \autoref{sec:mitigation}.
+The only fNIRS-based closed-loop mitigation system reported in the corpus \cite{yamamuraHemodynamicVRAdaptingUsers2021} is taken up in \autoref{sec:mitigation}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%           Classification          %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -223,7 +223,7 @@ Addressing the threshold-heterogeneity problem raised above, one recent study de
 Resting-state neural features have been used to predict VIMS susceptibility before exposure, and during exposure susceptible and resistant individuals show distinct neural signatures.
 Demographic moderators are reported in a small subset of the corpus and warrant cautious interpretation given the small effect sizes documented in the broader literature.
 
-Pre-exposure prediction of VIMS has been demonstrated in three corpus studies.
+Pre-exposure prediction of VIMS has been demonstrated in 3 corpus studies.
 A spiking neural network classified subsequent sickness with 85.9\% accuracy from pre-exposure resting-state EEG alone \cite{yangPredictionDetectionVirtual2023}.
 Resting-state EEG beta power in the left parietal region has been reported as a significant predictor of subsequent motion-sickness ratings in an in-car VR platform \cite{liRestingstateEEGVestibular2023}, and aperiodic components of the EEG signal have been reported as predictive of susceptibility to rotational motion \cite{tianWhoSaysYou2024}.
 These findings point to pre-existing neural traits that influence susceptibility, although the evidence base remains small.
@@ -235,7 +235,7 @@ One study reports that the cybersickness condition produces increased delta and 
 An earlier study using a long-duration driving task found that the ratio of theta to total EEG power in frontal and parietal lobes differed between sick and non-sick groups, proposing this ratio as a physiological index of sensitivity \cite{parkLongTermStudySimulator2008}.
 
 Sex and gender differences are reported in 3 of 92 corpus studies, all from a single laboratory using a VR-neurofeedback paradigm \cite{bergerSexDifferencesUser2021, bergerInfluencePlaceboTDCS2024, bergerManipulatingCybersicknessVirtual2025}.
-Across all three studies, women reported greater cybersickness than men; in two of the three, higher cybersickness was additionally associated with poorer sensorimotor-rhythm neurofeedback performance \cite{bergerInfluencePlaceboTDCS2024, bergerManipulatingCybersicknessVirtual2025}.
+Across all 3 studies, women reported greater cybersickness than men; in 2 of the 3, higher cybersickness was additionally associated with poorer sensorimotor-rhythm neurofeedback performance \cite{bergerInfluencePlaceboTDCS2024, bergerManipulatingCybersicknessVirtual2025}.
 An additional 11 corpus studies use male-only samples (precluding sex comparisons) and 15 do not report participant sex composition, leaving 63 mixed-sex studies that report composition without analysing sex effects.
 
 Individual variability in VIMS susceptibility has measurable neural correlates and small demographic moderators.
@@ -250,12 +250,12 @@ Mitigation research in the corpus splits into two threads: closed-loop adaptive 
 Both threads are early-stage, and the small literature already documents one methodological obstacle specific to the closed-loop setting.
 
 \subsubsection{Closed-Loop Adaptive VR}
-Only two corpus studies implement closed-loop adaptation: the literature is in early-stage development.
+Only 2 corpus studies implement closed-loop adaptation: the literature is in early-stage development.
 One system uses a two-stage shallow convolutional network to detect cybersickness from EEG and infer a likely causal factor, then selectively modifies the implicated VR parameter (navigation speed or scene complexity), producing a significant reduction in user-reported sickness compared to a control condition \cite{uyanCDMSRealtimeSystem2024}.
 A second system uses fNIRS to monitor total hemoglobin concentration; on detecting increases correlated with sickness, the system dynamically reduces the user's field of view, demonstrating the feasibility of an fNIRS-based closed-loop pipeline \cite{yamamuraHemodynamicVRAdaptingUsers2021}.
 
 \subsubsection{Interventions Modulating Brain State}
-Five corpus studies investigate interventions intended to act on the underlying physiological state of the user, with concurrent EEG used to verify neural engagement.
+The corpus includes 5 studies that investigate interventions intended to act on the underlying physiological state of the user, each using concurrent EEG to verify neural engagement.
 Transcutaneous auricular vagus nerve stimulation significantly reduced motion-sickness symptoms in one study, with the reduction correlated with stimulation-induced neural activation in specific brain regions measured by EEG source localisation \cite{molefiTranscutaneousAuricularVagus2025}.
 Vibro-motor reprocessing therapy was associated with significant reductions in alpha, delta, and theta spectral power \cite{molefiVibromotorReprocessingTherapy2022}.
 Providing synchronised auditory and physical motion cues during a simulated bicycle ride reduced VIMS scores relative to conditions with mismatched or absent cues, with the effect reflected in concurrent EEG recordings \cite{yeoEEGbasedAnalysisVarious2022}.
