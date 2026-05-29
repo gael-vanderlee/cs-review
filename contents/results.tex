@@ -14,8 +14,9 @@ The dispersion documented in this subsection is the precondition for the meta-an
 
 
 \subsubsection{Neuroimaging and Physiological Recording Modalities}
-EEG is the predominant modality (77 of 92 studies, 83.7\%).
-The remaining studies use fNIRS (4 of 92, 4.3\%) or non-invasive neurostimulation without concurrent recording (11 of 92, 12.0\%: GVS in 5, tDCS in 3, tACS in 2).
+EEG is the predominant modality (77 of 92 studies, 83.7\%), followed by fNIRS (4 of 92, 4.3\%).
+The remaining 11 studies (12.0\%) record neither EEG nor fNIRS: 9 deliver non-invasive stimulation without concurrent brain recording (GVS in 5, tDCS in 2, tACS in 1, bone-conducted vibration in 1), and 2 record only peripheral physiology.
+Across the full corpus, including studies that also record EEG, non-invasive stimulation is used in 11 studies (GVS in 5, tDCS in 3, tACS in 2, bone-conducted vibration in 1).
 No corpus study uses fMRI, MEG, or PET; \autoref{sec:methodology} states the search-query and screening implications of this absence.
 
 
@@ -94,13 +95,13 @@ Increases in delta (1--4 Hz) and theta (4--8 Hz) power have been associated with
 
 Alpha-band findings diverge across the corpus.
 Of the 39 studies reporting an alpha change, 15 (38.5\%) report an increase, 11 (28.2\%) report a decrease, 9 (23.1\%) report a mixed pattern, and 4 (10.3\%) report no change.
-Studies that report alpha suppression, particularly over central, parietal, and occipital cortices, interpret it as a marker of increased cognitive load under sensory conflict or as a consequence of postural-control demand \cite{cortesEEGbasedExperimentVR2023a, chenSpatialTemporalEEG2010, kimPsychophysiologicalChangesNavigation2001}.
-Studies that report alpha enhancement attribute it to sensory gating or to drowsiness during prolonged exposure.
+Studies that report alpha suppression, particularly over central, parietal, and occipital cortices, interpret it as a marker of increased cognitive load under sensory conflict or as a consequence of postural-control demand \cite{cortesEEGbasedExperimentVR2023, chenSpatialTemporalEEG2010, kimPsychophysiologicalChangesNavigation2001}.
+Studies that report an alpha increase attribute it to sensory gating or to drowsiness during prolonged exposure.
 \autoref{sec:confounders} shows that the direction of the alpha change tracks VR display hardware, and reframes part of this corpus-level heterogeneity as hardware-attributable.
 
 Higher-frequency bands show less consistent patterns than delta and theta.
 Of the 36 studies reporting a beta-band change, 11 (30.6\%) report an increase, 10 (27.8\%) a decrease, 10 a mixed pattern, and 5 no change.
-Individual reports range from beta suppression \cite{kimCharacteristicChangesPhysiological2005} to beta enhancement \cite{suwandiExploringImpactMotion2024}, and one study identifies beta as the most informative band for channel selection in classification \cite{khoirunnisaaChannelSelectionEEGBased2018}.
+Individual reports range from a beta decrease \cite{kimCharacteristicChangesPhysiological2005} to a beta increase \cite{suwandiExploringImpactMotion2024}, and one study identifies beta as the most informative band for channel selection in classification \cite{khoirunnisaaChannelSelectionEEGBased2018}.
 Of the 21 studies reporting a gamma-band change, 7 (33.3\%) report an increase, 6 no change, 5 a mixed pattern, and 3 a decrease.
 The full distribution of rhythm changes across anatomical regions is shown in \autoref{fig:rhythm_changes}; as with alpha, the beta result is partly attributable to display hardware (\autoref{sec:confounders}).
 
@@ -114,7 +115,9 @@ Test-retest reliability for delta, theta, and alpha power changes in frontal and
 \end{figure}
 
 Beyond band-power, a subset of studies has examined additional spectral and information-theoretic features (entropy, complexity measures, amplitude modulation, mean theta-band frequency) \cite{fengComprehensiveExplorationMotion2025, liuPilotStudyEEGBased2020, liuMeasuringVisuallyInduced2017, rosannePreprocessNotPreprocess2025, liEEGbasedEvaluationMotion2022}.
-Functional connectivity is investigated in 16 studies with mixed direction (7 mixed, 4 decrease, 3 increase, 2 no change), including transfer-entropy decreases at VIMS onset \cite{nurnbergerMismatchVisualVestibularInformation2021} and reduced connectivity between visual area V5 and vestibular regions \cite{namElectroencephalogramMicrostatesFunctional2022}; phase-locking-value features have also been used as inputs to deep classification models \cite{shenClassificationVisuallyInduced2024, huaDualpathwayEEGModel2025}.
+Functional connectivity is investigated in 16 studies using heterogeneous metrics (coherence, phase-locking value, transfer entropy, Granger causality), and no single direction of change emerges at the corpus level.
+An interpretable signal comes from the subset that examines specific visual--vestibular pathways, which report reduced or altered coupling during VIMS, consistent with the sensory-conflict account: transfer entropy between cortical regions decreases at VIMS onset \cite{nurnbergerMismatchVisualVestibularInformation2021}, connectivity between visual area V5 and vestibular regions is reduced \cite{namElectroencephalogramMicrostatesFunctional2022}, and Granger-causal analysis indicates altered directed interaction within the visual--vestibular network \cite{ahnTemporalDynamicsVisually2020}.
+A separate group of studies instead uses connectivity features, such as phase-locking value, as inputs to deep classification models without assigning a directional interpretation \cite{shenClassificationVisuallyInduced2024, huaDualpathwayEEGModel2025}.
 The causal relevance of these patterns is supported by intervention studies in which symptom mitigation correlates with normalisation of the same EEG bands \cite{molefiVibromotorReprocessingTherapy2022, yeoEEGbasedAnalysisVarious2022}.
 
 \subsubsection{Event-Related Potentials and Evoked Responses}
@@ -125,7 +128,7 @@ VIMS has also been shown to impair response inhibition, as reflected by a larger
 Read alongside the sensory-conflict and cognitive-load accounts introduced in \autoref{sec:theoretical}, these findings are consistent with VIMS consuming processing resources that would otherwise support task performance.
 
 Susceptibility-related ERP patterns recur in studies that compare resistant and susceptible participants.
-VIMS-susceptible participants exhibit excessive parietal N2 amplitudes and impaired theta-band phase synchronisation compared to resistant counterparts \cite{weiMotionSicknesssusceptibleParticipants2019}, and individuals with high sickness levels show higher P3 amplitudes during sensory-mismatch conditions \cite{ahnTemporalDynamicsVisually2020}.
+VIMS-susceptible participants exhibit larger parietal N2 amplitudes and reduced theta-band phase synchronisation compared to resistant counterparts \cite{weiMotionSicknesssusceptibleParticipants2019}, and individuals with high sickness levels show higher P3 amplitudes during sensory-mismatch conditions \cite{ahnTemporalDynamicsVisually2020}.
 A separate ERP approach has linked the subjective experience of disorientation to a suppression of fronto-central heartbeat-evoked potentials, providing a link between interoceptive processing and a key symptom of cybersickness \cite{changIdentifyingPhysiologicalCorrelates2022}.
 These susceptibility markers are revisited in \autoref{sec:individual-differences} alongside the resting-state-prediction literature.
 
@@ -200,7 +203,7 @@ Ten further studies (26.3\%) report only regression metrics ($R^2$, RMSE) withou
 \subsubsection{Classification Tasks}
 Across the 38-study subset, binary classification of a ``sick'' versus ``not sick'' state is the most common task.
 Several studies report within-subject accuracies above 95\% on this binary task \cite{huaDetectionVirtualReality2024, shenClassificationVisuallyInduced2024, huaEEGClassificationModel2024, jeongCybersicknessAnalysisEEG2019, dasdemirLocomotionTechniquesEEG2023, yuEEGbasedClassificationSystem2010}.
-The sick/non-sick label that grounds these accuracies varies in how it is operationalised: 19 of 38 classification studies expose the threshold or its basis, of which 8 use a numeric cutoff and the remainder use self-reported binary labels, pre/post differences, or total-questionnaire-score cutoffs. The other 19 studies do not document the threshold at all.
+The sick/non-sick label that grounds these accuracies varies in how it is operationalised: 19 of 38 classification studies disclose the threshold or its basis, of which 8 use a numeric cutoff and the remainder use self-reported binary labels, pre/post differences, or total-questionnaire-score cutoffs. The other 19 studies do not document the threshold at all.
 
 A second task is multi-level classification, which categorises VIMS into several discrete levels of severity.
 Three-level classification has been demonstrated with multimodal fusion \cite{liMachineLearningAssessment2019, dennisonImprovingMotionSickness2019} and with EEG alone using rule-based induction \cite{paneIdentifyingSeverityLevel2018} or a genetic algorithm combined with a Support Vector Machine \cite{linMotionSicknessEstimation2012}.
@@ -229,8 +232,8 @@ Resting-state EEG beta power in the left parietal region has been reported as a 
 These findings point to pre-existing neural traits that influence susceptibility, although the evidence base remains small.
 
 During VIMS exposure, resistant and susceptible individuals show distinct neural signatures.
-Resistant individuals exhibit enhanced theta activity in the left parietal cortex, a candidate biomarker of resilience \cite{liExploringNeuralBiomarkers2023}.
-Susceptible individuals show excessive parietal N2 ERP amplitudes and impaired theta-band phase synchronisation \cite{weiMotionSicknesssusceptibleParticipants2019}, and higher P3 amplitudes during sensory-mismatch conditions \cite{ahnTemporalDynamicsVisually2020}.
+Resistant individuals exhibit increased theta activity in the left parietal cortex, a candidate biomarker of resilience \cite{liExploringNeuralBiomarkers2023}.
+Susceptible individuals show larger parietal N2 ERP amplitudes and reduced theta-band phase synchronisation \cite{weiMotionSicknesssusceptibleParticipants2019}, and higher P3 amplitudes during sensory-mismatch conditions \cite{ahnTemporalDynamicsVisually2020}.
 One study reports that the cybersickness condition produces increased delta and decreased alpha power in both susceptible and non-susceptible groups, but susceptible participants additionally show lower absolute power in the beta and gamma bands at baseline \cite{jangEstimatingObjectiveEEG2022}.
 An earlier study using a long-duration driving task found that the ratio of theta to total EEG power in frontal and parietal lobes differed between sick and non-sick groups, proposing this ratio as a physiological index of sensitivity \cite{parkLongTermStudySimulator2008}.
 
@@ -246,7 +249,7 @@ The mitigation literature reviewed next acts on the neural signals identified he
 
 \subsection{Mitigation and Intervention Strategies}\label{sec:mitigation}
 
-Mitigation research in the corpus splits into two threads: closed-loop adaptive VR that modifies the virtual environment in response to detected sickness (2 corpus studies), and interventions that target the user's brain state directly (5 corpus studies).
+Mitigation research in the corpus splits into two threads: closed-loop adaptive VR that modifies the virtual environment in response to detected sickness (2 corpus studies), and interventions that target the user's brain state directly (7 corpus studies).
 Both threads are early-stage, and the small literature already documents one methodological obstacle specific to the closed-loop setting.
 
 \subsubsection{Closed-Loop Adaptive VR}
@@ -255,14 +258,19 @@ One system uses a two-stage shallow convolutional network to detect cybersicknes
 A second system uses fNIRS to monitor total hemoglobin concentration; on detecting increases correlated with sickness, the system dynamically reduces the user's field of view, demonstrating the feasibility of an fNIRS-based closed-loop pipeline \cite{yamamuraHemodynamicVRAdaptingUsers2021}.
 
 \subsubsection{Interventions Modulating Brain State}
-The corpus includes 5 studies that investigate interventions intended to act on the underlying physiological state of the user, each using concurrent EEG to verify neural engagement.
+The corpus includes 7 studies that investigate interventions intended to act on the underlying physiological state of the user, most using concurrent neurophysiological recording to verify engagement.
 Transcutaneous auricular vagus nerve stimulation significantly reduced motion-sickness symptoms in one study, with the reduction correlated with stimulation-induced neural activation in specific brain regions measured by EEG source localisation \cite{molefiTranscutaneousAuricularVagus2025}.
 Vibro-motor reprocessing therapy was associated with significant reductions in alpha, delta, and theta spectral power \cite{molefiVibromotorReprocessingTherapy2022}.
 Providing synchronised auditory and physical motion cues during a simulated bicycle ride reduced VIMS scores relative to conditions with mismatched or absent cues, with the effect reflected in concurrent EEG recordings \cite{yeoEEGbasedAnalysisVarious2022}.
 
+Transcranial alternating-current stimulation has been applied online during VR exposure to target oscillations implicated in VIMS.
+Random-phase tACS at 18~Hz over the left parietal cortex, chosen to disrupt a sickness-correlated oscillation identified from EEG, reduced reported nausea relative to sham and control stimulation while the user remained in VR \cite{liReducedVRMotion2024}.
+In a separate double-blind trial, 10~Hz tACS modelled to reach the vestibular cortex bilaterally reduced cybersickness nausea during a VR roller-coaster in a frequency-dependent, placebo-insensitive manner, paralleled by a modulation of galvanic skin response \cite{benelliFrequencyDependentReductionCybersickness2023}.
+Because the effect in both studies depended on the stimulation frequency, these results provide causal evidence that the targeted oscillations contribute to VIMS rather than only accompanying it.
+
 Two further studies, both from the same laboratory, investigated neurofeedback protocols in which users were trained to volitionally modulate their own brain activity.
-The presence of cybersickness symptoms was found to directly impair the user's ability to successfully perform the neurofeedback training task \cite{bergerManipulatingCybersicknessVirtual2025}, and a placebo transcranial direct current stimulation procedure, while having no significant effect on reported sickness symptoms, paradoxically degraded performance on a concurrent neurofeedback task \cite{bergerInfluencePlaceboTDCS2024}.
-These findings illustrate a methodological challenge for any neuromarker-driven closed-loop intervention: the physiological state being targeted can interfere with the user's ability to engage respond to the intervention itself.
+The presence of cybersickness symptoms was found to directly reduce the user's ability to perform the neurofeedback training task \cite{bergerManipulatingCybersicknessVirtual2025}, and a placebo transcranial direct current stimulation procedure, while having no significant effect on reported sickness symptoms, degraded performance on a concurrent neurofeedback task \cite{bergerInfluencePlaceboTDCS2024}.
+These findings illustrate a methodological challenge for any neuromarker-driven closed-loop intervention: the physiological state being targeted can interfere with the user's ability to engage with the intervention itself.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%           Confounders          %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
