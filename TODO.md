@@ -91,6 +91,7 @@
 ## Round 2 (Minor Revision, decision letter dated 2026-07-19, due 2026-08-18)
 
 1. `[AE, R1]` Comment: Add `EEG` and `cybersickness` to the keywords.
+   - Done: Added to `\IEEEkeywords` in `review_bci_cs.tex`.
 2. `[AE, R1]` Comment: The authors' contributions are easy to miss in the Introduction; add a "Contributions" subsection or other visual aid.
 3. `[R1]` Comment: Future Directions paragraphs ("First," "Second," ...) should be broken into sub-subsections or otherwise highlighted.
 4. `[AE, R2]` Comment: The manuscript is inconsistent about calling itself a systematic vs. scoping review.
