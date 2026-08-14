@@ -9,7 +9,7 @@ The manuscript is under revision for TVCG (currently round 2, Minor Revision); r
   - `revision_plan.md` — round 1's full plan (phased: Phase 0–9, side-jobs, drafting workflow). Kept for reference/precedent.
   - `round2_plan.md` — round 2's plan. Round 2 is a light Minor Revision (editorial/clarity items, no new analysis), so it skips the phase/side-job scaffolding: a flat ordered checklist is enough.
   - `phase1/` … `phase8/` — round 1 side-job notes (verification, audits, outlines) referenced from `revision_plan.md` and `change_log.md`.
-- **`reviews/`** (tracked in git) — reviewer feedback letters and our response letters: `reviewer_feedback_round1.txt`, `reviewer_feedback_round2.txt`, `response_letter_round1.tex`, and (once drafted) `response_letter_round2.tex`.
+- **`reviews/`** (tracked in git) — reviewer feedback letters and our response letters: `reviewer_feedback_round1.txt`, `reviewer_feedback_round2.txt`, `response_letter_round1.tex`, and (once drafted) `response_letter_round2.tex`. Read the relevant feedback associated with the TODO item to have a complete understanding of your task.
 - **Doing an item**: implement the change → update `TODO.md` with a `Done:` line → append a `revision_notes/change_log.md` line. All three in the same pass, not deferred.
 
 ## Outline

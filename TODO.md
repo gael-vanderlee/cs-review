@@ -93,7 +93,9 @@
 1. `[AE, R1]` Comment: Add `EEG` and `cybersickness` to the keywords.
    - Done: Added to `\IEEEkeywords` in `review_bci_cs.tex`.
 2. `[AE, R1]` Comment: The authors' contributions are easy to miss in the Introduction; add a "Contributions" subsection or other visual aid.
+   - Done: Added `\subsection{Contributions}` and `\subsection{Paper Organization}` in `contents/introduction.tex` (renders as "A. Contributions" / "B. Paper Organization"); kept the paragraphs as prose (no itemize) to stay within the page budget.
 3. `[R1]` Comment: Future Directions paragraphs ("First," "Second," ...) should be broken into sub-subsections or otherwise highlighted.
+   - Done: Replaced the six ordinal lead-ins ("First," "Second," "Third," "Fourth," "Fifth," "Finally") in `contents/future.tex` with `\subsubsection` headings (Standardised Reporting and Open Data; Causal Mechanisms; Generalisation and Ecological Validation; Sex- and Gender-Stratified Design; Objective Behavioural Markers; Longitudinal Characterisation of Adaptation and Recovery), matching the nesting already used in `contents/results.tex`. Manuscript still compiles to exactly 20 pages.
 4. `[AE, R2]` Comment: The manuscript is inconsistent about calling itself a systematic vs. scoping review.
 5. `[AE, R2]` Comment: P8 numbers are inconsistently given with or without percentages; add percentages throughout.
 6. `[R2, R3]` Comment: The manuscript states the search was conducted in March 2025, but that date is the publication cut-off, not the (later) search-execution date; clarify.
