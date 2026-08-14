@@ -1,5 +1,5 @@
-The 92 corpus studies address four main research objectives: classification or prediction of VIMS from physiological signals (38 studies), identification of neural and physiological correlates (25), development of mitigation strategies (17), and characterisation of individual susceptibility (3).
-Nine residual studies (cognitive effects, recovery, dataset contributions, other framings) are integrated into the relevant subsections, with full discussion deferred to \autoref{sec:discussion}.
+The 92 corpus studies address four main research objectives: classification or prediction of VIMS from physiological signals (38 studies), identification of neural and physiological correlates (25), development of mitigation strategies with a closed-loop or brain-state-interventional design that engages neurophysiological measurement (8), and characterisation of individual susceptibility (3).
+Eighteen residual studies (further mitigation work without a closed-loop or brain-state-interventional component, cognitive effects, recovery, dataset contributions, and other framings) are integrated into the relevant subsections, with full discussion deferred to \autoref{sec:discussion}.
 This section adds two cross-cutting layers on top of these objectives: \autoref{sec:corpus-characteristics} describes the corpus as a whole, and \autoref{sec:confounders} reports meta-analytic observations across the 92 studies.
 
 Activity in the field has accelerated in recent years: 63.0\% of the corpus (58 of 92 studies) was published from 2021 onwards, with a corresponding shift toward classification, mitigation, and susceptibility objectives (\autoref{fig:stacked}).
@@ -23,12 +23,10 @@ No corpus study uses fMRI, MEG, or PET; \autoref{sec:methodology} states the sea
 \subsubsection{Sample Sizes and Demographics}
 The 92 studies span 2001--2025.
 Across the corpus, 2687 participants were analysed (recruited: 2822), with a mean of 29.2 $\pm$ 29.0 participants analysed per study (median: 22, range: 1--202).
-The 62 studies that report an age range yield a mean age of 23.7 $\pm$ 2.7 years, indicating a focus on young-adult populations; 14 studies do not report age or report ranges that cannot be parsed.\autoref{fig:age_distribution} shows the age distribution across studies.
+Of the 92 studies, 62 report a mean age (yielding a corpus mean of 23.7 $\pm$ 2.7 years, indicating a focus on young-adult populations); 15 report a minimum--maximum range without a mean, and 15 report no parseable age information. \autoref{fig:age_distribution} shows the age distribution across studies.
 
 EEG channel counts vary widely (median 30, range 1--256, mean 39.6 $\pm$ 55.8, $n = 72$ studies reporting).
 The most frequent montages are 32-channel (18 studies), 64-channel (9), 14-channel (8), 16-channel (5), and 30- or 256-channel (4 each); a long tail of low-channel configurations (4 to 16 channels) is consistent with portable in-VR recording.
-\autoref{fig:eeg_channels} shows the distribution of EEG channel configurations across studies.
-Channel count is positively correlated with reported within-subject classification accuracy ($r = 0.403$, $p = 0.037$, $n = 27$); this observation is revisited in \autoref{sec:confounders}.
 
 \input{contents/tables/all_studies.tex}
 
@@ -48,6 +46,9 @@ Channel count is positively correlated with reported within-subject classificati
     \caption{Distribution of EEG channel configurations across VIMS studies.}
     \label{fig:eeg_channels}
 \end{figure}
+
+\noindent \autoref{fig:eeg_channels} shows the distribution of EEG channel configurations across studies.
+Channel count is positively correlated with reported within-subject classification accuracy ($r = 0.403$, $p = 0.037$, $n = 27$); this observation is revisited in \autoref{sec:confounders}.
 
 Concurrent physiological recording is reported in 36 of 92 studies (39.1\%). Most commonly used are electro-oculography (18 studies), electrocardiography (16), and galvanic skin response (9). Present but less common are electromyography (2), electrogastrography (4), photoplethysmography (7), respiration (2), skin temperature (4), and blood pressure (1).
 
@@ -69,7 +70,7 @@ The joint distribution of device type and environment is shown in \autoref{fig:v
 
 \subsubsection{VIMS Assessment Methods}
 VIMS is measured through questionnaire instruments in 70 of 92 studies (76.1\%), continuous ratings during exposure in 20 (21.7\%), single-item Likert scales in 15 (16.3\%), and behavioural indices in 8 (8.7\%); these categories sum above 100\% because 19 studies use more than one method on the same exposure.
-Among studies using questionnaires, the Simulator Sickness Questionnaire is the most common instrument (57 of 92), followed by the Fast Motion Sickness Scale (6), the Motion Sickness Susceptibility Questionnaire (2), the Virtual Reality Sickness Questionnaire (2), and other instruments (6); 19 studies do not specify the questionnaire used.
+Across the corpus, the Simulator Sickness Questionnaire is the most common instrument (57 of 92 studies), followed by the Fast Motion Sickness Scale (6), the Motion Sickness Susceptibility Questionnaire (2), and the Virtual Reality Sickness Questionnaire (2); 6 studies use other instruments, and 19 either use no questionnaire or do not name one.
 
 \subsubsection{Baseline Conditions and Preprocessing Heterogeneity}
 Baseline conditions vary across the corpus: 39 of 92 studies use a task baseline, 16 use an eyes-open resting baseline, 8 use a pre-stimulus segment of the same recording, 5 use an eyes-closed resting baseline, and the remainder either do not specify a baseline (3) or do not report one (21 missing, including the neurostimulation-only studies).
@@ -85,7 +86,7 @@ Of the 66 that report a band-pass setting, 59 give numeric low and high cutoffs,
 
 \subsection{Neural and Physiological Correlates of VIMS}\label{sec:correlates}
 
-Across the 77 EEG, 4 fNIRS, and a subset of corpus studies using event-related potential analyses, the corpus converges on a low-frequency power increase during VIMS; higher-frequency and lateralised findings are less consistent at the corpus level and, as shown in \autoref{sec:confounders}, are partly attributable to differences in VR hardware platform.
+Across the 77 EEG studies, 4 fNIRS studies, and the subset using event-related potential analyses, the corpus converges on a low-frequency power increase during VIMS; higher-frequency and lateralised findings are less consistent at the corpus level and, as shown in \autoref{sec:confounders}, are partly attributable to differences in VR hardware platform.
 
 \subsubsection{EEG Spectral Power}
 Across the studies reporting per-band changes during VIMS, the most consistent direction is an increase in low-frequency power.
@@ -103,7 +104,7 @@ Higher-frequency bands show less consistent patterns than delta and theta.
 Of the 36 studies reporting a beta-band change, 11 (30.6\%) report an increase, 10 (27.8\%) a decrease, 10 a mixed pattern, and 5 no change.
 Individual reports range from a beta decrease \cite{kimCharacteristicChangesPhysiological2005} to a beta increase \cite{suwandiExploringImpactMotion2024}, and one study identifies beta as the most informative band for channel selection in classification \cite{khoirunnisaaChannelSelectionEEGBased2018}.
 Of the 21 studies reporting a gamma-band change, 7 (33.3\%) report an increase, 6 no change, 5 a mixed pattern, and 3 a decrease.
-The full distribution of rhythm changes across anatomical regions is shown in \autoref{fig:rhythm_changes}; as with alpha, the beta result is partly attributable to display hardware (\autoref{sec:confounders}).
+The full distribution of rhythm changes across anatomical regions is shown in \autoref{fig:rhythm_changes}; as with alpha, the beta findings are partly attributable to display hardware (\autoref{sec:confounders}).
 
 Test-retest reliability for delta, theta, and alpha power changes in frontal and central areas has been reported in 1 corpus study \cite{limTestretestReliabilityVirtual2021}, and delta-band normalisation has been used as a marker of the post-exposure recovery time course \cite{wooRecoveryTimeVR2023}; the recovery literature is discussed in \autoref{sec:discussion}.
 
@@ -118,7 +119,7 @@ Beyond band-power, a subset of studies has examined additional spectral and info
 Functional connectivity is investigated in 16 studies using heterogeneous metrics (coherence, phase-locking value, transfer entropy, Granger causality), and no single direction of change emerges at the corpus level.
 An interpretable signal comes from the subset that examines specific visual--vestibular pathways, which report reduced or altered coupling during VIMS, consistent with the sensory-conflict account: transfer entropy between cortical regions decreases at VIMS onset \cite{nurnbergerMismatchVisualVestibularInformation2021}, connectivity between visual area V5 and vestibular regions is reduced \cite{namElectroencephalogramMicrostatesFunctional2022}, and Granger-causal analysis indicates altered directed interaction within the visual--vestibular network \cite{ahnTemporalDynamicsVisually2020}.
 A separate group of studies instead uses connectivity features, such as phase-locking value, as inputs to deep classification models without assigning a directional interpretation \cite{shenClassificationVisuallyInduced2024, huaDualpathwayEEGModel2025}.
-The causal relevance of these patterns is supported by intervention studies in which symptom mitigation correlates with normalisation of the same EEG bands \cite{molefiVibromotorReprocessingTherapy2022, yeoEEGbasedAnalysisVarious2022}.
+The causal relevance of these patterns is supported by intervention studies in which symptom mitigation correlates with normalisation of the same EEG bands \cite{yeoEEGbasedAnalysisVarious2022}.
 
 \subsubsection{Event-Related Potentials and Evoked Responses}
 Beyond ongoing oscillations, a subset of studies has used event-related potentials (ERPs) to characterise how VIMS affects discrete cognitive processes.
@@ -138,7 +139,7 @@ Bilateral angular-gyrus deactivation has been reported in association with subje
 Reduced cortical activation during low-resolution stereoscopic exposure has also been documented \cite{tanimuraEffectsLowResolution3D2019}.
 
 The direction of the hemodynamic effect is not uniform across the small fNIRS literature: regional perfusion increases in some cortical areas coexist with decreases in others.
-The only fNIRS-based closed-loop mitigation system reported in the corpus \cite{yamamuraHemodynamicVRAdaptingUsers2021} is taken up in \autoref{sec:mitigation}.
+The two fNIRS-based closed-loop mitigation systems reported in the corpus \cite{yamamuraHemodynamicVRAdaptingUsers2021, yamamuraPleasantLocomotionReducing2020} are taken up in \autoref{sec:mitigation}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%           Classification          %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -202,7 +203,7 @@ Ten further studies (26.3\%) report only regression metrics ($R^2$, RMSE) withou
 
 \subsubsection{Classification Tasks}
 Across the 38-study subset, binary classification of a ``sick'' versus ``not sick'' state is the most common task.
-Several studies report within-subject accuracies above 95\% on this binary task \cite{huaDetectionVirtualReality2024, shenClassificationVisuallyInduced2024, huaEEGClassificationModel2024, jeongCybersicknessAnalysisEEG2019, dasdemirLocomotionTechniquesEEG2023, yuEEGbasedClassificationSystem2010}.
+Several studies report cross-subject accuracies above 95\% on this binary task \cite{huaDetectionVirtualReality2024, huaEEGClassificationModel2024, huaDualpathwayEEGModel2025, jeongCybersicknessAnalysisEEG2019, zhouApplicationEEGSTransformation2023, chaiEEGStudyVirtual2023}.
 The sick/non-sick label that grounds these accuracies varies in how it is operationalised: 19 of 38 classification studies disclose the threshold or its basis, of which 8 use a numeric cutoff and the remainder use self-reported binary labels, pre/post differences, or total-questionnaire-score cutoffs. The other 19 studies do not document the threshold at all.
 
 A second task is multi-level classification, which categorises VIMS into several discrete levels of severity.
@@ -210,7 +211,6 @@ Three-level classification has been demonstrated with multimodal fusion \cite{li
 
 A third task is continuous prediction or regression of a VIMS severity score, measured by correlation coefficients and error metrics.
 Deep-learning models have demonstrated high correlations between predicted and actual SSQ scores \cite{liuExploringBrainPhysiological2024, huaAssessmentVirtualReality2023, xuSECNNAttentionStructure2023, liuExploringQuantitativeAssessment2024, huaSiamLSTMModelMultichannel2024, leeAssessingIndividualVR2022}, while earlier work used Support Vector Regression \cite{weiEEGbasedEvaluationSystem2011, koEstimatingLevelMotion2011} and linear regression \cite{weiImplementationMotionSickness2011}.
-Addressing the threshold-heterogeneity problem raised above, one recent study develops continuous, calibration-free detection directly from physiological data with dynamic real-time ground-truth labels \cite{demirelSubjectivityContinuousCybersickness2025}.
 
 \begin{figure}[t]
     \centering
@@ -249,18 +249,16 @@ The mitigation literature reviewed next acts on the neural signals identified he
 
 \subsection{Mitigation and Intervention Strategies}\label{sec:mitigation}
 
-Mitigation research in the corpus splits into two threads: closed-loop adaptive VR that modifies the virtual environment in response to detected sickness (2 corpus studies), and interventions that target the user's brain state directly (7 corpus studies).
+Mitigation research in the corpus splits into two threads: closed-loop adaptive VR that modifies the virtual environment in response to neurophysiologically detected sickness (3 corpus studies), and interventions that target the user's brain state directly (5 corpus studies).
 Both threads are early-stage, and the small literature already documents one methodological obstacle specific to the closed-loop setting.
 
 \subsubsection{Closed-Loop Adaptive VR}
-Only 2 corpus studies implement closed-loop adaptation: the literature is in early-stage development.
+Three corpus studies implement neurophysiology-driven closed-loop adaptation: the literature is in early-stage development.
 One system uses a two-stage shallow convolutional network to detect cybersickness from EEG and infer a likely causal factor, then selectively modifies the implicated VR parameter (navigation speed or scene complexity), producing a significant reduction in user-reported sickness compared to a control condition \cite{uyanCDMSRealtimeSystem2024}.
-A second system uses fNIRS to monitor total hemoglobin concentration; on detecting increases correlated with sickness, the system dynamically reduces the user's field of view, demonstrating the feasibility of an fNIRS-based closed-loop pipeline \cite{yamamuraHemodynamicVRAdaptingUsers2021}.
+Two further systems use fNIRS to monitor total hemoglobin concentration; on detecting increases correlated with sickness, the system dynamically reduces the user's field of view, demonstrating the feasibility of an fNIRS-based closed-loop pipeline \cite{yamamuraHemodynamicVRAdaptingUsers2021, yamamuraPleasantLocomotionReducing2020}.
 
 \subsubsection{Interventions Modulating Brain State}
-The corpus includes 7 studies that investigate interventions intended to act on the underlying physiological state of the user, most using concurrent neurophysiological recording to verify engagement.
-Transcutaneous auricular vagus nerve stimulation significantly reduced motion-sickness symptoms in one study, with the reduction correlated with stimulation-induced neural activation in specific brain regions measured by EEG source localisation \cite{molefiTranscutaneousAuricularVagus2025}.
-Vibro-motor reprocessing therapy was associated with significant reductions in alpha, delta, and theta spectral power \cite{molefiVibromotorReprocessingTherapy2022}.
+The corpus includes 5 studies that investigate interventions intended to act on the underlying physiological state of the user, most using concurrent neurophysiological recording to verify engagement.
 Providing synchronised auditory and physical motion cues during a simulated bicycle ride reduced VIMS scores relative to conditions with mismatched or absent cues, with the effect reflected in concurrent EEG recordings \cite{yeoEEGbasedAnalysisVarious2022}.
 
 Transcranial alternating-current stimulation has been applied online during VR exposure to target oscillations implicated in VIMS.
