@@ -1,5 +1,16 @@
 This is a systematic review paper on neurophysiological markers (neuromarkers) of cybersickness in Virtual Reality (VR). The "BCI" framing was removed from the manuscript per round 1 reviewer feedback (see TODO.md Critical #1) — prefer "neuromarkers" / "neuroimaging" / explicit modality names.
-The manuscript is under revision for TVCG (currently round 2, Minor Revision); reviewer feedback letters are in `docs/reviewer_feedback.txt` (round 1) and `docs/reviewer_feedback_round2.txt` (round 2) — gitignored, local-only — and condensed actions are in [TODO.md](TODO.md).
+The manuscript is under revision for TVCG (currently round 2, Minor Revision); reviewer feedback letters are tracked in [reviews/reviewer_feedback_round1.txt](reviews/reviewer_feedback_round1.txt) and [reviews/reviewer_feedback_round2.txt](reviews/reviewer_feedback_round2.txt), and condensed actions are in [TODO.md](TODO.md).
+
+## Revision workflow
+
+- **[TODO.md](TODO.md)** — one entry per reviewer comment, tagged `[AE/R1/R2/R3/Editor letter]`, grouped by round and priority. Each entry has a `Decision:` line (what we chose to do) and, once implemented, one or more `Done:` lines describing what actually landed (file/section, not just intent). Never mark an item done without adding this line — it's how a fresh session (and the eventual response letter) knows what's finished vs. still open.
+- **`revision_notes/`** (gitignored, local-only — LLM-assisted working notes, not part of the manuscript):
+  - `change_log.md` — append-only, one line per change, format `YYYY-MM-DD | phase-or-round | file:loc | reviewer-tag | change`. Every edit that closes (or partially closes) a TODO item gets a line here, written at the same time as the `Done:` line above. Feeds the response letter directly.
+  - `revision_plan.md` — round 1's full plan (phased: Phase 0–9, side-jobs, drafting workflow). Kept for reference/precedent.
+  - `round2_plan.md` — round 2's plan. Round 2 is a light Minor Revision (editorial/clarity items, no new analysis), so it skips the phase/side-job scaffolding: a flat ordered checklist is enough.
+  - `phase1/` … `phase8/` — round 1 side-job notes (verification, audits, outlines) referenced from `revision_plan.md` and `change_log.md`.
+- **`reviews/`** (tracked in git) — reviewer feedback letters and our response letters: `reviewer_feedback_round1.txt`, `reviewer_feedback_round2.txt`, `response_letter_round1.tex`, and (once drafted) `response_letter_round2.tex`.
+- **Doing an item**: implement the change → update `TODO.md` with a `Done:` line → append a `revision_notes/change_log.md` line. All three in the same pass, not deferred.
 
 ## Outline
 

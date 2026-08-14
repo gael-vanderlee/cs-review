@@ -1,0 +1,225 @@
+Decision letter (Revision 1)
+The Neurophysiology of Cybersickness: A Systematic Review of Neuromarkers, Neurostimulation, and Reporting Practices in Virtual Reality
+Subject
+TVCG-2025-09-0929.R1 - Decision (Minor Revision)
+Date sent
+19 July 2026 at 18:10 CEST
+From
+tvcg@computer.org
+To
+Show 4 addresses
+RE: TVCG-2025-09-0929.R1, "The Neurophysiology of Cybersickness: A Systematic Review of Neuromarkers, Neurostimulation, and Reporting Practices in Virtual Reality"
+Manuscript Type: Survey
+
+19-Jul-2026
+
+Dear Mr. Lee,
+
+We have completed the review process of the above referenced paper for the IEEE Transactions on Visualization and Computer Graphics and recommend that your paper undergo a Minor Revision.  
+
+Enclosed are your reviews. If you should choose to revise your paper, please prepare a separate document describing how each of the reviewers' comments are responded to in your revision and send it to us by
+
+                  18-Aug-2026.
+
+Please note, some reviewers may have recommended that you discuss additional literature when revising your manuscript. If you feel that the recommended literature does not contribute to the scholarly content of the article or is otherwise irrelevant, please note your concerns in your response to reviewer feedback.
+
+When you are ready to submit your revision, visit the following link:
+https://ieee.atyponrex.com/submission/submissionBoard/REX-PROD-2-CB3FA0BC-CDBC-489E-90E2-8A822A78D7EA-A8727EE0-1A35-4A6E-B981-BE3A5E62F6B1-42489/current?idtype=external
+
+When submitting your revised manuscript, you will be able to respond to the comments made by the reviewer(s) in the space provided. You can use this space to document any changes you make to the original manuscript. In order to expedite the processing of the revised manuscript, please be as specific as possible in your response to the reviewer(s)'questions and comments. You may also upload your responses as separate files for review along with your revision.
+
+When the submission process is complete, you will receive an automated confirmation email immediately. If you did not receive that email, your submission is not yet complete.  
+
+The Administrator will contact you should we have any concerns or questions regarding your revision. Otherwise, your revision will be forwarded to the assigned Associate Editor with a request for a final decision.
+
+Please be mindful when making your revisions that you still need to maintain the size limitations for papers submitted to TVCG.  The manuscript types and submission length guidelines are found at,
+
+https://www.computer.org/csdl/journal/tg/write-for-us/15094?title=Author%20Information&periodical=IEEE%20Transactions%20on%20Vis
+
+We encourage you to use our double column template (regular papers 12 pages, with additional pages up to 18 with fee, survey papers 20 pages max) which can be found at,
+
+https://www.computer.org/csdl/journal/tg/write-for-us/15094?title=Author%20Information&periodical=IEEE%20Transactions%20on%20Vis
+
+Text in any color other than black is not acceptable. Your revised paper must include the following:
+
+- Abstract
+- Index terms
+- Author affiliation information
+- Main text
+- References
+- Figure captions
+- Table titles
+- Brief biography of each author
+(biographies are not required for concise papers or comments papers)
+
+NOTE: All materials must fit within the paging guidelines. Papers that exceed the page limit will be returned for further editing.
+
+Please do not hesitate in contacting us should you have any questions about our process or are experiencing technical difficulties. You can reach the Administrator, Dr. Soham Basu, at soham.basu@ieee.org.
+
+Thank you for your contribution to TVCG, and we look forward to receiving your revised manuscript.
+
+Sincerely,
+
+Dr. Wenping Wang, EIC
+IEEE  IEEE Transactions on Visualization and Computer Graphics
+IEEE Computer Society
+
+**************
+Associate Editor Comments
+
+Senior Editor: 1
+Comments to the Author:
+(There are no comments. Please check to see if comments were included as a file attachment with this e-mail or as an attachment in your Author Center.)
+
+Associate Editor: 2
+Comments to the Author:
+Based on reviewers' feedback, I recommend a minor revision, with conditions summarized below.
+R1:
+- keywords: add EEG and cybersickness to keywords
+- intro: highlight the author's contributions more explicitly
+- style and presentation edits.
+R2:
+- is this scoping or systematic review
+- consistent numbering as percentages
+- update search date
+R3:
+- clarify "any mention" on page 10
+- state frequency ranges for different bands.
+
+********************
+
+Reviewer Comments
+
+
+Reviewer: 1
+
+Recommendation: Author Should Prepare A Minor Revision
+
+Comments:
+Title, abstract, and keywords. The title is appropriate and faithfully reflects the content, and it is a clear improvement over the previous version. The abstract represents the paper accurately. The keywords work, but I would suggest adding EEG and cybersickness so the paper is discoverable by researchers searching those exact terms.
+Introduction. The introduction is a strong improvement over the previous version and clarifies the points raised in the earlier review cycle. My one suggestion is that the authors' own contributions are easy to miss. I would encourage them to highlight these more explicitly. In the Introduction section, I suggest the authors either add a dedicated "Contributions" subsection by emphasising the relevant text, or use another visual aid. The material is strong, and signposting it would ensure readers do not overlook it.
+Organization, focus, and length. The manuscript is well organised, and the length is appropriate for the topic. The reformatted table is a very useful addition and the new figures are helpful. The paper is focused, which makes the main discussion points easy to follow. One suggestion: in the future directions section, the authors do a strong job of laying out the directions, but each is presented as a single paragraph beginning "First," "Second," and so on. Breaking these into sub-subsections or otherwise highlighting them would make this valuable material easier to navigate and harder to overlook.
+Readability. Readability is excellent. EEG papers can easily become dense, heavy, and hard to read, and the authors have done a very good job of keeping the content accessible while preserving its complexity. The pacing is strong and the manuscript reads easily from start to finish.
+Novelty, impact, and replicability. The paper is novel, and the authors clearly differentiate their work from Chang et al. Beyond surveying the neural correlates of cybersickness, its strongest contribution is critical: it surfaces inconsistencies in how specific EEG bands relate to cybersickness, and it points to broader flaws across cybersickness research, including the unclear threshold between sick and non-sick states and an over-reliance on subjective markers that makes a robust objective marker hard to establish. It also calls out the lack of methodological transparency that commonly affects EEG and other neurophysiological cybersickness studies, and it questions the vague use of "neuromarker" language. These are valuable contributions, and the community and beyond would benefit from reading this paper. On replicability, the method is reproducible: the authors clarified their methodology across the revision so that the survey itself can be reproduced, which is fitting for a paper whose central critique is underreporting.
+
+Additional Questions:
+1. Which category describes this manuscript?: Survey
+
+2. How relevant is this manuscript to the readers of this periodical? Please explain your rating under Public Comments below.: Very Relevant
+
+1. Please explain how this manuscript advances this field of research and/or contributes something new to the literature. What do you see as the strongest and the weakest aspect of the paper? Please also comment on the paper’s novelty, its potential impact and, the replicability of the results and the method itself.: This paper presents a review of the neurophysiological signals of cybersickness. It covers the latest advances in how cybersickness has been studied and its neural correlates, and it provides useful insights into using neural mechanisms to understand cybersickness. In my opinion, the strongest contribution is that the paper calls out the lack of methodological transparency that commonly affects EEG and other neurophysiological cybersickness studies. It then suggests the improvements needed for future work to produce high-quality, replicable results.
+
+The weakest aspect is minor: some editorial changes would help sharpen the authors' arguments and make their contributions stand out more clearly. I will detail these suggestions separately. Beyond that, this is already a revised version, and it is in very good shape.
+
+The paper is novel, and the authors clearly differentiate their work from Chang et al. Their revision addressed my comments accurately, which improved the quality, novelty, and replicability of the paper.
+
+2. Is the manuscript technically sound? Please explain your answer under Public Comments below.: Yes
+
+1. Are the title, abstract, and keywords appropriate? Please explain under Public Comments below.: Yes
+
+2. Does the manuscript contain sufficient and appropriate references? Please explain and list missing references under Public Comments below.: References are sufficient and appropriate
+
+If you are suggesting additional references they must be entered in the text box provided.  All suggestions must include full bibliographic information plus a DOI.
+
+
+If you are not suggesting any references, please type NA.: N/A
+
+3. Does the introduction state the objectives of the manuscript in terms that encourage the reader to read on? Please explain your answer under Public Comments below.: Yes
+
+4. How would you rate the organization of the manuscript? Is it focused? Is the length appropriate for the topic? Please explain under Public Comments below.: Satisfactory
+
+5. Please rate the readability of the manuscript. Explain your rating under Public Comments below.: Easy to read
+
+6. Should the supplemental material be included? (Click on the Supplementary Files icon to view files): Does not apply, no supplementary files included
+
+7. If yes to 6, should it be accepted: After revisions.  Please include explanation under Public Comments below.
+
+Please rate the manuscript. Explain your choice.: Excellent
+
+
+Reviewer: 2
+
+Recommendation: Author Should Prepare A Minor Revision
+
+Comments:
+The authors did an excellent job addressing my comments and revising the manuscript accordingly. The paper has much improved and is much more meaningful and relevant now. I only have a few, very minor comments.
+
+1. The authors state at one point that this is a systematic review and at another point they say it is a scoping review. Please clarify and be consistent.
+
+2. P8: Why are only some numbers of papers represented with percentages in brackets and others are not? This seems inconsistent, I would add percentages to all numbers.
+
+3. The authors clearly updated the literature search based on the new search terms and keywords. However, they still say that the search was done in 2025. The date should be updated to represent the updated search.
+
+
+Additional Questions:
+1. Which category describes this manuscript?: Research
+
+2. How relevant is this manuscript to the readers of this periodical? Please explain your rating under Public Comments below.: Relevant
+
+1. Please explain how this manuscript advances this field of research and/or contributes something new to the literature. What do you see as the strongest and the weakest aspect of the paper? Please also comment on the paper’s novelty, its potential impact and, the replicability of the results and the method itself.: see detailed review below
+
+2. Is the manuscript technically sound? Please explain your answer under Public Comments below.: Yes
+
+1. Are the title, abstract, and keywords appropriate? Please explain under Public Comments below.: Yes
+
+2. Does the manuscript contain sufficient and appropriate references? Please explain and list missing references under Public Comments below.: References are sufficient and appropriate
+
+If you are suggesting additional references they must be entered in the text box provided.  All suggestions must include full bibliographic information plus a DOI.
+
+
+If you are not suggesting any references, please type NA.: NA
+
+3. Does the introduction state the objectives of the manuscript in terms that encourage the reader to read on? Please explain your answer under Public Comments below.: Yes
+
+4. How would you rate the organization of the manuscript? Is it focused? Is the length appropriate for the topic? Please explain under Public Comments below.: Satisfactory
+
+5. Please rate the readability of the manuscript. Explain your rating under Public Comments below.: Easy to read
+
+6. Should the supplemental material be included? (Click on the Supplementary Files icon to view files): Does not apply, no supplementary files included
+
+7. If yes to 6, should it be accepted:
+
+Please rate the manuscript. Explain your choice.: Good
+
+
+Reviewer: 3
+
+Recommendation: Accept With No Changes
+
+Comments:
+The authors have addressed all my comments on the original submission and I believe the manuscript is much improved. The manuscript will provide an excellent and timely resource for the field. I only have a few minor comments. Please see below:
+
+Page 6, Isn’t 2026 the year that the search was performed for this revised version?  Possibly the year range was through 2025. This should be clarified. I think it is fine to state it just as the publication cut-off date.
+Page 10 – I am not clear on what “any-mention” means in reference to navigation
+Page 11-12 – To help the reader and be more precise I would be more systematic in stating the frequency ranges for different frequency band. Delta and theta are defined on page 11 (though might benefit from being stated at beginning rather than end of the paragraph). The other ranges don’t appear to be stated.
+
+
+Additional Questions:
+1. Which category describes this manuscript?: Survey
+
+2. How relevant is this manuscript to the readers of this periodical? Please explain your rating under Public Comments below.: Very Relevant
+
+1. Please explain how this manuscript advances this field of research and/or contributes something new to the literature. What do you see as the strongest and the weakest aspect of the paper? Please also comment on the paper’s novelty, its potential impact and, the replicability of the results and the method itself.: Understanding the brain response to experiencing VR holds great promise to develop novel methods to combat cybersickness. There is a growing literature and this review is excellent to summarise the findings, reveal potential confounding factors across the literature and suggest advances to methodology to improve the field. The meta analytic methods are sound and this paper will be a great benefit to the field.
+
+2. Is the manuscript technically sound? Please explain your answer under Public Comments below.: Yes
+
+1. Are the title, abstract, and keywords appropriate? Please explain under Public Comments below.: Yes
+
+2. Does the manuscript contain sufficient and appropriate references? Please explain and list missing references under Public Comments below.: References are sufficient and appropriate
+
+If you are suggesting additional references they must be entered in the text box provided.  All suggestions must include full bibliographic information plus a DOI.
+
+
+If you are not suggesting any references, please type NA.: NA
+
+3. Does the introduction state the objectives of the manuscript in terms that encourage the reader to read on? Please explain your answer under Public Comments below.: Yes
+
+4. How would you rate the organization of the manuscript? Is it focused? Is the length appropriate for the topic? Please explain under Public Comments below.: Satisfactory
+
+5. Please rate the readability of the manuscript. Explain your rating under Public Comments below.: Easy to read
+
+6. Should the supplemental material be included? (Click on the Supplementary Files icon to view files): Does not apply, no supplementary files included
+
+7. If yes to 6, should it be accepted: As is
+
+Please rate the manuscript. Explain your choice.: Excellent

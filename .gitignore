@@ -4,6 +4,7 @@
 # latexmk writes to out/; track *.pdf there, ignore aux/logs via patterns below
 template_tvcg/out/
 
+# Internal LLM-assisted revision working notes, not part of the manuscript
 revision_notes/
 
 # LaTeX auxiliary and build products
