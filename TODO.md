@@ -87,3 +87,27 @@
 5. `[Editor letter]` Comment: The revised manuscript must stay within TVCG page limits and include all required submission elements.
    - Done (decision): 20-page hard cap confirmed; per-section budget allocated. Compliance check completed in Phase 8 (manuscript compiles to exactly 20 pages).
 6. `[Editor letter]` Comment: The revision should be accompanied by a separate, specific response to every Associate Editor and reviewer comment.
+
+## Round 2 (Minor Revision, decision letter dated 2026-07-19, due 2026-08-18)
+
+All three reviewers recommend minor revision or accept; no new analysis or corpus work is required. Comments are editorial/clarification-scale.
+
+1. `[AE, R1]` Comment: Keywords should include EEG and cybersickness for discoverability.
+   - Location: `review_bci_cs.tex:56` (`\begin{IEEEkeywords}` — currently Human-centered computing, HCI, Interaction paradigms, Virtual reality; no EEG or cybersickness).
+2. `[AE, R1]` Comment: The authors' own contributions are easy to miss in the Introduction; add a dedicated "Contributions" subsection or other visual aid (bold lead-ins, itemized list).
+   - Location: `contents/introduction.tex` ("The contributions of this review are threefold." paragraph, currently plain prose).
+3. `[R1]` Comment: In Future Directions, each direction is a single paragraph beginning "First," "Second," etc.; break into sub-subsections or otherwise highlight for navigability.
+   - Location: `contents/future.tex` lines 3, 13, 18, 22, 30 (First/Second/Third/Fourth/Fifth).
+4. `[AE, R2]` Comment: The manuscript states at one point that this is a systematic review and at another a scoping review; clarify and be consistent.
+   - Verified: manuscript text is already consistent (Chang et al.'s prior work is always called "scoping review"; this manuscript is always called "systematic review" — abstract, intro, conclusion, methodology). Likely refers to the reviewer's own submission-form category answers (R1 answered "Survey", R2 answered "Research"), not manuscript prose. Needs a response-letter clarification; may not require a text change.
+5. `[AE, R2]` Comment: P8 — some study counts are given with percentages in brackets and others are not; add percentages to all numbers for consistency.
+   - Location: `contents/results.tex`, broad pattern (e.g. line 5 "58 of 92 studies" with no %, vs line 17 "77 of 92, 83%"). Needs a full pass, not confined to one page.
+6. `[R2, R3]` Comment: The manuscript still states the search was conducted in March 2025, but the round 1 revision re-ran the search with expanded neurostimulation/PET/MEG terms later (2026); clarify search-execution date vs. literature cutoff date.
+   - Location: `contents/methodology.tex:2` ("A systematic literature search was conducted across three databases... on the 27th of March 2025.").
+   - Open question: what was the actual re-run date for the round-1 neurostimulation-expanded search? Needed to state this accurately.
+7. `[R3]` Comment: Page 10 — "any-mention" terminology is unclear in reference to navigation.
+   - Location: `contents/results.tex:61` ("Virtual environments cluster on navigation (17 studies, any-mention 18.5\%)...").
+8. `[R3]` Comment: Page 11-12 — frequency ranges should be stated systematically for each band; delta/theta are given (at the end of their paragraph) but alpha, beta, and gamma are not.
+   - Location: `contents/results.tex:95` (delta 1--4 Hz, theta 4--8 Hz, at the end of the paragraph rather than the start); no Hz range anywhere for alpha/beta/gamma.
+9. `[Editor letter]` Comment: A separate, specific response to every Associate Editor and reviewer comment must accompany the round-2 revision (same requirement as round 1).
+   - New `response_letter.tex` (or a round-2 section within it) addressing all round-2 items above.
