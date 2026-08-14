@@ -1,5 +1,5 @@
-This is a review paper on Brain Computer Interfaces (BCIs) studies using Virtual Reality (VR).
-The manuscript is under revision for TVCG; reviewer feedback is in [reviewer_feedback.txt](reviewer_feedback.txt) and condensed actions are in [TODO.md](TODO.md).
+This is a systematic review paper on neurophysiological markers (neuromarkers) of cybersickness in Virtual Reality (VR). The "BCI" framing was removed from the manuscript per round 1 reviewer feedback (see TODO.md Critical #1) — prefer "neuromarkers" / "neuroimaging" / explicit modality names.
+The manuscript is under revision for TVCG (currently round 2, Minor Revision); reviewer feedback letters are in `docs/reviewer_feedback.txt` (round 1) and `docs/reviewer_feedback_round2.txt` (round 2) — gitignored, local-only — and condensed actions are in [TODO.md](TODO.md).
 
 ## Outline
 
