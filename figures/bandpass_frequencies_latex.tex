@@ -271,43 +271,27 @@
 \draw[black, line width=1.5pt] (axis cs:1.0,58.85) -- (axis cs:1.0,59.15);
 \draw[black, line width=1.5pt] (axis cs:100.0,58.85) -- (axis cs:100.0,59.15);
 
-% Notch filter crosses
-\draw[red, line width=1.5pt] (axis cs:50.0,0.8) -- (axis cs:50.0,1.2);
-\draw[red, line width=1.5pt] (axis cs:47.5,1) -- (axis cs:52.5,1);
-\draw[red, line width=1.5pt] (axis cs:60.0,3.8) -- (axis cs:60.0,4.2);
-\draw[red, line width=1.5pt] (axis cs:57.0,4) -- (axis cs:63.0,4);
-\draw[red, line width=1.5pt] (axis cs:50.0,17.8) -- (axis cs:50.0,18.2);
-\draw[red, line width=1.5pt] (axis cs:47.5,18) -- (axis cs:52.5,18);
-\draw[red, line width=1.5pt] (axis cs:50.0,18.8) -- (axis cs:50.0,19.2);
-\draw[red, line width=1.5pt] (axis cs:47.5,19) -- (axis cs:52.5,19);
-\draw[red, line width=1.5pt] (axis cs:50.0,20.8) -- (axis cs:50.0,21.2);
-\draw[red, line width=1.5pt] (axis cs:47.5,21) -- (axis cs:52.5,21);
-\draw[red, line width=1.5pt] (axis cs:50.0,22.8) -- (axis cs:50.0,23.2);
-\draw[red, line width=1.5pt] (axis cs:47.5,23) -- (axis cs:52.5,23);
-\draw[red, line width=1.5pt] (axis cs:50.0,27.8) -- (axis cs:50.0,28.2);
-\draw[red, line width=1.5pt] (axis cs:47.5,28) -- (axis cs:52.5,28);
-\draw[red, line width=1.5pt] (axis cs:60.0,28.8) -- (axis cs:60.0,29.2);
-\draw[red, line width=1.5pt] (axis cs:57.0,29) -- (axis cs:63.0,29);
-\draw[red, line width=1.5pt] (axis cs:50.0,41.8) -- (axis cs:50.0,42.2);
-\draw[red, line width=1.5pt] (axis cs:47.5,42) -- (axis cs:52.5,42);
-\draw[red, line width=1.5pt] (axis cs:50.0,45.8) -- (axis cs:50.0,46.2);
-\draw[red, line width=1.5pt] (axis cs:47.5,46) -- (axis cs:52.5,46);
-\draw[red, line width=1.5pt] (axis cs:50.0,49.8) -- (axis cs:50.0,50.2);
-\draw[red, line width=1.5pt] (axis cs:47.5,50) -- (axis cs:52.5,50);
-\draw[red, line width=1.5pt] (axis cs:50.0,50.8) -- (axis cs:50.0,51.2);
-\draw[red, line width=1.5pt] (axis cs:47.5,51) -- (axis cs:52.5,51);
-\draw[red, line width=1.5pt] (axis cs:50.0,51.8) -- (axis cs:50.0,52.2);
-\draw[red, line width=1.5pt] (axis cs:47.5,52) -- (axis cs:52.5,52);
-\draw[red, line width=1.5pt] (axis cs:60.0,53.8) -- (axis cs:60.0,54.2);
-\draw[red, line width=1.5pt] (axis cs:57.0,54) -- (axis cs:63.0,54);
-\draw[red, line width=1.5pt] (axis cs:50.0,54.8) -- (axis cs:50.0,55.2);
-\draw[red, line width=1.5pt] (axis cs:47.5,55) -- (axis cs:52.5,55);
-\draw[red, line width=1.5pt] (axis cs:50.0,55.8) -- (axis cs:50.0,56.2);
-\draw[red, line width=1.5pt] (axis cs:47.5,56) -- (axis cs:52.5,56);
-\draw[red, line width=1.5pt] (axis cs:60.0,57.8) -- (axis cs:60.0,58.2);
-\draw[red, line width=1.5pt] (axis cs:57.0,58) -- (axis cs:63.0,58);
-\draw[red, line width=1.5pt] (axis cs:60.0,58.8) -- (axis cs:60.0,59.2);
-\draw[red, line width=1.5pt] (axis cs:57.0,59) -- (axis cs:63.0,59);
+% Notch filter crosses (native PGF markers: legend match, no data-scale distortion)
+\addplot[only marks, mark=x, red, mark size=3pt, mark options={line width=0.7pt}, forget plot] coordinates {
+    (50.0, 1)
+    (60.0, 4)
+    (50.0, 18)
+    (50.0, 19)
+    (50.0, 21)
+    (50.0, 23)
+    (50.0, 28)
+    (60.0, 29)
+    (50.0, 42)
+    (50.0, 46)
+    (50.0, 50)
+    (50.0, 51)
+    (50.0, 52)
+    (60.0, 54)
+    (50.0, 55)
+    (50.0, 56)
+    (60.0, 58)
+    (60.0, 59)
+};
 
 % Legend entries
 \addlegendimage{black, line width=1.5pt}
