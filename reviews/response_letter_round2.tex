@@ -1,0 +1,175 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage[protrusion=true,expansion=false]{microtype}
+\usepackage{parskip}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black}
+
+\setlist[itemize]{leftmargin=*,topsep=2pt,itemsep=2pt}
+\setlist[description]{leftmargin=0pt,labelindent=0pt,topsep=2pt,itemsep=4pt}
+
+% Compact diff macro: rendered as a two-column table for clarity
+\newcommand{\diffbox}[2]{%
+  \begin{center}
+  \small
+  \begin{tabular}{@{}p{0.46\textwidth}@{\hspace{2em}}p{0.46\textwidth}@{}}
+  \toprule
+  \textbf{Before} & \textbf{After} \\
+  \midrule
+  #1 & #2 \\
+  \bottomrule
+  \end{tabular}
+  \end{center}}
+
+\newcommand{\addresses}[1]{\par\noindent\textbf{\small Addresses:} {\small #1}\par\smallskip}
+\newcommand{\xref}[1]{\textcolor{blue!50!black}{[\,#1\,]}}
+
+\title{\vspace{-2em}Response to Reviewers\\[0.3em]
+  \large Manuscript TVCG-2025-09-0929.R1: Minor Revision}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\vspace{-3em}
+
+\noindent Dear Associate Editor and Reviewers,\medskip
+
+\noindent We thank the reviewers for their comments on the revised manuscript; all have been addressed.
+
+\noindent The response is organised by theme, each theme lists the comments it addresses, and a per-comment cross-reference appears at the end as Table~\ref{tab:xref}. Manuscript section numbers refer to the revised submission.
+
+\bigskip
+
+% ---------------------------------------------------------------
+\section{Keywords, contributions, and Future Directions}\label{sec:signpost}
+\addresses{Associate Editor (R1 summary: keywords, contributions, style and presentation edits); R1 (title, abstract, and keywords; Introduction; organization, focus, and length).}
+
+We agree with R1 that the contributions and the Future Directions material were discoverable only on a close read. Three changes address this.
+
+\paragraph{Keywords.} EEG and cybersickness are added to the Index Terms.
+
+\diffbox{Human-centered computing, Human computer interaction (HCI), Interaction paradigms, Virtual reality.}{Cybersickness, EEG, Human-centered computing, Human computer interaction (HCI), Interaction paradigms, Virtual reality.}
+
+\paragraph{Contributions (Introduction).} The Introduction now carries two subsection headings: \S~I-A ``Contributions'', introducing the paragraph that states the three contributions (unified synthesis across recording and stimulation modalities, corpus-level meta-analytic hardware effect, methodological audit of reporting practices), and \S~I-B ``Paper Organization'', introducing the section roadmap. The three contributions now sit directly under a heading that names them.
+
+\paragraph{Future Directions (\S~V-C).} The six directions now carry \verb|\subsubsection| headings, at the heading depth already used in Results, and the ordinal lead-ins are removed: Standardised Reporting and Open Data; Causal Mechanisms; Generalisation and Ecological Validation; Sex- and Gender-Stratified Design; Objective Behavioural Markers; Longitudinal Characterisation of Adaptation and Recovery.
+
+\diffbox{``First, standardised reporting represents a gap documented across the corpus.''}{``\textbf{1) Standardised Reporting and Open Data:} Standardised reporting represents a gap documented across the corpus.''}
+
+% ---------------------------------------------------------------
+\section{Review type: systematic, not scoping}\label{sec:systematic}
+\addresses{Associate Editor (R2 summary); R2~\#1.}
+
+R2 is correct that both terms appear in the manuscript. On checking every occurrence, the manuscript never described itself as a scoping review: the self-description is ``systematic review'' throughout (title, Abstract, Introduction, \S~III, Conclusion), consistent with the PRISMA 2020 flow and pre-specified screening protocol reported in \S~III. ``Scoping'' appeared only in reference to Chang et al.\ 2023, whose own paper is titled as a scoping review.
+
+The inconsistency was in how Chang et al.\ was labelled across sections, which can read as a second self-description: ``a previous review'' (Introduction), ``the prior scoping review'' (Discussion, Conclusion), and ``prior reviews'', plural (Challenges). We dropped ``scoping'' and standardised all four mentions to ``the prior review''.
+
+\diffbox{``The \textbf{prior scoping review} of cybersickness EEG research by Chang et al.\ reported delta-band increases, beta-band decreases, and inconsistent alpha-band findings $\ldots$''}{``The \textbf{prior review} of cybersickness EEG research by Chang et al.\ reported delta-band increases, beta-band decreases, and inconsistent alpha-band findings $\ldots$''}
+
+\noindent ``Scoping'' now appears nowhere in the manuscript, and every self-reference is ``systematic review''.
+
+% ---------------------------------------------------------------
+\section{Percentage reporting}\label{sec:pct}
+\addresses{Associate Editor (R2 summary); R2~\#2.}
+
+We agree that mixing bare counts with counts carrying percentages is inconsistent. Percentages against the 92-study denominator are added to every bare count in the passages R2 identified:
+
+\begin{itemize}
+  \item \textbf{\S~IV-A2:} concurrent physiological recording modalities (EOG 19.6\%, ECG 17.4\%, GSR 9.8\%, EMG 2.2\%, EGG 4.3\%, PPG 7.6\%, respiration 2.2\%, skin temperature 4.3\%, blood pressure 1.1\%);
+  \item \textbf{\S~IV-A4:} questionnaire instruments (SSQ 62.0\%, FMSS 6.5\%, MSSQ 2.2\%, VRSQ 2.2\%, other 6.5\%, none or unnamed 20.7\%) and the multi-method overlap count (20.7\%);
+  \item \textbf{\S~IV-A5:} baseline conditions (task 42.4\%, eyes-open 17.4\%, pre-stimulus 8.7\%, eyes-closed 5.4\%, unspecified 3.3\%, unreported 22.8\%).
+\end{itemize}
+
+\diffbox{``$\ldots$ electro-oculography (18 studies), electrocardiography (16), and galvanic skin response (9).''}{``$\ldots$ electro-oculography (18 studies, 19.6\%), electrocardiography (16, 17.4\%), and galvanic skin response (9, 9.8\%).''}
+
+\noindent No underlying count changed. All 22 added percentages were recomputed against the 92-study denominator; the baseline-condition counts sum to 92.
+
+% ---------------------------------------------------------------
+\section{Search date and publication cut-off}\label{sec:date}
+\addresses{Associate Editor (R2 summary); R2~\#3; R3 (Page 6).}
+
+R2 is correct that the search was re-executed for the previous revision with the expanded query (added neurostimulation and neuroimaging terms, and the explicit-VR eligibility criterion). When re-running it, we applied the same publication-date cut-off of 27 March 2025 that governed the original corpus and filtered the returned records accordingly before merging. Records published after that date were returned by the query and excluded by this filter. The PRISMA counts reported in \S~III (443 identified, 219 screened, 92 included) are the counts obtained under that cut-off.
+
+27 March 2025 is therefore the publication cut-off of the corpus, not the date the databases were queried. The sentence was phrased as though it were the query-execution date. We adopted R3's suggested resolution and state it purely as a cut-off.
+
+\diffbox{``A systematic literature search was conducted across three databases: PubMed, Web of Science, and Scopus, \textbf{on the 27th of March 2025}. No earlier date restriction was imposed, so the search captures the full historical record of the field.''}{``A systematic literature search across three databases, PubMed, Web of Science, and Scopus, \textbf{retrieved records published through the 27th of March 2025}. No earlier date restriction was imposed, so the search captures the full historical record of the field \textbf{up to that date}.''}
+
+\noindent We did not add the query-execution date to the manuscript, since it does not bound the corpus and a second date would obscure the one that determines which studies are included. The Abstract already stated the date as a cut-off (``through March 2025'') and is unchanged.
+
+% ---------------------------------------------------------------
+\section{``Any-mention'' terminology}\label{sec:anymention}
+\addresses{Associate Editor (R3 summary); R3 (Page 10).}
+
+R3 is correct that the term was unclear. Its intended meaning was that the environment categories in \S~IV-A3 are not mutually exclusive, since a study may use more than one environment, so the percentages do not sum to 100. The term is removed and that meaning is now stated in the sentence itself rather than left to the figure caption.
+
+\diffbox{``Virtual environments cluster on navigation (17 studies, \textbf{any-mention} 18.5\%), roller-coaster experiences (16, 17.4\%), $\ldots$ and space simulators (5, 5.4\%).''}{``Virtual environments cluster on navigation (17 studies, 18.5\%), roller-coaster experiences (16, 17.4\%), $\ldots$ and space simulators (5, 5.4\%); \textbf{categories are non-exclusive, as a study may employ more than one type of environment.}''}
+
+% ---------------------------------------------------------------
+\section{Frequency band ranges}\label{sec:bands}
+\addresses{Associate Editor (R3 summary); R3 (Page 11-12).}
+
+Both parts of R3's comment are adopted. \S~IV-B1 (EEG Spectral Power) now opens with the full set of band definitions, and the delta and theta ranges that previously appeared mid-paragraph are removed as redundant.
+
+\diffbox{Delta and theta ranges given inline, mid-paragraph: ``Increases in delta (1--4 Hz) and theta (4--8 Hz) power have been associated with $\ldots$''\ Alpha, beta, and gamma ranges not stated.}{Opening sentence of \S~IV-B1: ``The EEG spectrum is conventionally divided into delta (1--4 Hz), theta (4--8 Hz), alpha (8--13 Hz), beta (13--30 Hz), and gamma ($>$30 Hz) bands, though the exact cutoffs applied to each band vary across individual studies.''}
+
+\noindent The ranges are cited to Newson \& Thiagarajan 2019, a review of band definitions across 184 studies, which supports both the convention and the accompanying caveat that exact cut-offs vary between studies.
+
+% ---------------------------------------------------------------
+\section{Per-comment cross-reference}\label{sec:xref}
+
+Table~\ref{tab:xref} lists every Associate Editor and reviewer comment with the response section that addresses it.
+
+\begin{longtable}{p{0.30\textwidth} p{0.44\textwidth} p{0.16\textwidth}}
+\caption{Per-comment cross-reference. Bracketed numbers refer to sections of this letter.}\label{tab:xref}\\
+\toprule
+\textbf{Comment} & \textbf{Summary} & \textbf{Response} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Comment} & \textbf{Summary} & \textbf{Response} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+
+\multicolumn{3}{l}{\textit{Associate Editor}}\\
+AE : R1 keywords & Add EEG and cybersickness to keywords & \xref{\ref{sec:signpost}} \\
+AE : R1 intro & Highlight contributions more explicitly & \xref{\ref{sec:signpost}} \\
+AE : R1 style & Style and presentation edits & \xref{\ref{sec:signpost}} \\
+AE : R2 review type & Scoping or systematic review & \xref{\ref{sec:systematic}} \\
+AE : R2 numbering & Consistent numbering as percentages & \xref{\ref{sec:pct}} \\
+AE : R2 search date & Update search date & \xref{\ref{sec:date}} \\
+AE : R3 any mention & Clarify ``any mention'' on page 10 & \xref{\ref{sec:anymention}} \\
+AE : R3 bands & State frequency ranges for different bands & \xref{\ref{sec:bands}} \\
+\midrule
+\multicolumn{3}{l}{\textit{Reviewer 1}}\\
+R1 : keywords & Add EEG and cybersickness for discoverability & \xref{\ref{sec:signpost}} \\
+R1 : contributions & Contributions easy to miss; add subsection or visual aid & \xref{\ref{sec:signpost}} \\
+R1 : future directions & ``First,'' ``Second,'' paragraphs need sub-headings & \xref{\ref{sec:signpost}} \\
+\midrule
+\multicolumn{3}{l}{\textit{Reviewer 2}}\\
+R2 \#1 & Systematic vs.\ scoping review inconsistency & \xref{\ref{sec:systematic}} \\
+R2 \#2 & P8 counts inconsistently given with percentages & \xref{\ref{sec:pct}} \\
+R2 \#3 & Search date should reflect the updated search & \xref{\ref{sec:date}} \\
+\midrule
+\multicolumn{3}{l}{\textit{Reviewer 3}}\\
+R3 : Page 6 & Search year vs.\ publication cut-off date & \xref{\ref{sec:date}} \\
+R3 : Page 10 & ``Any-mention'' unclear in reference to navigation & \xref{\ref{sec:anymention}} \\
+R3 : Page 11-12 & State band ranges systematically; move to start of paragraph & \xref{\ref{sec:bands}} \\
+\end{longtable}
+
+\bigskip
+\noindent Brief biographies of all authors are included at the end of the revised manuscript, which remains within the 20-page limit for survey papers.
+
+\bigskip
+\noindent We thank the reviewers for their comments across both rounds and remain available for any further clarification.
+
+\end{document}

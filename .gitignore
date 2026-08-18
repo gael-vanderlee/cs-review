@@ -6,6 +6,7 @@ template_tvcg/out/
 
 # Internal LLM-assisted revision working notes, not part of the manuscript
 revision_notes/
+submission/
 
 # LaTeX auxiliary and build products
 *.acn
