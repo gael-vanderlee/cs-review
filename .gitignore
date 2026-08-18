@@ -38,3 +38,6 @@ revision_notes/
 
 # Regenerated sample PDFs next to IEEE TVCG template sources
 template_tvcg/*.pdf
+
+# Build output (latexmkrc sets $out_dir = out)
+out/

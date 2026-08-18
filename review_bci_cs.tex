@@ -40,6 +40,16 @@
 \usepackage{tikz}
 \pgfplotsset{compat=1.18}
 
+% IEEEtran opens every biography with `\vskip 4\baselineskip plus 1fil`
+% (IEEEtran.cls:6081). The infinite stretch absorbs all leftover space in the
+% column, which on a sparse final page opens ~1.4in gaps between biographies.
+% Pin the skip to a fixed 2 baselineskips so the slack falls to the column foot.
+\usepackage{etoolbox}
+\patchcmd{\IEEEbiographynophoto}%
+  {\vskip 4\baselineskip plus 1fil minus 0\baselineskip}%
+  {\vskip 2\baselineskip}%
+  {}{\PackageWarning{review_bci_cs}{IEEEbiographynophoto skip patch FAILED}}
+
 \begin{document}
 
 \title{The Neurophysiology of Cybersickness: A Systematic Review of Neuromarkers, Neurostimulation, and Reporting Practices in Virtual Reality}
@@ -79,6 +89,18 @@ This research was funded by the European Union ERANET CHIST-ERA 2020 (CHIST-ERA-
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}
+
+\begin{IEEEbiographynophoto}{Gaël Van der Lee}
+received the B.S. degree in Cognitive Science, with a specialization in Machine Learning and Neural Computation, from the University of California, San Diego, CA, USA, in 2018, and the M.Sc. degree in Artificial Intelligence and Visual Computing from \'{E}cole Polytechnique, Institut Polytechnique de Paris, France, in 2022. He received the Ph.D. degree in Signal Processing and Control Science from the University of Lille, France, in 2025, for work on electroencephalographic markers of self-motion perception and cybersickness in virtual reality, carried out at the Lille Joint Research Center for Informatics, Signal Processing and Control Science (CRIStAL, UMR CNRS 9189) within the European project CHIST-ERA GENESIS. Prior to his doctoral work he was Lead Machine Learning Scientist at Lofty AI, San Francisco, CA, USA. His research interests include electroencephalography, signal processing, and machine learning applied to the estimation of user states in immersive environments, with a focus on vection, acceleration perception, and cybersickness.
+\end{IEEEbiographynophoto}
+
+\begin{IEEEbiographynophoto}{Fran\c{c}ois Cabestaing}
+(Senior Member, IEEE) received the B.S. degree in Mathematics in 1987 from USTL, the M.Sc. degree in Engineering and Control Science in 1987 from ISEN, and the PhD degree in Signal Processing and Control Science in 1991 from the University of Lille, France. He holds an Habilitation \`a Diriger des Recherches obtained in 2003 from ULille. He has been an associate professor at ULille since 1992 and became full professor in 2006 in the same university. He is a researcher at the Lille Joint Research Center for Informatics, Signal Processing and Control Science (CRIStAL, UMR CNRS 9189), where he heads the ``BCI'' (Brain-Computer Interfaces) research team. He studies physiological signal processing techniques, mainly electroencephalogram, and classification techniques, particularly to estimate the mental states of brain-machine interface users. He contributed to the creation of the COllectif pour la Recherche Transdisciplinaire sur les Interfaces Cerveau-Ordinateur (CORTICO), a learned society of which he was president from 2017 to 2024.
+\end{IEEEbiographynophoto}
+
+\begin{IEEEbiographynophoto}{Hakim Si-Mohammed}
+received the M.Sc. and Engineering degrees from the Higher National School of Computer Engineering (ESI), Algiers, Algeria, in 2016, and the Ph.D. degree in Computer Science from Inria and INSA Rennes, France, in 2019. He is currently an Associate Professor with the University of Lille, France, and a researcher at the CRIStAL Laboratory (UMR CNRS 9189). He serves as Deputy Director of the CNRS Research Federation on Visual Sciences and Cultures, and Head of the BCI and Neuroprosthetics Axis at the Institut Cerveau, Soci\'et\'e et Technologie. His research interests include Brain-Computer Interfaces and immersive technologies. He led and coordinated the European project CHIST-ERA GENESIS (2021--2025) on cybersickness, and serves as Secretary General of CORTICO, the French Society for Research in Brain-Computer Interfaces.
+\end{IEEEbiographynophoto}
 
 \vfill
 
