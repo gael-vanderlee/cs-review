@@ -76,6 +76,7 @@ Canonical paths:
 - **Python**: the sibling `review_scripts` repo uses `uv`. The system `python3` has no scientific packages installed and `pip install` is blocked. To run a one-off snippet that needs pandas / pypdf / etc., use `uv run --with <pkg1>[,<pkg2>] python -c "..."` from any directory. Example: `uv run --with pandas python -c "import pandas as pd; print(pd.read_csv('data/V4/Stim/Plots_Analysis_GPT54.csv').shape)"`. The `.venv` at the repo root works too (`.venv/bin/python`) but only has what's already locked in `uv.lock`.
 - **PDF text extraction**: `pdftotext` / `mutool` / `poppler` are not available on this machine. Use `uv run --with pypdf python -c "import pypdf; ..."` to extract text from PDFs (e.g. reading references from Zotero exports placed under `revision_notes/assets/`).
 - **Zotero MCP**: You can use the zotero mcp tool to access my zotero library, search for papers, get citations, read full texts, run semantic searches and more.
+- **Compiling** I use a latexmkrc file and `latexmk`, your sandbox makes it stall so run it outside sandbox.
 
 ## Workflow notes
 

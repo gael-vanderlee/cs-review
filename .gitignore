@@ -42,3 +42,6 @@ template_tvcg/*.pdf
 
 # Build output (latexmkrc sets $out_dir = out)
 out/
+
+# Packaged submission archive
+submission.zip
